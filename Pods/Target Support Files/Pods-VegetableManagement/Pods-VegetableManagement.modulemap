@@ -1,0 +1,6 @@
+framework module Pods_VegetableManagement {
+  umbrella header "Pods-VegetableManagement-umbrella.h"
+
+  export *
+  module * { export * }
+}
