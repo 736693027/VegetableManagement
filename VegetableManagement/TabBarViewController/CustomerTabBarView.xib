@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="AiH-sQ-Poq" customClass="CustomerTabBarView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" tag="9991" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKg-q3-fs9">
+                    <rect key="frame" x="125" y="0.0" width="125" height="60"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="待取货">
+                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" red="0.33725490200000002" green="1" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.33725490200000002" green="1" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="0.33725490200000002" green="1" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="selectItem:" destination="AiH-sQ-Poq" eventType="touchUpInside" id="IDQ-OW-s2U"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="9992" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeE-a0-joC">
+                    <rect key="frame" x="250" y="0.0" width="125" height="60"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="配送中">
+                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" red="0.33725490200000002" green="1" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.33725490200000002" green="1" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="0.33725490200000002" green="1" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="selectItem:" destination="AiH-sQ-Poq" eventType="touchUpInside" id="LrN-bn-vGp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="9990" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjN-Ar-0uu">
+                    <rect key="frame" x="0.0" y="0.0" width="125" height="60"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="新任务">
+                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" red="0.33725490200000002" green="1" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.33725490200000002" green="1" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="0.33725490200000002" green="1" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="selectItem:" destination="AiH-sQ-Poq" eventType="touchUpInside" id="ySC-NE-SgV"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fjN-Ar-0uu" firstAttribute="top" secondItem="GEe-Io-rPy" secondAttribute="top" id="8c0-dJ-Zh1"/>
+                <constraint firstItem="jeE-a0-joC" firstAttribute="top" secondItem="GEe-Io-rPy" secondAttribute="top" id="A74-Bg-WkS"/>
+                <constraint firstItem="fjN-Ar-0uu" firstAttribute="bottom" secondItem="GEe-Io-rPy" secondAttribute="bottom" id="AyJ-qH-Tap"/>
+                <constraint firstItem="fKg-q3-fs9" firstAttribute="leading" secondItem="fjN-Ar-0uu" secondAttribute="trailing" id="GHh-MD-bjW"/>
+                <constraint firstItem="GEe-Io-rPy" firstAttribute="trailing" secondItem="jeE-a0-joC" secondAttribute="trailing" id="Gky-p6-1eq"/>
+                <constraint firstItem="jeE-a0-joC" firstAttribute="bottom" secondItem="GEe-Io-rPy" secondAttribute="bottom" id="IJy-fd-FwF"/>
+                <constraint firstItem="fKg-q3-fs9" firstAttribute="top" secondItem="GEe-Io-rPy" secondAttribute="top" id="aIz-Rb-CtW"/>
+                <constraint firstItem="fKg-q3-fs9" firstAttribute="width" secondItem="fjN-Ar-0uu" secondAttribute="width" id="caU-Ts-rwd"/>
+                <constraint firstItem="fjN-Ar-0uu" firstAttribute="leading" secondItem="GEe-Io-rPy" secondAttribute="leading" id="du5-zm-igB"/>
+                <constraint firstItem="jeE-a0-joC" firstAttribute="leading" secondItem="fKg-q3-fs9" secondAttribute="trailing" id="n6t-qM-Ux9"/>
+                <constraint firstItem="jeE-a0-joC" firstAttribute="width" secondItem="fjN-Ar-0uu" secondAttribute="width" id="tPq-0g-Kao"/>
+                <constraint firstItem="fKg-q3-fs9" firstAttribute="bottom" secondItem="GEe-Io-rPy" secondAttribute="bottom" id="xoR-9Z-Kbf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="GEe-Io-rPy"/>
+            <point key="canvasLocation" x="-72.5" y="70"/>
+        </view>
+    </objects>
+</document>

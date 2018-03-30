@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BaseViewController.h"
+#import "VMTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [BaseViewController new];
+    self.window.rootViewController = [[VMTabBarController alloc] init];
     [self.window makeKeyAndVisible];
     return YES;
 }
