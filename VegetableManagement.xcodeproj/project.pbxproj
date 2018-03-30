@@ -393,7 +393,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H3VBM36K4M;
-				GCC_PREFIX_HEADER = /Users/apple/Desktop/ProjectDemo/VegetableManagement/VegetableManagement/Tools/VegetableHeaderFile.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VegetableManagement/Tools/VegetableHeaderFile.pch";
 				INFOPLIST_FILE = VegetableManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lubao.VegetableManagement;
@@ -410,7 +410,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H3VBM36K4M;
-				GCC_PREFIX_HEADER = /Users/apple/Desktop/ProjectDemo/VegetableManagement/VegetableManagement/Tools/VegetableHeaderFile.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VegetableManagement/Tools/VegetableHeaderFile.pch";
 				INFOPLIST_FILE = VegetableManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lubao.VegetableManagement;

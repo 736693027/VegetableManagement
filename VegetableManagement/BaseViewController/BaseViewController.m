@@ -44,6 +44,14 @@
     self.navigationItem.rightBarButtonItems = @[rigthButtonSapce,rightBarButtonItem];
 }
 
+#pragma mark navigationItem BarButtonItem click
+- (void)navLeftButtonClicked:(UIButton *)sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (void)navRightButtonClicked:(UIButton *)sender{
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
