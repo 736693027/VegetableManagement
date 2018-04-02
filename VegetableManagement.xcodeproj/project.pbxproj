@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1832BF182071DE1B00FC83B0 /* VMWaitPickUpTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF152071DE1A00FC83B0 /* VMWaitPickUpTableViewCell.m */; };
+		1832BF192071DE1B00FC83B0 /* VMWaitPickUpTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832BF172071DE1A00FC83B0 /* VMWaitPickUpTableViewCell.xib */; };
+		1832BF1F20720FFC00FC83B0 /* VMPersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF1D20720FFC00FC83B0 /* VMPersonalCenterViewController.m */; };
+		1832BF2020720FFC00FC83B0 /* VMPersonalCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832BF1E20720FFC00FC83B0 /* VMPersonalCenterViewController.xib */; };
+		1832BF25207215FC00FC83B0 /* VMPersonalCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF23207215FC00FC83B0 /* VMPersonalCenterTableViewCell.m */; };
+		1832BF26207215FC00FC83B0 /* VMPersonalCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832BF24207215FC00FC83B0 /* VMPersonalCenterTableViewCell.xib */; };
+		1832BF532072225400FC83B0 /* VMSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF512072225400FC83B0 /* VMSetupViewController.m */; };
+		1832BF542072225400FC83B0 /* VMSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832BF522072225400FC83B0 /* VMSetupViewController.xib */; };
+		1832BF5F20722D0000FC83B0 /* VMSetupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832BF5C20722D0000FC83B0 /* VMSetupTableViewCell.xib */; };
+		1832BF6020722D0000FC83B0 /* VMSetupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF5E20722D0000FC83B0 /* VMSetupTableViewCell.m */; };
 		185B1DD6206E092700816924 /* CustomerTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B1DD5206E092700816924 /* CustomerTabBarView.m */; };
 		185B1DDA206E096300816924 /* CustomerTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185B1DD9206E096300816924 /* CustomerTabBarView.xib */; };
 		185B1DDD206E0DA600816924 /* VMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B1DDC206E0DA600816924 /* VMTabBarController.m */; };
@@ -27,6 +37,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1832BF152071DE1A00FC83B0 /* VMWaitPickUpTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMWaitPickUpTableViewCell.m; sourceTree = "<group>"; };
+		1832BF162071DE1A00FC83B0 /* VMWaitPickUpTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMWaitPickUpTableViewCell.h; sourceTree = "<group>"; };
+		1832BF172071DE1A00FC83B0 /* VMWaitPickUpTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMWaitPickUpTableViewCell.xib; sourceTree = "<group>"; };
+		1832BF1C20720FFC00FC83B0 /* VMPersonalCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMPersonalCenterViewController.h; sourceTree = "<group>"; };
+		1832BF1D20720FFC00FC83B0 /* VMPersonalCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMPersonalCenterViewController.m; sourceTree = "<group>"; };
+		1832BF1E20720FFC00FC83B0 /* VMPersonalCenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMPersonalCenterViewController.xib; sourceTree = "<group>"; };
+		1832BF22207215FC00FC83B0 /* VMPersonalCenterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMPersonalCenterTableViewCell.h; sourceTree = "<group>"; };
+		1832BF23207215FC00FC83B0 /* VMPersonalCenterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMPersonalCenterTableViewCell.m; sourceTree = "<group>"; };
+		1832BF24207215FC00FC83B0 /* VMPersonalCenterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMPersonalCenterTableViewCell.xib; sourceTree = "<group>"; };
+		1832BF502072225400FC83B0 /* VMSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMSetupViewController.h; sourceTree = "<group>"; };
+		1832BF512072225400FC83B0 /* VMSetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMSetupViewController.m; sourceTree = "<group>"; };
+		1832BF522072225400FC83B0 /* VMSetupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMSetupViewController.xib; sourceTree = "<group>"; };
+		1832BF5C20722D0000FC83B0 /* VMSetupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMSetupTableViewCell.xib; sourceTree = "<group>"; };
+		1832BF5D20722D0000FC83B0 /* VMSetupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMSetupTableViewCell.h; sourceTree = "<group>"; };
+		1832BF5E20722D0000FC83B0 /* VMSetupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMSetupTableViewCell.m; sourceTree = "<group>"; };
 		185B1DD4206E092700816924 /* CustomerTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomerTabBarView.h; sourceTree = "<group>"; };
 		185B1DD5206E092700816924 /* CustomerTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomerTabBarView.m; sourceTree = "<group>"; };
 		185B1DD9206E096300816924 /* CustomerTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerTabBarView.xib; sourceTree = "<group>"; };
@@ -75,6 +100,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1832BF142071DE1A00FC83B0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1832BF162071DE1A00FC83B0 /* VMWaitPickUpTableViewCell.h */,
+				1832BF152071DE1A00FC83B0 /* VMWaitPickUpTableViewCell.m */,
+				1832BF172071DE1A00FC83B0 /* VMWaitPickUpTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1832BF1B20720C5500FC83B0 /* PersonalCenter(个人中心) */ = {
+			isa = PBXGroup;
+			children = (
+				1832BF21207215E100FC83B0 /* Cell */,
+				1832BF1C20720FFC00FC83B0 /* VMPersonalCenterViewController.h */,
+				1832BF1D20720FFC00FC83B0 /* VMPersonalCenterViewController.m */,
+				1832BF1E20720FFC00FC83B0 /* VMPersonalCenterViewController.xib */,
+			);
+			path = "PersonalCenter(个人中心)";
+			sourceTree = "<group>";
+		};
+		1832BF21207215E100FC83B0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1832BF22207215FC00FC83B0 /* VMPersonalCenterTableViewCell.h */,
+				1832BF23207215FC00FC83B0 /* VMPersonalCenterTableViewCell.m */,
+				1832BF24207215FC00FC83B0 /* VMPersonalCenterTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1832BF4F2072223C00FC83B0 /* Setup(设置) */ = {
+			isa = PBXGroup;
+			children = (
+				1832BF5B20722D0000FC83B0 /* cell */,
+				1832BF502072225400FC83B0 /* VMSetupViewController.h */,
+				1832BF512072225400FC83B0 /* VMSetupViewController.m */,
+				1832BF522072225400FC83B0 /* VMSetupViewController.xib */,
+			);
+			path = "Setup(设置)";
+			sourceTree = "<group>";
+		};
+		1832BF5B20722D0000FC83B0 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				1832BF5C20722D0000FC83B0 /* VMSetupTableViewCell.xib */,
+				1832BF5D20722D0000FC83B0 /* VMSetupTableViewCell.h */,
+				1832BF5E20722D0000FC83B0 /* VMSetupTableViewCell.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		185B1DD3206E090600816924 /* TabBarViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +169,8 @@
 		185B1DE1206E11AA00816924 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1832BF4F2072223C00FC83B0 /* Setup(设置) */,
+				1832BF1B20720C5500FC83B0 /* PersonalCenter(个人中心) */,
 				185B1DE2206E11AA00816924 /* NewTask(新任务) */,
 				185B1DE3206E11AA00816924 /* WaitPickUp(待取货) */,
 				185B1DE4206E11AA00816924 /* DeliveryOrder(配送中) */,
@@ -112,6 +191,7 @@
 		185B1DE3206E11AA00816924 /* WaitPickUp(待取货) */ = {
 			isa = PBXGroup;
 			children = (
+				1832BF142071DE1A00FC83B0 /* Cell */,
 				185B1DEB206E15D000816924 /* VMWaitPickUpViewController.h */,
 				185B1DEC206E15D000816924 /* VMWaitPickUpViewController.m */,
 			);
@@ -241,7 +321,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = VM;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
 					18CC220C206CBBED007E1274 = {
@@ -273,7 +353,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1832BF5F20722D0000FC83B0 /* VMSetupTableViewCell.xib in Resources */,
 				185B1DF9206E24CD00816924 /* VMNewTaskTableViewCell.xib in Resources */,
+				1832BF26207215FC00FC83B0 /* VMPersonalCenterTableViewCell.xib in Resources */,
+				1832BF2020720FFC00FC83B0 /* VMPersonalCenterViewController.xib in Resources */,
+				1832BF542072225400FC83B0 /* VMSetupViewController.xib in Resources */,
+				1832BF192071DE1B00FC83B0 /* VMWaitPickUpTableViewCell.xib in Resources */,
 				185B1DDA206E096300816924 /* CustomerTabBarView.xib in Resources */,
 				18CC221A206CBBED007E1274 /* Assets.xcassets in Resources */,
 			);
@@ -372,13 +457,18 @@
 				18CC2240206CD5E9007E1274 /* BaseViewController.m in Sources */,
 				185B1DE7206E11FC00816924 /* VMNewTaskViewController.m in Sources */,
 				185B1DDD206E0DA600816924 /* VMTabBarController.m in Sources */,
+				1832BF25207215FC00FC83B0 /* VMPersonalCenterTableViewCell.m in Sources */,
 				18CC2212206CBBED007E1274 /* AppDelegate.m in Sources */,
 				185B1DE0206E0EAF00816924 /* VMCustomTabBar.m in Sources */,
+				1832BF1F20720FFC00FC83B0 /* VMPersonalCenterViewController.m in Sources */,
 				185B1DF3206E161900816924 /* BaseTableViewController.m in Sources */,
 				185B1DD6206E092700816924 /* CustomerTabBarView.m in Sources */,
+				1832BF182071DE1B00FC83B0 /* VMWaitPickUpTableViewCell.m in Sources */,
+				1832BF6020722D0000FC83B0 /* VMSetupTableViewCell.m in Sources */,
 				185B1DEA206E154200816924 /* VMNavigationController.m in Sources */,
 				18CC2242206CD5E9007E1274 /* CommonTools.m in Sources */,
 				185B1DED206E15D000816924 /* VMWaitPickUpViewController.m in Sources */,
+				1832BF532072225400FC83B0 /* VMSetupViewController.m in Sources */,
 				185B1DF8206E24CD00816924 /* VMNewTaskTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +490,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -407,6 +498,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -455,6 +547,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -462,6 +555,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VMNewTaskTableViewCell" rowHeight="247" id="KGk-i7-Jjw" customClass="VMNewTaskTableViewCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VMWaitPickUpTableViewCell" rowHeight="247" id="KGk-i7-Jjw" customClass="VMWaitPickUpTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="245"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -98,19 +98,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kV-Vv-qbo">
-                        <rect key="frame" x="10" y="200" width="300" height="30"/>
-                        <color key="backgroundColor" red="0.33725490200000002" green="0.77327008928571428" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <state key="normal" title="立即抢单">
-                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="45" y="200" width="80" height="30"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="电话商家">
+                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="3"/>
+                                <integer key="value" value="5"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <action selector="creatNewOrderBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="81h-Pl-ijQ"/>
+                            <action selector="cellBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hRg-Gb-WfX"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvB-iR-SRH">
@@ -135,22 +135,58 @@
                             <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0t-KE-tVV">
+                        <rect key="frame" x="225" y="200" width="80" height="30"/>
+                        <color key="backgroundColor" red="0.33725490200000002" green="0.77327008929999996" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="我已取货">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="cellBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xtQ-hh-j70"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TE-yQ-UeO">
+                        <rect key="frame" x="135" y="200" width="80" height="30"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="电话用户">
+                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="cellBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IhA-Xq-RVc"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="7Tl-e3-qZT" firstAttribute="leading" secondItem="hBC-b9-snf" secondAttribute="leading" id="0Na-a0-yMY"/>
                     <constraint firstItem="y2h-ez-vYu" firstAttribute="leading" secondItem="LdN-Gn-Mb9" secondAttribute="trailing" constant="5" id="2bx-GO-QTL"/>
+                    <constraint firstItem="9TE-yQ-UeO" firstAttribute="height" secondItem="3kV-Vv-qbo" secondAttribute="height" id="3fo-ZV-JKA"/>
                     <constraint firstItem="3Za-hx-ds4" firstAttribute="leading" secondItem="non-1d-NW4" secondAttribute="trailing" constant="10" id="4jm-RD-9em"/>
                     <constraint firstAttribute="bottom" secondItem="3kV-Vv-qbo" secondAttribute="bottom" constant="14.5" id="5RU-iZ-PWv"/>
                     <constraint firstItem="hBC-b9-snf" firstAttribute="leading" secondItem="K4G-Fj-Gbx" secondAttribute="leading" id="6zn-uK-kr5"/>
                     <constraint firstAttribute="trailing" secondItem="K4G-Fj-Gbx" secondAttribute="trailing" constant="15" id="Dfx-Zy-CeE"/>
                     <constraint firstItem="B8m-1V-Ilu" firstAttribute="centerY" secondItem="y2h-ez-vYu" secondAttribute="centerY" id="EqG-S3-eUS"/>
-                    <constraint firstAttribute="trailing" secondItem="3kV-Vv-qbo" secondAttribute="trailing" constant="10" id="GcQ-k7-GKN"/>
+                    <constraint firstItem="T0t-KE-tVV" firstAttribute="width" secondItem="3kV-Vv-qbo" secondAttribute="width" id="F46-5o-TKF"/>
                     <constraint firstItem="zAk-vV-zge" firstAttribute="leading" secondItem="3Za-hx-ds4" secondAttribute="leading" id="IVf-GB-nvm"/>
+                    <constraint firstItem="T0t-KE-tVV" firstAttribute="leading" secondItem="9TE-yQ-UeO" secondAttribute="trailing" constant="10" id="IYh-05-1Ia"/>
                     <constraint firstAttribute="trailing" secondItem="B8m-1V-Ilu" secondAttribute="trailing" constant="15" id="JhG-3M-dTc"/>
                     <constraint firstItem="LdN-Gn-Mb9" firstAttribute="centerY" secondItem="hxn-Xp-gIW" secondAttribute="centerY" id="KAj-7J-Cez"/>
                     <constraint firstItem="fkc-f5-JEC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="KqJ-zT-TPR"/>
                     <constraint firstItem="3kV-Vv-qbo" firstAttribute="top" secondItem="7Tl-e3-qZT" secondAttribute="bottom" constant="15" id="LgD-GW-PpU"/>
                     <constraint firstAttribute="trailing" secondItem="fvB-iR-SRH" secondAttribute="trailing" constant="15" id="N20-uc-im0"/>
+                    <constraint firstItem="9TE-yQ-UeO" firstAttribute="centerY" secondItem="3kV-Vv-qbo" secondAttribute="centerY" id="ROC-lR-xtt"/>
+                    <constraint firstItem="3kV-Vv-qbo" firstAttribute="leading" secondItem="7Tl-e3-qZT" secondAttribute="leading" id="SJ1-Ab-o7K"/>
                     <constraint firstItem="non-1d-NW4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Y0m-GX-por"/>
                     <constraint firstItem="non-1d-NW4" firstAttribute="top" secondItem="hxn-Xp-gIW" secondAttribute="bottom" constant="10" id="bZR-om-t2L"/>
                     <constraint firstAttribute="trailing" secondItem="MZY-Qe-29q" secondAttribute="trailing" constant="15" id="btr-Et-ESv"/>
@@ -162,13 +198,17 @@
                     <constraint firstAttribute="trailing" secondItem="7Tl-e3-qZT" secondAttribute="trailing" constant="15" id="iQ5-N3-i6U"/>
                     <constraint firstAttribute="trailing" secondItem="zAk-vV-zge" secondAttribute="trailing" constant="15" id="khU-Wu-8L0"/>
                     <constraint firstItem="hBC-b9-snf" firstAttribute="centerY" secondItem="fkc-f5-JEC" secondAttribute="centerY" id="kyt-87-Sqa"/>
+                    <constraint firstItem="9TE-yQ-UeO" firstAttribute="leading" secondItem="3kV-Vv-qbo" secondAttribute="trailing" constant="10" id="lNR-wZ-JVf"/>
+                    <constraint firstItem="T0t-KE-tVV" firstAttribute="height" secondItem="3kV-Vv-qbo" secondAttribute="height" id="pG9-7I-lmz"/>
+                    <constraint firstItem="9TE-yQ-UeO" firstAttribute="width" secondItem="3kV-Vv-qbo" secondAttribute="width" id="pnr-Q1-o8l"/>
                     <constraint firstItem="LdN-Gn-Mb9" firstAttribute="leading" secondItem="hxn-Xp-gIW" secondAttribute="trailing" constant="5" id="rEB-H4-oac"/>
-                    <constraint firstItem="3kV-Vv-qbo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="rFo-IT-X7Y"/>
                     <constraint firstItem="3Za-hx-ds4" firstAttribute="centerY" secondItem="non-1d-NW4" secondAttribute="centerY" id="rwJ-X8-Jbo"/>
                     <constraint firstItem="MZY-Qe-29q" firstAttribute="centerY" secondItem="hBC-b9-snf" secondAttribute="centerY" id="sNR-2k-BGy"/>
+                    <constraint firstItem="T0t-KE-tVV" firstAttribute="centerY" secondItem="3kV-Vv-qbo" secondAttribute="centerY" id="t32-L3-si4"/>
                     <constraint firstItem="zAk-vV-zge" firstAttribute="top" secondItem="3Za-hx-ds4" secondAttribute="bottom" constant="5" id="wcn-sJ-lXR"/>
                     <constraint firstItem="y2h-ez-vYu" firstAttribute="centerY" secondItem="LdN-Gn-Mb9" secondAttribute="centerY" id="wpY-Ko-oln"/>
                     <constraint firstItem="hxn-Xp-gIW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="x4n-0X-nxI"/>
+                    <constraint firstAttribute="trailing" secondItem="T0t-KE-tVV" secondAttribute="trailing" constant="15" id="yNH-cY-l61"/>
                     <constraint firstItem="hxn-Xp-gIW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="zWN-r2-ZNq"/>
                 </constraints>
             </tableViewCellContentView>
@@ -179,16 +219,19 @@
                 <outlet property="deliveryDistanceLabel" destination="hBC-b9-snf" id="UPu-n7-q4e"/>
                 <outlet property="deliveryInformationBtn" destination="MZY-Qe-29q" id="Qxk-kj-gjy"/>
                 <outlet property="iconLabel" destination="y2h-ez-vYu" id="ivd-7G-Lb5"/>
+                <outlet property="operatingBtn" destination="T0t-KE-tVV" id="JQb-SB-OT1"/>
                 <outlet property="pickupAddressLabel" destination="K4G-Fj-Gbx" id="6bW-Te-3Py"/>
                 <outlet property="pickupDistanceLabel" destination="3Za-hx-ds4" id="nGG-uW-pmg"/>
                 <outlet property="pickupInformationBtn" destination="fvB-iR-SRH" id="3kz-1q-Zg4"/>
                 <outlet property="pickupPlaceLabel" destination="zAk-vV-zge" id="Ugo-Ai-P6p"/>
                 <outlet property="priceLabel" destination="B8m-1V-Ilu" id="8IG-4X-Ywc"/>
+                <outlet property="toBusinessBtn" destination="3kV-Vv-qbo" id="Z14-eF-Vaz"/>
+                <outlet property="toUseBtn" destination="9TE-yQ-UeO" id="Aek-q6-j6I"/>
             </connections>
-            <point key="canvasLocation" x="-319" y="17"/>
+            <point key="canvasLocation" x="-54" y="20"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="1" width="59" height="59"/>
+        <image name="1" width="30" height="30"/>
     </resources>
 </document>

@@ -1,14 +1,14 @@
 //
-//  VMNewTaskTableViewCell.m
+//  VMWaitPickUpTableViewCell.m
 //  VegetableManagement
 //
 //  Created by Apple on 2018/3/30.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "VMNewTaskTableViewCell.h"
+#import "VMWaitPickUpTableViewCell.h"
 
-@implementation VMNewTaskTableViewCell
+@implementation VMWaitPickUpTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -19,9 +19,14 @@
     self.deliveryInformationBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.deliveryInformationBtn.layer.borderWidth = 1;
     self.deliveryInformationBtn.layer.cornerRadius = 2;
+    self.toBusinessBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.toBusinessBtn.layer.borderWidth = 1;
+    self.toUseBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.toUseBtn.layer.borderWidth = 1;
 }
 
-- (IBAction)creatNewOrderBtnClick:(UIButton *)sender {
+- (IBAction)cellBtnClick:(UIButton *)sender {
+    
     
 }
 

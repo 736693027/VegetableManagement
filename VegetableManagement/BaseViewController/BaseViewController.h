@@ -12,5 +12,7 @@
     UIButton *navRrightBtn;//导航右侧按钮
     UIButton *navLeftBtn;//导航左侧按钮
 }
+- (void)navLeftButtonClicked:(UIButton *)sender;
 
+- (void)navRightButtonClicked:(UIButton *)sender;
 @end

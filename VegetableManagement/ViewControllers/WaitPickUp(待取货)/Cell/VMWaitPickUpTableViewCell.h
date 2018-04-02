@@ -1,5 +1,5 @@
 //
-//  VMNewTaskTableViewCell.h
+//  VMWaitPickUpTableViewCell.h
 //  VegetableManagement
 //
 //  Created by Apple on 2018/3/30.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VMNewTaskTableViewCell : UITableViewCell
+@interface VMWaitPickUpTableViewCell : UITableViewCell
 
 //取货信息
 @property (weak, nonatomic) IBOutlet UIButton *pickupInformationBtn;
@@ -28,6 +28,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *deliveryDistanceLabel;
 //送货的地址
 @property (weak, nonatomic) IBOutlet UILabel *deliveryAddressLabel;
+//显示'菜帮配送'
 @property (weak, nonatomic) IBOutlet UILabel *iconLabel;
+//电话商家
+@property (weak, nonatomic) IBOutlet UIButton *toBusinessBtn;
+//电话用户
+@property (weak, nonatomic) IBOutlet UIButton *toUseBtn;
+//订单操作按钮
+@property (weak, nonatomic) IBOutlet UIButton *operatingBtn;
 
 @end

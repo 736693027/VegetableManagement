@@ -7,6 +7,7 @@
 //
 
 #import "VMDeliveryOrderViewController.h"
+#import "VMWaitPickUpTableViewCell.h"
 
 @interface VMDeliveryOrderViewController ()
 
@@ -16,22 +17,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //导航左侧按钮设置
+    [navLeftBtn setImage:[UIImage imageNamed:@"1"] forState:UIControlStateNormal];
+    self.dataTableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    self.dataTableView.separatorColor = [UIColor greenColor];
+    self.dataTableView.rowHeight = UITableViewAutomaticDimension;
+    self.dataTableView.estimatedRowHeight = 245;
+    [self.dataTableView registerNib:[UINib nibWithNibName:@"VMWaitPickUpTableViewCell" bundle:nil] forCellReuseIdentifier:@"VMWaitPickUpTableViewCell"];
 }
 
+#pragma mark nav leftBarBtn click
+- (void)navLeftButtonClicked:(UIButton *)sender {
+    
+}
+
+#pragma mark tableView datasource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    VMWaitPickUpTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMWaitPickUpTableViewCell"];
+    [cell.operatingBtn setTitle:@"我已送达" forState:UIControlStateNormal];
+    return cell;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
