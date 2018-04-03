@@ -34,6 +34,18 @@ PODS:
   - IQKeyboardManager (5.0.8)
   - Masonry (0.6.4)
   - MJRefresh (3.0.8)
+  - MMDrawerController (0.6.0):
+    - MMDrawerController/Core (= 0.6.0)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
+    - MMDrawerController/MMDrawerVisualStates (= 0.6.0)
+    - MMDrawerController/Subclass (= 0.6.0)
+  - MMDrawerController/Core (0.6.0)
+  - MMDrawerController/MMDrawerBarButtonItem (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.6.0):
+    - MMDrawerController/Core
   - ReactiveObjC (3.1.0)
   - Realm (3.1.1):
     - Realm/Headers (= 3.1.1)
@@ -55,6 +67,7 @@ DEPENDENCIES:
   - IQKeyboardManager (~> 5.0.7)
   - Masonry (~> 0.6.3)
   - MJRefresh (~> 3.0.7)
+  - MMDrawerController (~> 0.6.0)
   - ReactiveObjC (~> 3.1.0)
   - Realm (~> 3.1.0)
   - SDWebImage (~> 3.7.3)
@@ -73,6 +86,7 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 266cb7b1d11f94a3e71229d77f960f9a1b538e5b
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
+  MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   Realm: 42d1c38a5b1bbcc828b48a7ce702cb86fc68adf4
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
@@ -80,6 +94,6 @@ SPEC CHECKSUMS:
   YTKNetwork: 28ef7a3c119f61e737a76abbe74ff2fe1afec913
   YYModel: 33a27f41a995f4c36ff8178421bac9f221a9c7ea
 
-PODFILE CHECKSUM: d1b46ccfe39aa077b66b1814082f99011bb6d2e4
+PODFILE CHECKSUM: d1a2f8f898e0b78de2cc5eecab5aaa4347d12ded
 
 COCOAPODS: 1.4.0

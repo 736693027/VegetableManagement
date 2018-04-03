@@ -19,4 +19,6 @@ pod 'AMap3DMap'
 pod 'AMapLocation'
 pod 'AMapNavi'
 
+pod 'MMDrawerController', '~> 0.6.0'
+
 end
