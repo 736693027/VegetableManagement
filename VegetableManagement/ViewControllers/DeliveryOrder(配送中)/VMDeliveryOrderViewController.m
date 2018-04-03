@@ -22,9 +22,8 @@
     [navLeftBtn setImage:[UIImage imageNamed:@"1"] forState:UIControlStateNormal];
     self.dataTableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     self.dataTableView.separatorColor = [UIColor greenColor];
-    self.dataTableView.rowHeight = UITableViewAutomaticDimension;
-    self.dataTableView.estimatedRowHeight = 245;
-    [self.dataTableView registerNib:[UINib nibWithNibName:@"VMWaitPickUpTableViewCell" bundle:nil] forCellReuseIdentifier:@"VMWaitPickUpTableViewCell"];
+    NSString *cellClassName = NSStringFromClass([VMWaitPickUpTableViewCell class]);
+    [self tableRegisterNibName:cellClassName cellReuseIdentifier:cellClassName estimatedRowHeight:245];
 }
 
 #pragma mark nav leftBarBtn click

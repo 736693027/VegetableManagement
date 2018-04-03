@@ -8,6 +8,7 @@
 
 #import "VMSetupViewController.h"
 #import "VMSetupTableViewCell.h"
+#import "VMSelectAgentViewController.h"
 
 @interface VMSetupViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -58,6 +59,29 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.00001f;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.section == 0){
+        switch (indexPath.row) {
+            case 0:{
+                    
+            }
+                break;
+            case 1:{
+                
+            }
+                break;
+            case 2:{
+                VMSelectAgentViewController *selectAgentVC = [[VMSelectAgentViewController alloc] init];
+                [self.navigationController pushViewController:selectAgentVC animated:YES];
+            }
+                break;
+            default:
+                break;
+        }
+    }else{
+        
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

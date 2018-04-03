@@ -41,10 +41,19 @@
     _dataTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(tableHeadViewRefreshAction)];
     _dataTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(tableFootViewRefreshAction)];
 }
+
+- (void)tableRegisterNibName:(NSString *)nibName cellReuseIdentifier:(NSString *)cellReuseIdentifier estimatedRowHeight:(CGFloat)height{
+    self.dataTableView.rowHeight = UITableViewAutomaticDimension;
+    self.dataTableView.estimatedRowHeight = height;
+    [self.dataTableView registerNib:[UINib nibWithNibName:nibName bundle:nil] forCellReuseIdentifier:cellReuseIdentifier];
+}
+
 - (void)tableHeadViewRefreshAction{
 };
+
 - (void)tableFootViewRefreshAction{
 };
+
 - (void)setIsClickEmptyImageLoading:(BOOL)isClickEmptyImageLoading
 {
     if (self.isClickEmptyImageLoading == isClickEmptyImageLoading) {

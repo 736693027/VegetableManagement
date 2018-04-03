@@ -20,4 +20,6 @@
 - (void)tableHeadViewRefreshAction;
 - (void)tableFootViewRefreshAction;
 
+- (void)tableRegisterNibName:(NSString *)nibName cellReuseIdentifier:(NSString *)CellReuseIdentifier estimatedRowHeight:(CGFloat)height;
+
 @end

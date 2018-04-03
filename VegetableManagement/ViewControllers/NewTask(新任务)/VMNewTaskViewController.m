@@ -29,9 +29,8 @@
     
     self.dataTableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     self.dataTableView.separatorColor = [UIColor greenColor];
-    self.dataTableView.rowHeight = UITableViewAutomaticDimension;
-    self.dataTableView.estimatedRowHeight = 245;
-    [self.dataTableView registerNib:[UINib nibWithNibName:@"VMNewTaskTableViewCell" bundle:nil] forCellReuseIdentifier:@"VMNewTaskTableViewCell"];
+    NSString *cellClassName = NSStringFromClass([VMNewTaskTableViewCell class]);
+    [self tableRegisterNibName:cellClassName cellReuseIdentifier:cellClassName estimatedRowHeight:245];
 }
 
 #pragma mark nav leftBarBtn click

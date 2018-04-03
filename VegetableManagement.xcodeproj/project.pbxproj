@@ -19,6 +19,14 @@
 		1832BF6020722D0000FC83B0 /* VMSetupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF5E20722D0000FC83B0 /* VMSetupTableViewCell.m */; };
 		1832BF66207317F000FC83B0 /* VMHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF64207317F000FC83B0 /* VMHelpViewController.m */; };
 		1832BF67207317F000FC83B0 /* VMHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832BF65207317F000FC83B0 /* VMHelpViewController.xib */; };
+		1832BF6C20734C3500FC83B0 /* VMMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF6A20734C3500FC83B0 /* VMMessageCenterViewController.m */; };
+		1832BF7220734C9000FC83B0 /* VMMessageCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF7020734C9000FC83B0 /* VMMessageCenterTableViewCell.m */; };
+		1832BF7320734C9000FC83B0 /* VMMessageCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832BF7120734C9000FC83B0 /* VMMessageCenterTableViewCell.xib */; };
+		1832BF7720735A2900FC83B0 /* VMMessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF7520735A2900FC83B0 /* VMMessageDetailViewController.m */; };
+		1832BF7820735A2900FC83B0 /* VMMessageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832BF7620735A2900FC83B0 /* VMMessageDetailViewController.xib */; };
+		1832BF822073659600FC83B0 /* VMSelectAgentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF7F2073659600FC83B0 /* VMSelectAgentViewController.m */; };
+		1832BF88207367B700FC83B0 /* VMSelectAgentViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF86207367B700FC83B0 /* VMSelectAgentViewTableViewCell.m */; };
+		1832BF89207367B700FC83B0 /* VMSelectAgentViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832BF87207367B700FC83B0 /* VMSelectAgentViewTableViewCell.xib */; };
 		185B1DD6206E092700816924 /* CustomerTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B1DD5206E092700816924 /* CustomerTabBarView.m */; };
 		185B1DDA206E096300816924 /* CustomerTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185B1DD9206E096300816924 /* CustomerTabBarView.xib */; };
 		185B1DDD206E0DA600816924 /* VMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B1DDC206E0DA600816924 /* VMTabBarController.m */; };
@@ -57,6 +65,19 @@
 		1832BF63207317F000FC83B0 /* VMHelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMHelpViewController.h; sourceTree = "<group>"; };
 		1832BF64207317F000FC83B0 /* VMHelpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMHelpViewController.m; sourceTree = "<group>"; };
 		1832BF65207317F000FC83B0 /* VMHelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMHelpViewController.xib; sourceTree = "<group>"; };
+		1832BF6920734C3500FC83B0 /* VMMessageCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMMessageCenterViewController.h; sourceTree = "<group>"; };
+		1832BF6A20734C3500FC83B0 /* VMMessageCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMessageCenterViewController.m; sourceTree = "<group>"; };
+		1832BF6F20734C9000FC83B0 /* VMMessageCenterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMMessageCenterTableViewCell.h; sourceTree = "<group>"; };
+		1832BF7020734C9000FC83B0 /* VMMessageCenterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMessageCenterTableViewCell.m; sourceTree = "<group>"; };
+		1832BF7120734C9000FC83B0 /* VMMessageCenterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMMessageCenterTableViewCell.xib; sourceTree = "<group>"; };
+		1832BF7420735A2900FC83B0 /* VMMessageDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMMessageDetailViewController.h; sourceTree = "<group>"; };
+		1832BF7520735A2900FC83B0 /* VMMessageDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMessageDetailViewController.m; sourceTree = "<group>"; };
+		1832BF7620735A2900FC83B0 /* VMMessageDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMMessageDetailViewController.xib; sourceTree = "<group>"; };
+		1832BF7F2073659600FC83B0 /* VMSelectAgentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMSelectAgentViewController.m; sourceTree = "<group>"; };
+		1832BF802073659600FC83B0 /* VMSelectAgentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMSelectAgentViewController.h; sourceTree = "<group>"; };
+		1832BF85207367B700FC83B0 /* VMSelectAgentViewTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMSelectAgentViewTableViewCell.h; sourceTree = "<group>"; };
+		1832BF86207367B700FC83B0 /* VMSelectAgentViewTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMSelectAgentViewTableViewCell.m; sourceTree = "<group>"; };
+		1832BF87207367B700FC83B0 /* VMSelectAgentViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMSelectAgentViewTableViewCell.xib; sourceTree = "<group>"; };
 		185B1DD4206E092700816924 /* CustomerTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomerTabBarView.h; sourceTree = "<group>"; };
 		185B1DD5206E092700816924 /* CustomerTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomerTabBarView.m; sourceTree = "<group>"; };
 		185B1DD9206E096300816924 /* CustomerTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerTabBarView.xib; sourceTree = "<group>"; };
@@ -167,6 +188,49 @@
 			path = "Help(帮助中心)";
 			sourceTree = "<group>";
 		};
+		1832BF6820734C2100FC83B0 /* MessageCenter(消息中心) */ = {
+			isa = PBXGroup;
+			children = (
+				1832BF6E20734C7800FC83B0 /* Cell */,
+				1832BF6920734C3500FC83B0 /* VMMessageCenterViewController.h */,
+				1832BF6A20734C3500FC83B0 /* VMMessageCenterViewController.m */,
+				1832BF7420735A2900FC83B0 /* VMMessageDetailViewController.h */,
+				1832BF7520735A2900FC83B0 /* VMMessageDetailViewController.m */,
+				1832BF7620735A2900FC83B0 /* VMMessageDetailViewController.xib */,
+			);
+			path = "MessageCenter(消息中心)";
+			sourceTree = "<group>";
+		};
+		1832BF6E20734C7800FC83B0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1832BF6F20734C9000FC83B0 /* VMMessageCenterTableViewCell.h */,
+				1832BF7020734C9000FC83B0 /* VMMessageCenterTableViewCell.m */,
+				1832BF7120734C9000FC83B0 /* VMMessageCenterTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1832BF7E2073659600FC83B0 /* SelectAgent(代理商选择) */ = {
+			isa = PBXGroup;
+			children = (
+				1832BF84207367A500FC83B0 /* Cell */,
+				1832BF802073659600FC83B0 /* VMSelectAgentViewController.h */,
+				1832BF7F2073659600FC83B0 /* VMSelectAgentViewController.m */,
+			);
+			path = "SelectAgent(代理商选择)";
+			sourceTree = "<group>";
+		};
+		1832BF84207367A500FC83B0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1832BF85207367B700FC83B0 /* VMSelectAgentViewTableViewCell.h */,
+				1832BF86207367B700FC83B0 /* VMSelectAgentViewTableViewCell.m */,
+				1832BF87207367B700FC83B0 /* VMSelectAgentViewTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		185B1DD3206E090600816924 /* TabBarViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +248,8 @@
 		185B1DE1206E11AA00816924 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1832BF7E2073659600FC83B0 /* SelectAgent(代理商选择) */,
+				1832BF6820734C2100FC83B0 /* MessageCenter(消息中心) */,
 				1832BF62207317DC00FC83B0 /* Help(帮助中心) */,
 				1832BF4F2072223C00FC83B0 /* Setup(设置) */,
 				1832BF1B20720C5500FC83B0 /* PersonalCenter(个人中心) */,
@@ -369,9 +435,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1832BF7820735A2900FC83B0 /* VMMessageDetailViewController.xib in Resources */,
 				1832BF5F20722D0000FC83B0 /* VMSetupTableViewCell.xib in Resources */,
 				185B1DF9206E24CD00816924 /* VMNewTaskTableViewCell.xib in Resources */,
 				1832BF26207215FC00FC83B0 /* VMPersonalCenterTableViewCell.xib in Resources */,
+				1832BF7320734C9000FC83B0 /* VMMessageCenterTableViewCell.xib in Resources */,
+				1832BF89207367B700FC83B0 /* VMSelectAgentViewTableViewCell.xib in Resources */,
 				1832BF2020720FFC00FC83B0 /* VMPersonalCenterViewController.xib in Resources */,
 				1832BF542072225400FC83B0 /* VMSetupViewController.xib in Resources */,
 				1832BF192071DE1B00FC83B0 /* VMWaitPickUpTableViewCell.xib in Resources */,
@@ -475,10 +544,13 @@
 				185B1DE7206E11FC00816924 /* VMNewTaskViewController.m in Sources */,
 				185B1DDD206E0DA600816924 /* VMTabBarController.m in Sources */,
 				1832BF25207215FC00FC83B0 /* VMPersonalCenterTableViewCell.m in Sources */,
+				1832BF88207367B700FC83B0 /* VMSelectAgentViewTableViewCell.m in Sources */,
 				18CC2212206CBBED007E1274 /* AppDelegate.m in Sources */,
 				185B1DE0206E0EAF00816924 /* VMCustomTabBar.m in Sources */,
+				1832BF7720735A2900FC83B0 /* VMMessageDetailViewController.m in Sources */,
 				1832BF1F20720FFC00FC83B0 /* VMPersonalCenterViewController.m in Sources */,
 				185B1DF3206E161900816924 /* BaseTableViewController.m in Sources */,
+				1832BF7220734C9000FC83B0 /* VMMessageCenterTableViewCell.m in Sources */,
 				185B1DD6206E092700816924 /* CustomerTabBarView.m in Sources */,
 				1832BF182071DE1B00FC83B0 /* VMWaitPickUpTableViewCell.m in Sources */,
 				1832BF6020722D0000FC83B0 /* VMSetupTableViewCell.m in Sources */,
@@ -487,6 +559,8 @@
 				1832BF66207317F000FC83B0 /* VMHelpViewController.m in Sources */,
 				185B1DED206E15D000816924 /* VMWaitPickUpViewController.m in Sources */,
 				1832BF532072225400FC83B0 /* VMSetupViewController.m in Sources */,
+				1832BF6C20734C3500FC83B0 /* VMMessageCenterViewController.m in Sources */,
+				1832BF822073659600FC83B0 /* VMSelectAgentViewController.m in Sources */,
 				185B1DF8206E24CD00816924 /* VMNewTaskTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

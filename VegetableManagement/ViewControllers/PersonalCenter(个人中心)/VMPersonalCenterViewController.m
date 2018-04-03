@@ -10,6 +10,7 @@
 #import "VMPersonalCenterTableViewCell.h"
 #import "VMSetupViewController.h"
 #import "VMHelpViewController.h"
+#import "VMMessageCenterViewController.h"
 
 @interface VMPersonalCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -87,7 +88,8 @@
                 break;
             case 1:
             {
-                
+                VMMessageCenterViewController *messagerCenterVC = [[VMMessageCenterViewController alloc] init];
+                [self.navigationController pushViewController:messagerCenterVC animated:YES];
             }
                 break;
             case 2:
