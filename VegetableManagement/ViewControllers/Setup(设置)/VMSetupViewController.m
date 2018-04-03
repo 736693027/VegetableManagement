@@ -22,11 +22,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"设置";
-    if (@available(iOS 11.0, *)){
-        [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
-    }else{
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
+//    if (@available(iOS 11.0, *)){
+//        [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+//    }else{
+//        self.automaticallyAdjustsScrollViewInsets = NO;
+//    }
     _titleArray = @[@[@"我的位置",@"当前版本",@"代理商选择"],@[@"安全退出"]];
     self.dataTableView.rowHeight = UITableViewAutomaticDimension;
     self.dataTableView.estimatedRowHeight = 44;

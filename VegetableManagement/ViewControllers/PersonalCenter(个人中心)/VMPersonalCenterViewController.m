@@ -9,6 +9,7 @@
 #import "VMPersonalCenterViewController.h"
 #import "VMPersonalCenterTableViewCell.h"
 #import "VMSetupViewController.h"
+#import "VMHelpViewController.h"
 
 @interface VMPersonalCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -91,7 +92,8 @@
                 break;
             case 2:
             {
-                
+                VMHelpViewController *helpVC = [[VMHelpViewController alloc] init];
+                [self.navigationController pushViewController:helpVC animated:YES];
             }
                 break;
                 

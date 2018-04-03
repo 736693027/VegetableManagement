@@ -17,6 +17,8 @@
 		1832BF542072225400FC83B0 /* VMSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832BF522072225400FC83B0 /* VMSetupViewController.xib */; };
 		1832BF5F20722D0000FC83B0 /* VMSetupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832BF5C20722D0000FC83B0 /* VMSetupTableViewCell.xib */; };
 		1832BF6020722D0000FC83B0 /* VMSetupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF5E20722D0000FC83B0 /* VMSetupTableViewCell.m */; };
+		1832BF66207317F000FC83B0 /* VMHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF64207317F000FC83B0 /* VMHelpViewController.m */; };
+		1832BF67207317F000FC83B0 /* VMHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832BF65207317F000FC83B0 /* VMHelpViewController.xib */; };
 		185B1DD6206E092700816924 /* CustomerTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B1DD5206E092700816924 /* CustomerTabBarView.m */; };
 		185B1DDA206E096300816924 /* CustomerTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185B1DD9206E096300816924 /* CustomerTabBarView.xib */; };
 		185B1DDD206E0DA600816924 /* VMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B1DDC206E0DA600816924 /* VMTabBarController.m */; };
@@ -52,6 +54,9 @@
 		1832BF5C20722D0000FC83B0 /* VMSetupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMSetupTableViewCell.xib; sourceTree = "<group>"; };
 		1832BF5D20722D0000FC83B0 /* VMSetupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMSetupTableViewCell.h; sourceTree = "<group>"; };
 		1832BF5E20722D0000FC83B0 /* VMSetupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMSetupTableViewCell.m; sourceTree = "<group>"; };
+		1832BF63207317F000FC83B0 /* VMHelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMHelpViewController.h; sourceTree = "<group>"; };
+		1832BF64207317F000FC83B0 /* VMHelpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMHelpViewController.m; sourceTree = "<group>"; };
+		1832BF65207317F000FC83B0 /* VMHelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMHelpViewController.xib; sourceTree = "<group>"; };
 		185B1DD4206E092700816924 /* CustomerTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomerTabBarView.h; sourceTree = "<group>"; };
 		185B1DD5206E092700816924 /* CustomerTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomerTabBarView.m; sourceTree = "<group>"; };
 		185B1DD9206E096300816924 /* CustomerTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerTabBarView.xib; sourceTree = "<group>"; };
@@ -152,6 +157,16 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		1832BF62207317DC00FC83B0 /* Help(帮助中心) */ = {
+			isa = PBXGroup;
+			children = (
+				1832BF63207317F000FC83B0 /* VMHelpViewController.h */,
+				1832BF64207317F000FC83B0 /* VMHelpViewController.m */,
+				1832BF65207317F000FC83B0 /* VMHelpViewController.xib */,
+			);
+			path = "Help(帮助中心)";
+			sourceTree = "<group>";
+		};
 		185B1DD3206E090600816924 /* TabBarViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +184,7 @@
 		185B1DE1206E11AA00816924 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1832BF62207317DC00FC83B0 /* Help(帮助中心) */,
 				1832BF4F2072223C00FC83B0 /* Setup(设置) */,
 				1832BF1B20720C5500FC83B0 /* PersonalCenter(个人中心) */,
 				185B1DE2206E11AA00816924 /* NewTask(新任务) */,
@@ -361,6 +377,7 @@
 				1832BF192071DE1B00FC83B0 /* VMWaitPickUpTableViewCell.xib in Resources */,
 				185B1DDA206E096300816924 /* CustomerTabBarView.xib in Resources */,
 				18CC221A206CBBED007E1274 /* Assets.xcassets in Resources */,
+				1832BF67207317F000FC83B0 /* VMHelpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +484,7 @@
 				1832BF6020722D0000FC83B0 /* VMSetupTableViewCell.m in Sources */,
 				185B1DEA206E154200816924 /* VMNavigationController.m in Sources */,
 				18CC2242206CD5E9007E1274 /* CommonTools.m in Sources */,
+				1832BF66207317F000FC83B0 /* VMHelpViewController.m in Sources */,
 				185B1DED206E15D000816924 /* VMWaitPickUpViewController.m in Sources */,
 				1832BF532072225400FC83B0 /* VMSetupViewController.m in Sources */,
 				185B1DF8206E24CD00816924 /* VMNewTaskTableViewCell.m in Sources */,
