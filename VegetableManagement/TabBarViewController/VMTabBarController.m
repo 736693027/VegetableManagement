@@ -60,7 +60,7 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     CGRect frame = self.tabBar.frame;
-    frame.size.height = 60;
+    frame.size.height = TabBarHeight;
     frame.origin.y = self.view.frame.size.height - frame.size.height;
     self.tabBar.frame = frame;
 //    self.tabBar.backgroundColor = [UIColor blackColor];

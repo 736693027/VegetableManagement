@@ -85,21 +85,36 @@
  颜色数值转换:#ababab
  */
 +(UIColor *)changeColor:(NSString *)str{
-    unsigned int red,green,blue;
-    NSString * str1 = [str substringWithRange:NSMakeRange(1, 2)];
-    NSString * str2 = [str substringWithRange:NSMakeRange(3, 2)];
-    NSString * str3 = [str substringWithRange:NSMakeRange(5, 2)];
-    
-    NSScanner * canner = [NSScanner scannerWithString:str1];
-    [canner scanHexInt:&red];
-    
-    canner = [NSScanner scannerWithString:str2];
-    [canner scanHexInt:&green];
-    
-    canner = [NSScanner scannerWithString:str3];
-    [canner scanHexInt:&blue];
-    UIColor * color = [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1.0];
-    return color;
+    if ([str length] <6){//长度不合法
+        return [UIColor blackColor];
+    }
+    NSString *tempString=[str lowercaseString];
+    if ([tempString hasPrefix:@"0x"]){//检查开头是0x
+        tempString = [tempString substringFromIndex:2];
+    }else if ([tempString hasPrefix:@"#"]){//检查开头是#
+        tempString = [tempString substringFromIndex:1];
+    }
+    if ([tempString length] !=6){
+        return [UIColor blackColor];
+    }
+    //分解三种颜色的值
+    NSRange range;
+    range.location =0;
+    range.length =2;
+    NSString *rString = [tempString substringWithRange:range];
+    range.location =2;
+    NSString *gString = [tempString substringWithRange:range];
+    range.location =4;
+    NSString *bString = [tempString substringWithRange:range];
+    //取三种颜色值
+    unsigned int r, g, b;
+    [[NSScanner scannerWithString:rString]scanHexInt:&r];
+    [[NSScanner scannerWithString:gString]scanHexInt:&g];
+    [[NSScanner scannerWithString:bString]scanHexInt:&b];
+    return [UIColor colorWithRed:((float) r /255.0f)
+                           green:((float) g /255.0f)
+                            blue:((float) b /255.0f)
+                           alpha:1.0f];
 }
 /*
  颜色数值转换:#ababab  透明度 alpha

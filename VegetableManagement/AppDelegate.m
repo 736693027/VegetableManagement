@@ -9,8 +9,12 @@
 #import "AppDelegate.h"
 #import "BaseViewController.h"
 #import "VMTabBarController.h"
+#import <MMDrawerController/MMDrawerController.h>
+#import "VMPersonalCenterViewController.h"
 
 @interface AppDelegate ()
+
+@property(nonatomic,strong) MMDrawerController * drawerController;
 
 @end
 
@@ -20,7 +24,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[VMTabBarController alloc] init];
+    
+    VMTabBarController *tabBarVC = [[VMTabBarController alloc] init];
+    VMPersonalCenterViewController *personCenter = [[VMPersonalCenterViewController alloc] init];
+    
+    //3、使用MMDrawerController
+    self.drawerController = [[MMDrawerController alloc]initWithCenterViewController:tabBarVC leftDrawerViewController:personCenter rightDrawerViewController:nil];
+    
+    //4、设置打开/关闭抽屉的手势
+    self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+    self.drawerController.closeDrawerGestureModeMask =MMCloseDrawerGestureModeAll;
+    //5、设置左右两边抽屉显示的多少
+    self.drawerController.maximumLeftDrawerWidth = 300.0;
+    [self.drawerController setShowsShadow:NO];
+    
+    self.window.rootViewController = self.drawerController;
     [self.window makeKeyAndVisible];
     return YES;
 }

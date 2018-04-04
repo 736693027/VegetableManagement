@@ -27,6 +27,7 @@
 		1832BF822073659600FC83B0 /* VMSelectAgentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF7F2073659600FC83B0 /* VMSelectAgentViewController.m */; };
 		1832BF88207367B700FC83B0 /* VMSelectAgentViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF86207367B700FC83B0 /* VMSelectAgentViewTableViewCell.m */; };
 		1832BF89207367B700FC83B0 /* VMSelectAgentViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832BF87207367B700FC83B0 /* VMSelectAgentViewTableViewCell.xib */; };
+		1832BF8C2074AD3500FC83B0 /* VMTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF8B2074AD3500FC83B0 /* VMTabBarView.m */; };
 		185B1DD6206E092700816924 /* CustomerTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B1DD5206E092700816924 /* CustomerTabBarView.m */; };
 		185B1DDA206E096300816924 /* CustomerTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185B1DD9206E096300816924 /* CustomerTabBarView.xib */; };
 		185B1DDD206E0DA600816924 /* VMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B1DDC206E0DA600816924 /* VMTabBarController.m */; };
@@ -78,6 +79,8 @@
 		1832BF85207367B700FC83B0 /* VMSelectAgentViewTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMSelectAgentViewTableViewCell.h; sourceTree = "<group>"; };
 		1832BF86207367B700FC83B0 /* VMSelectAgentViewTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMSelectAgentViewTableViewCell.m; sourceTree = "<group>"; };
 		1832BF87207367B700FC83B0 /* VMSelectAgentViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMSelectAgentViewTableViewCell.xib; sourceTree = "<group>"; };
+		1832BF8A2074AD3500FC83B0 /* VMTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMTabBarView.h; sourceTree = "<group>"; };
+		1832BF8B2074AD3500FC83B0 /* VMTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMTabBarView.m; sourceTree = "<group>"; };
 		185B1DD4206E092700816924 /* CustomerTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomerTabBarView.h; sourceTree = "<group>"; };
 		185B1DD5206E092700816924 /* CustomerTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomerTabBarView.m; sourceTree = "<group>"; };
 		185B1DD9206E096300816924 /* CustomerTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerTabBarView.xib; sourceTree = "<group>"; };
@@ -241,6 +244,8 @@
 				185B1DDF206E0EAF00816924 /* VMCustomTabBar.m */,
 				185B1DDB206E0DA600816924 /* VMTabBarController.h */,
 				185B1DDC206E0DA600816924 /* VMTabBarController.m */,
+				1832BF8A2074AD3500FC83B0 /* VMTabBarView.h */,
+				1832BF8B2074AD3500FC83B0 /* VMTabBarView.m */,
 			);
 			path = TabBarViewController;
 			sourceTree = "<group>";
@@ -559,6 +564,7 @@
 				185B1DEA206E154200816924 /* VMNavigationController.m in Sources */,
 				18CC2242206CD5E9007E1274 /* CommonTools.m in Sources */,
 				1832BF66207317F000FC83B0 /* VMHelpViewController.m in Sources */,
+				1832BF8C2074AD3500FC83B0 /* VMTabBarView.m in Sources */,
 				185B1DED206E15D000816924 /* VMWaitPickUpViewController.m in Sources */,
 				1832BF532072225400FC83B0 /* VMSetupViewController.m in Sources */,
 				1832BF6C20734C3500FC83B0 /* VMMessageCenterViewController.m in Sources */,
@@ -691,7 +697,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lubao.VegetableManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -708,7 +714,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lubao.VegetableManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

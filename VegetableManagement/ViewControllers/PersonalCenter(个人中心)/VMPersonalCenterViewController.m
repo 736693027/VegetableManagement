@@ -11,6 +11,7 @@
 #import "VMSetupViewController.h"
 #import "VMHelpViewController.h"
 #import "VMMessageCenterViewController.h"
+#import "UIViewController+MMDrawerController.h"
 
 @interface VMPersonalCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -82,8 +83,16 @@
         switch (indexPath.row) {
             case 0:
             {
+                //拿到我们的LitterLCenterViewController，让它去push
+                UITabBarController* nav = (UITabBarController*)self.mm_drawerController.centerViewController;
+                NSArray *arr = nav.viewControllers;
                 VMSetupViewController *setupVC = [[VMSetupViewController alloc] init];
-                [self.navigationController pushViewController:setupVC animated:YES];
+                [arr[0] pushViewController:setupVC animated:NO];
+                //当我们push成功之后，关闭我们的抽屉
+                [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
+                    //设置打开抽屉模式为MMOpenDrawerGestureModeNone，也就是没有任何效果。
+                    [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
+                }];
             }
                 break;
             case 1:
