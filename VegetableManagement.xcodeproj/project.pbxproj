@@ -44,6 +44,12 @@
 		18CC2220206CBBED007E1274 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CC221F206CBBED007E1274 /* main.m */; };
 		18CC2240206CD5E9007E1274 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CC2237206CD5E9007E1274 /* BaseViewController.m */; };
 		18CC2242206CD5E9007E1274 /* CommonTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CC223D206CD5E9007E1274 /* CommonTools.m */; };
+		18F7AA012079FE52009A4D4E /* VMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F7A9FF2079FE52009A4D4E /* VMLoginViewController.m */; };
+		18F7AA022079FE52009A4D4E /* VMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F7AA002079FE52009A4D4E /* VMLoginViewController.xib */; };
+		18F7AA07207A062F009A4D4E /* VMFinishedOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F7AA05207A062F009A4D4E /* VMFinishedOrderViewController.m */; };
+		18F7AA08207A062F009A4D4E /* VMFinishedOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F7AA06207A062F009A4D4E /* VMFinishedOrderViewController.xib */; };
+		18F7AA0C207A0DC2009A4D4E /* VMFinishedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F7AA0A207A0DC2009A4D4E /* VMFinishedTableViewController.m */; };
+		18F7AA0D207A0DC2009A4D4E /* VMFinishedTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F7AA0B207A0DC2009A4D4E /* VMFinishedTableViewController.xib */; };
 		89F31D8AC665279E1A817B70 /* Pods_VegetableManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83F405C6F6A6BB5575622E0 /* Pods_VegetableManagement.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +118,15 @@
 		18CC223C206CD5E9007E1274 /* VegetableHeaderFile.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VegetableHeaderFile.pch; sourceTree = "<group>"; };
 		18CC223D206CD5E9007E1274 /* CommonTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTools.m; sourceTree = "<group>"; };
 		18CC223F206CD5E9007E1274 /* CommonTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTools.h; sourceTree = "<group>"; };
+		18F7A9FE2079FE52009A4D4E /* VMLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMLoginViewController.h; sourceTree = "<group>"; };
+		18F7A9FF2079FE52009A4D4E /* VMLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMLoginViewController.m; sourceTree = "<group>"; };
+		18F7AA002079FE52009A4D4E /* VMLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMLoginViewController.xib; sourceTree = "<group>"; };
+		18F7AA04207A062F009A4D4E /* VMFinishedOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMFinishedOrderViewController.h; sourceTree = "<group>"; };
+		18F7AA05207A062F009A4D4E /* VMFinishedOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMFinishedOrderViewController.m; sourceTree = "<group>"; };
+		18F7AA06207A062F009A4D4E /* VMFinishedOrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMFinishedOrderViewController.xib; sourceTree = "<group>"; };
+		18F7AA09207A0DC2009A4D4E /* VMFinishedTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMFinishedTableViewController.h; sourceTree = "<group>"; };
+		18F7AA0A207A0DC2009A4D4E /* VMFinishedTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMFinishedTableViewController.m; sourceTree = "<group>"; };
+		18F7AA0B207A0DC2009A4D4E /* VMFinishedTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMFinishedTableViewController.xib; sourceTree = "<group>"; };
 		75D29ADE452037068377BC3C /* Pods-VegetableManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegetableManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VegetableManagement/Pods-VegetableManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		D83F405C6F6A6BB5575622E0 /* Pods_VegetableManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VegetableManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E929BAB2B45D3F3CF0BCC35C /* Pods-VegetableManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegetableManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-VegetableManagement/Pods-VegetableManagement.release.xcconfig"; sourceTree = "<group>"; };
@@ -214,14 +229,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		1832BF7E2073659600FC83B0 /* SelectAgent(代理商选择) */ = {
+		1832BF7E2073659600FC83B0 /* SelectAgent(配送区域设置) */ = {
 			isa = PBXGroup;
 			children = (
 				1832BF84207367A500FC83B0 /* Cell */,
 				1832BF802073659600FC83B0 /* VMSelectAgentViewController.h */,
 				1832BF7F2073659600FC83B0 /* VMSelectAgentViewController.m */,
 			);
-			path = "SelectAgent(代理商选择)";
+			path = "SelectAgent(配送区域设置)";
 			sourceTree = "<group>";
 		};
 		1832BF84207367A500FC83B0 /* Cell */ = {
@@ -253,7 +268,9 @@
 		185B1DE1206E11AA00816924 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1832BF7E2073659600FC83B0 /* SelectAgent(代理商选择) */,
+				18F7AA03207A0608009A4D4E /* FinishedOrder(已完成) */,
+				18F7A9FD2079FDDB009A4D4E /* Login(登录) */,
+				1832BF7E2073659600FC83B0 /* SelectAgent(配送区域设置) */,
 				1832BF6820734C2100FC83B0 /* MessageCenter(消息中心) */,
 				1832BF62207317DC00FC83B0 /* Help(帮助中心) */,
 				1832BF4F2072223C00FC83B0 /* Setup(设置) */,
@@ -361,6 +378,29 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		18F7A9FD2079FDDB009A4D4E /* Login(登录) */ = {
+			isa = PBXGroup;
+			children = (
+				18F7A9FE2079FE52009A4D4E /* VMLoginViewController.h */,
+				18F7A9FF2079FE52009A4D4E /* VMLoginViewController.m */,
+				18F7AA002079FE52009A4D4E /* VMLoginViewController.xib */,
+			);
+			path = "Login(登录)";
+			sourceTree = "<group>";
+		};
+		18F7AA03207A0608009A4D4E /* FinishedOrder(已完成) */ = {
+			isa = PBXGroup;
+			children = (
+				18F7AA04207A062F009A4D4E /* VMFinishedOrderViewController.h */,
+				18F7AA05207A062F009A4D4E /* VMFinishedOrderViewController.m */,
+				18F7AA06207A062F009A4D4E /* VMFinishedOrderViewController.xib */,
+				18F7AA09207A0DC2009A4D4E /* VMFinishedTableViewController.h */,
+				18F7AA0A207A0DC2009A4D4E /* VMFinishedTableViewController.m */,
+				18F7AA0B207A0DC2009A4D4E /* VMFinishedTableViewController.xib */,
+			);
+			path = "FinishedOrder(已完成)";
+			sourceTree = "<group>";
+		};
 		92EFF8B6C8CA4ED163A2FE10 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,12 +481,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1832BF7820735A2900FC83B0 /* VMMessageDetailViewController.xib in Resources */,
+				18F7AA022079FE52009A4D4E /* VMLoginViewController.xib in Resources */,
 				1832BF5F20722D0000FC83B0 /* VMSetupTableViewCell.xib in Resources */,
 				185B1DF9206E24CD00816924 /* VMNewTaskTableViewCell.xib in Resources */,
 				1832BF26207215FC00FC83B0 /* VMPersonalCenterTableViewCell.xib in Resources */,
 				1832BF7320734C9000FC83B0 /* VMMessageCenterTableViewCell.xib in Resources */,
 				1832BF89207367B700FC83B0 /* VMSelectAgentViewTableViewCell.xib in Resources */,
 				1832BF2020720FFC00FC83B0 /* VMPersonalCenterViewController.xib in Resources */,
+				18F7AA0D207A0DC2009A4D4E /* VMFinishedTableViewController.xib in Resources */,
+				18F7AA08207A062F009A4D4E /* VMFinishedOrderViewController.xib in Resources */,
 				1832BF542072225400FC83B0 /* VMSetupViewController.xib in Resources */,
 				1832BF192071DE1B00FC83B0 /* VMWaitPickUpTableViewCell.xib in Resources */,
 				185B1DDA206E096300816924 /* CustomerTabBarView.xib in Resources */,
@@ -554,9 +597,12 @@
 				1832BF88207367B700FC83B0 /* VMSelectAgentViewTableViewCell.m in Sources */,
 				18CC2212206CBBED007E1274 /* AppDelegate.m in Sources */,
 				185B1DE0206E0EAF00816924 /* VMCustomTabBar.m in Sources */,
+				18F7AA012079FE52009A4D4E /* VMLoginViewController.m in Sources */,
 				1832BF7720735A2900FC83B0 /* VMMessageDetailViewController.m in Sources */,
 				1832BF1F20720FFC00FC83B0 /* VMPersonalCenterViewController.m in Sources */,
+				18F7AA07207A062F009A4D4E /* VMFinishedOrderViewController.m in Sources */,
 				185B1DF3206E161900816924 /* BaseTableViewController.m in Sources */,
+				18F7AA0C207A0DC2009A4D4E /* VMFinishedTableViewController.m in Sources */,
 				1832BF7220734C9000FC83B0 /* VMMessageCenterTableViewCell.m in Sources */,
 				185B1DD6206E092700816924 /* CustomerTabBarView.m in Sources */,
 				1832BF182071DE1B00FC83B0 /* VMWaitPickUpTableViewCell.m in Sources */,

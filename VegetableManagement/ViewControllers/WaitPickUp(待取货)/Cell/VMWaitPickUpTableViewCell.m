@@ -19,10 +19,10 @@
 //    self.deliveryInformationBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
 //    self.deliveryInformationBtn.layer.borderWidth = 1;
 //    self.deliveryInformationBtn.layer.cornerRadius = 2;
-//    self.toBusinessBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
-//    self.toBusinessBtn.layer.borderWidth = 1;
-//    self.toUseBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
-//    self.toUseBtn.layer.borderWidth = 1;
+    self.toBusinessBtn.layer.borderColor = [CommonTools changeColor:@"0x999999"].CGColor;
+    self.toBusinessBtn.layer.borderWidth = 0.5;
+    self.toUseBtn.layer.borderColor = [CommonTools changeColor:@"0x999999"].CGColor;
+    self.toUseBtn.layer.borderWidth = 0.5;
 }
 
 - (IBAction)cellBtnClick:(UIButton *)sender {

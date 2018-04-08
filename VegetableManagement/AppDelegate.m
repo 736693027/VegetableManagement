@@ -11,6 +11,7 @@
 #import "VMTabBarController.h"
 #import <MMDrawerController/MMDrawerController.h>
 #import "VMPersonalCenterViewController.h"
+#import "VMLoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -38,6 +39,8 @@
     self.drawerController.maximumLeftDrawerWidth = 300.0;
     [self.drawerController setShowsShadow:NO];
     
+    VMLoginViewController *loginVC = [[VMLoginViewController alloc] init];
+
     self.window.rootViewController = self.drawerController;
     [self.window makeKeyAndVisible];
     return YES;

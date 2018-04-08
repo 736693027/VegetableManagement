@@ -17,7 +17,7 @@
 
 - (UIImage *)emptyImage{
     if(_emptyImage == nil){
-        _emptyImage = [UIImage imageNamed:@"assignment-default"];
+        _emptyImage = [UIImage imageNamed:@"icon_noNews"];
     }
     return _emptyImage;
 }
@@ -74,8 +74,8 @@
 }
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView{
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
-    UIFont *font = [UIFont boldSystemFontOfSize:16.0];
-    UIColor *textColor = [CommonTools changeColor:@"#999999"];
+    UIFont *font = [UIFont boldSystemFontOfSize:14.0];
+    UIColor *textColor = [CommonTools changeColor:@"#cccccc"];
     
     [attributes setObject:font forKey:NSFontAttributeName];
     [attributes setObject:textColor forKey:NSForegroundColorAttributeName];
@@ -99,7 +99,7 @@
 }
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView{
     if(self.isClickEmptyImageLoading){
-        return [UIImage imageNamed:@"loading_imgBlue_78x78"];
+        return [UIImage imageNamed:@"icon_noNews"];
     }else{
         return self.emptyImage;
     }

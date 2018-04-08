@@ -21,8 +21,6 @@
     
     //导航左侧按钮设置
     [navLeftBtn setImage:[UIImage imageNamed:@"icon_toUserPhoto"] forState:UIControlStateNormal];
-    navLeftBtn.layer.borderWidth = 0.5;
-    navLeftBtn.layer.borderColor = [CommonTools changeColor:@"0x25ca86"].CGColor;
     
     self.dataTableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     self.dataTableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-TabBarHeight);

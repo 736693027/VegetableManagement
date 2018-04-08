@@ -22,7 +22,7 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - AMap3DMap (6.0.0):
+  - AMap3DMap (6.1.0):
     - AMapFoundation (~> 1.4)
   - AMapFoundation (1.4.3)
   - AMapLocation (2.6.0):
@@ -78,7 +78,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFDownloadRequestOperation: 748a1643423e1ddb23f2178f778087d4f0ae8ac7
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
-  AMap3DMap: ee8172d81560e9f6548d6e6010444df7e3d00fc7
+  AMap3DMap: 2cf8028884fc66c7e051f5e8818808949eff290d
   AMapFoundation: 973682cfe60b92efd73a8ef8f1144fa0fa8e1296
   AMapLocation: 55116a2c8956eab7550cbb56e989aa5cdcc424e3
   AMapNavi: 4d75c4ff83abd50959530e95c6da439e5b9fc06a

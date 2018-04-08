@@ -16,6 +16,8 @@
 
 @property (strong, nonatomic) NSArray *titleArray;
 
+@property (strong, nonatomic) NSArray *imageArray;
+
 @end
 
 @implementation VMSetupViewController
@@ -28,9 +30,10 @@
 //    }else{
 //        self.automaticallyAdjustsScrollViewInsets = NO;
 //    }
-    _titleArray = @[@[@"我的位置",@"当前版本",@"代理商选择"],@[@"安全退出"]];
+    _titleArray = @[@[@"我的位置",@"当前版本",@"配送区域设置"],@[@"安全退出"]];
+    _imageArray = @[@[@"icon_position",@"icon_information",@"icon_region"],@[@"icon_quit"]];
     self.dataTableView.rowHeight = UITableViewAutomaticDimension;
-    self.dataTableView.estimatedRowHeight = 44;
+    self.dataTableView.estimatedRowHeight = 50;
     [self.dataTableView registerNib:[UINib nibWithNibName:@"VMSetupTableViewCell" bundle:nil] forCellReuseIdentifier:@"VMSetupTableViewCell"];
 }
 
@@ -45,6 +48,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VMSetupTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMSetupTableViewCell"];
     NSArray *tmpArray = _titleArray[indexPath.section];
+    NSArray *tmpImageArray = _imageArray[indexPath.section];
     cell.titleLabel.text = tmpArray[indexPath.row];
     if(indexPath.section==1||indexPath.row == 1){
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -52,10 +56,11 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     cell.detailLabel.text = (indexPath.section==0&&indexPath.row==1)?@"v2.2":@"";
+    [cell.iconImageView setImage:[UIImage imageNamed:tmpImageArray[indexPath.row]]];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 20.f;
+    return 10.f;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.00001f;

@@ -97,14 +97,16 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kV-Vv-qbo">
-                        <rect key="frame" x="48" y="205" width="78.5" height="37"/>
+                        <rect key="frame" x="48" y="205.5" width="78.5" height="37"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" backgroundImage="icon_callSeller">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="电话商家" image="icon_callPhone">
                             <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="5"/>
+                                <real key="value" value="2.5"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
@@ -135,13 +137,14 @@
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0t-KE-tVV">
                         <rect key="frame" x="229.5" y="205" width="78.5" height="37"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" backgroundImage="icon_takenGoodsBtn">
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.792156862745098" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="我已取货">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="5"/>
+                                <real key="value" value="2.5"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
@@ -149,14 +152,16 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TE-yQ-UeO">
-                        <rect key="frame" x="138.5" y="205" width="79" height="37"/>
+                        <rect key="frame" x="139" y="205.5" width="78" height="37"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" backgroundImage="icon_callUserBtn">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="电话用户" image="icon_callPhone">
                             <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="5"/>
+                                <real key="value" value="2.5"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
@@ -229,17 +234,15 @@
                 <outlet property="toBusinessBtn" destination="3kV-Vv-qbo" id="Z14-eF-Vaz"/>
                 <outlet property="toUseBtn" destination="9TE-yQ-UeO" id="Aek-q6-j6I"/>
             </connections>
-            <point key="canvasLocation" x="-404" y="-247.5"/>
+            <point key="canvasLocation" x="-149" y="-113"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="icon_caibangDelivery" width="42" height="12"/>
-        <image name="icon_callSeller" width="95" height="37"/>
-        <image name="icon_callUserBtn" width="95" height="37"/>
+        <image name="icon_callPhone" width="11" height="12"/>
         <image name="icon_deliverID" width="21" height="25"/>
         <image name="icon_deliverIdLabel" width="50" height="18"/>
         <image name="icon_goodsInfomation" width="25" height="18"/>
         <image name="icon_goodsInformationLabel" width="50" height="18"/>
-        <image name="icon_takenGoodsBtn" width="95" height="37"/>
     </resources>
 </document>

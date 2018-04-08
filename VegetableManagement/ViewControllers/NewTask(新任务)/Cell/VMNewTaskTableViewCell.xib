@@ -51,13 +51,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="老段地产菜" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAk-vV-zge">
-                        <rect key="frame" x="47.5" y="77" width="257.5" height="15.5"/>
+                        <rect key="frame" x="47.5" y="77" width="257.5" height="16"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4G-Fj-Gbx">
-                        <rect key="frame" x="47.5" y="95.5" width="260" height="29"/>
+                        <rect key="frame" x="47.5" y="96" width="260" height="29"/>
                         <attributedString key="attributedText">
                             <fragment content="内蒙自治区通辽市科尔沁区建国街道通辽丰盛农产品物流园">
                                 <attributes>
@@ -70,20 +70,20 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="326.5km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBC-b9-snf">
-                        <rect key="frame" x="47.5" y="139.5" width="54" height="16"/>
+                        <rect key="frame" x="47.5" y="140" width="54" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_deliverID" translatesAutoresizingMaskIntoConstraints="NO" id="fkc-f5-JEC">
-                        <rect key="frame" x="14.5" y="135" width="21" height="25"/>
+                        <rect key="frame" x="14.5" y="135.5" width="21" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="21" id="G0T-Fs-qt5"/>
                             <constraint firstAttribute="height" constant="25" id="RJN-8V-BbG"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tl-e3-qZT">
-                        <rect key="frame" x="47.5" y="165.5" width="260" height="29"/>
+                        <rect key="frame" x="47.5" y="166" width="260" height="29"/>
                         <attributedString key="attributedText">
                             <fragment content="内蒙自治区通辽市科尔沁区建国街道通辽丰盛农产品物流园">
                                 <attributes>
@@ -96,9 +96,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kV-Vv-qbo">
-                        <rect key="frame" x="12.5" y="212" width="295" height="37"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" image="icon_grabOrderBtn">
+                        <rect key="frame" x="12.5" y="212.5" width="295" height="38"/>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.792156862745098" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="立即抢单">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <userDefinedRuntimeAttributes>
@@ -122,7 +123,7 @@
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZY-Qe-29q">
-                        <rect key="frame" x="257.5" y="137.5" width="50" height="20"/>
+                        <rect key="frame" x="257.5" y="138" width="50" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="sj7-7b-TQ5"/>
                             <constraint firstAttribute="height" constant="20" id="tAN-l0-vQs"/>
@@ -170,7 +171,7 @@
                     <constraint firstItem="3Za-hx-ds4" firstAttribute="centerY" secondItem="non-1d-NW4" secondAttribute="centerY" id="rwJ-X8-Jbo"/>
                     <constraint firstItem="MZY-Qe-29q" firstAttribute="centerY" secondItem="hBC-b9-snf" secondAttribute="centerY" id="sNR-2k-BGy"/>
                     <constraint firstItem="fkc-f5-JEC" firstAttribute="centerX" secondItem="non-1d-NW4" secondAttribute="centerX" id="sns-w8-qnY"/>
-                    <constraint firstAttribute="bottom" secondItem="3kV-Vv-qbo" secondAttribute="bottom" constant="16.5" id="u5o-Wo-M4M"/>
+                    <constraint firstAttribute="bottom" secondItem="3kV-Vv-qbo" secondAttribute="bottom" constant="15" id="u5o-Wo-M4M"/>
                     <constraint firstItem="zAk-vV-zge" firstAttribute="top" secondItem="3Za-hx-ds4" secondAttribute="bottom" constant="10" id="wcn-sJ-lXR"/>
                     <constraint firstItem="hxn-Xp-gIW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="x4n-0X-nxI"/>
                     <constraint firstItem="hxn-Xp-gIW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12.5" id="zWN-r2-ZNq"/>
@@ -197,6 +198,5 @@
         <image name="icon_deliverIdLabel" width="50" height="18"/>
         <image name="icon_goodsInfomation" width="25" height="18"/>
         <image name="icon_goodsInformationLabel" width="50" height="18"/>
-        <image name="icon_grabOrderBtn" width="350" height="37"/>
     </resources>
 </document>
