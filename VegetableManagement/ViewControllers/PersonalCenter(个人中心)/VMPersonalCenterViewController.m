@@ -13,6 +13,7 @@
 #import "VMMessageCenterViewController.h"
 #import "UIViewController+MMDrawerController.h"
 #import "VMFinishedOrderViewController.h"
+#import "VMEvaluationTableViewController.h"
 
 @interface VMPersonalCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -102,7 +103,9 @@
                 //我的评价
             case 3:
             {
-                
+                VMEvaluationTableViewController *evaluationVC = [[VMEvaluationTableViewController alloc] init];
+                evaluationVC.hidesBottomBarWhenPushed = YES;
+                [arr[0] pushViewController:evaluationVC animated:NO];
             }
                 break;
                 //设置

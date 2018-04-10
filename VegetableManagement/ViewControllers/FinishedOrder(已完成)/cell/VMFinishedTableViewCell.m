@@ -1,14 +1,14 @@
 //
-//  VMNewTaskTableViewCell.m
+//  VMFinishedTableViewCell.m
 //  VegetableManagement
 //
 //  Created by Apple on 2018/3/30.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "VMNewTaskTableViewCell.h"
+#import "VMFinishedTableViewCell.h"
 
-@implementation VMNewTaskTableViewCell
+@implementation VMFinishedTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

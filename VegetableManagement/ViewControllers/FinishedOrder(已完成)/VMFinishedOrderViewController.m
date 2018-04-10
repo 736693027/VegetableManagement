@@ -22,10 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"已完成";
-    _mainScrollview.contentSize = CGSizeMake(SCREEN_WIDTH*2, SCREEN_HEIGHT-self.navigationController.navigationBar.frame.size.height-50-20);
+    _mainScrollview.contentSize = CGSizeMake(SCREEN_WIDTH*2,_mainScrollview.frame.size.height);
     for(NSInteger i=0;i<2;i++){
         VMFinishedTableViewController *finishedTable = [[VMFinishedTableViewController alloc] init];
-        finishedTable.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT-self.navigationController.navigationBar.frame.size.height-55-20);
+        finishedTable.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, _mainScrollview.frame.size.height);
         [self addChildViewController:finishedTable];
         [_mainScrollview addSubview:finishedTable.view];
     }

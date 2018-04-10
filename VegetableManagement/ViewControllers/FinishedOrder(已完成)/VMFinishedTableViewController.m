@@ -7,7 +7,9 @@
 //
 
 #import "VMFinishedTableViewController.h"
-#import "VMNewTaskTableViewCell.h"
+#import "VMFinishedTableViewCell.h"
+#import "VMFinishedTableHeadView.h"
+#import <Masonry/Masonry.h>
 
 @interface VMFinishedTableViewController ()
 
@@ -17,11 +19,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataTableView.frame = CGRectMake(0, 55, SCREEN_WIDTH, self.view.frame.size.height-50);
+    
+    VMFinishedTableHeadView *tableHeadView = [[[NSBundle mainBundle] loadNibNamed:@"VMFinishedTableHeadView" owner:self options:nil] lastObject];
+    [self.view addSubview:tableHeadView];
+    [tableHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.and.left.offset(0);
+        make.height.offset(50);
+        make.width.offset(SCREEN_WIDTH);
+    }];
+    
+    [self.dataTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(tableHeadView.mas_bottom);
+        make.left.offset(0);
+        make.bottom.mas_equalTo(self.view.mas_bottom);
+        make.width.offset(SCREEN_WIDTH);
+    }];
     self.dataTableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     self.dataTableView.separatorColor = [CommonTools changeColor:@"0xcccccc"];
-    NSString *cellClassName = NSStringFromClass([VMNewTaskTableViewCell class]);
-    [self tableRegisterNibName:cellClassName cellReuseIdentifier:cellClassName estimatedRowHeight:266];
+    NSString *cellClassName = NSStringFromClass([VMFinishedTableViewCell class]);
+    [self tableRegisterNibName:cellClassName cellReuseIdentifier:cellClassName estimatedRowHeight:218.5];
+}
+- (IBAction)beginSearchAction:(UIButton *)sender {
 }
 
 #pragma mark tableView datasource
@@ -29,7 +47,7 @@
     return 10;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    VMNewTaskTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMNewTaskTableViewCell"];
+    VMFinishedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMFinishedTableViewCell"];
     return cell;
 }
 

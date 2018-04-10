@@ -44,12 +44,21 @@
 		18CC2220206CBBED007E1274 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CC221F206CBBED007E1274 /* main.m */; };
 		18CC2240206CD5E9007E1274 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CC2237206CD5E9007E1274 /* BaseViewController.m */; };
 		18CC2242206CD5E9007E1274 /* CommonTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CC223D206CD5E9007E1274 /* CommonTools.m */; };
+		18D99F37207B11E100DAFB5F /* VMFinishedTableHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D99F36207B11E100DAFB5F /* VMFinishedTableHeadView.m */; };
+		18D99F3B207B120400DAFB5F /* VMFinishedTableHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D99F3A207B120400DAFB5F /* VMFinishedTableHeadView.xib */; };
+		18D99F40207B3D2800DAFB5F /* VMFinishedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D99F3E207B3D2800DAFB5F /* VMFinishedTableViewCell.m */; };
+		18D99F41207B3D2800DAFB5F /* VMFinishedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D99F3F207B3D2800DAFB5F /* VMFinishedTableViewCell.xib */; };
+		18D99F46207B4C4800DAFB5F /* VMEvaluationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D99F45207B4C4800DAFB5F /* VMEvaluationTableViewController.m */; };
+		18D99F4B207B4C8000DAFB5F /* VMEvaluationTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D99F4A207B4C8000DAFB5F /* VMEvaluationTableHeaderView.m */; };
+		18D99F4F207B4C9D00DAFB5F /* VMEvaluationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D99F4D207B4C9D00DAFB5F /* VMEvaluationTableViewCell.m */; };
+		18D99F50207B4C9D00DAFB5F /* VMEvaluationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D99F4E207B4C9D00DAFB5F /* VMEvaluationTableViewCell.xib */; };
+		18D99F54207B4CB500DAFB5F /* VMEvaluationTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D99F53207B4CB500DAFB5F /* VMEvaluationTableHeaderView.xib */; };
+		18D99F58207B4F2000DAFB5F /* XHStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D99F57207B4F1F00DAFB5F /* XHStarRateView.m */; };
 		18F7AA012079FE52009A4D4E /* VMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F7A9FF2079FE52009A4D4E /* VMLoginViewController.m */; };
 		18F7AA022079FE52009A4D4E /* VMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F7AA002079FE52009A4D4E /* VMLoginViewController.xib */; };
 		18F7AA07207A062F009A4D4E /* VMFinishedOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F7AA05207A062F009A4D4E /* VMFinishedOrderViewController.m */; };
 		18F7AA08207A062F009A4D4E /* VMFinishedOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F7AA06207A062F009A4D4E /* VMFinishedOrderViewController.xib */; };
 		18F7AA0C207A0DC2009A4D4E /* VMFinishedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F7AA0A207A0DC2009A4D4E /* VMFinishedTableViewController.m */; };
-		18F7AA0D207A0DC2009A4D4E /* VMFinishedTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F7AA0B207A0DC2009A4D4E /* VMFinishedTableViewController.xib */; };
 		89F31D8AC665279E1A817B70 /* Pods_VegetableManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83F405C6F6A6BB5575622E0 /* Pods_VegetableManagement.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +127,22 @@
 		18CC223C206CD5E9007E1274 /* VegetableHeaderFile.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VegetableHeaderFile.pch; sourceTree = "<group>"; };
 		18CC223D206CD5E9007E1274 /* CommonTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTools.m; sourceTree = "<group>"; };
 		18CC223F206CD5E9007E1274 /* CommonTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTools.h; sourceTree = "<group>"; };
+		18D99F35207B11E100DAFB5F /* VMFinishedTableHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMFinishedTableHeadView.h; sourceTree = "<group>"; };
+		18D99F36207B11E100DAFB5F /* VMFinishedTableHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMFinishedTableHeadView.m; sourceTree = "<group>"; };
+		18D99F3A207B120400DAFB5F /* VMFinishedTableHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMFinishedTableHeadView.xib; sourceTree = "<group>"; };
+		18D99F3D207B3D2800DAFB5F /* VMFinishedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMFinishedTableViewCell.h; sourceTree = "<group>"; };
+		18D99F3E207B3D2800DAFB5F /* VMFinishedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMFinishedTableViewCell.m; sourceTree = "<group>"; };
+		18D99F3F207B3D2800DAFB5F /* VMFinishedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMFinishedTableViewCell.xib; sourceTree = "<group>"; };
+		18D99F44207B4C4800DAFB5F /* VMEvaluationTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMEvaluationTableViewController.h; sourceTree = "<group>"; };
+		18D99F45207B4C4800DAFB5F /* VMEvaluationTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMEvaluationTableViewController.m; sourceTree = "<group>"; };
+		18D99F49207B4C8000DAFB5F /* VMEvaluationTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMEvaluationTableHeaderView.h; sourceTree = "<group>"; };
+		18D99F4A207B4C8000DAFB5F /* VMEvaluationTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMEvaluationTableHeaderView.m; sourceTree = "<group>"; };
+		18D99F4C207B4C9D00DAFB5F /* VMEvaluationTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMEvaluationTableViewCell.h; sourceTree = "<group>"; };
+		18D99F4D207B4C9D00DAFB5F /* VMEvaluationTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMEvaluationTableViewCell.m; sourceTree = "<group>"; };
+		18D99F4E207B4C9D00DAFB5F /* VMEvaluationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMEvaluationTableViewCell.xib; sourceTree = "<group>"; };
+		18D99F53207B4CB500DAFB5F /* VMEvaluationTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMEvaluationTableHeaderView.xib; sourceTree = "<group>"; };
+		18D99F56207B4F1F00DAFB5F /* XHStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHStarRateView.h; sourceTree = "<group>"; };
+		18D99F57207B4F1F00DAFB5F /* XHStarRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHStarRateView.m; sourceTree = "<group>"; };
 		18F7A9FE2079FE52009A4D4E /* VMLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMLoginViewController.h; sourceTree = "<group>"; };
 		18F7A9FF2079FE52009A4D4E /* VMLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMLoginViewController.m; sourceTree = "<group>"; };
 		18F7AA002079FE52009A4D4E /* VMLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMLoginViewController.xib; sourceTree = "<group>"; };
@@ -126,7 +151,6 @@
 		18F7AA06207A062F009A4D4E /* VMFinishedOrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMFinishedOrderViewController.xib; sourceTree = "<group>"; };
 		18F7AA09207A0DC2009A4D4E /* VMFinishedTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMFinishedTableViewController.h; sourceTree = "<group>"; };
 		18F7AA0A207A0DC2009A4D4E /* VMFinishedTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMFinishedTableViewController.m; sourceTree = "<group>"; };
-		18F7AA0B207A0DC2009A4D4E /* VMFinishedTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMFinishedTableViewController.xib; sourceTree = "<group>"; };
 		75D29ADE452037068377BC3C /* Pods-VegetableManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegetableManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VegetableManagement/Pods-VegetableManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		D83F405C6F6A6BB5575622E0 /* Pods_VegetableManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VegetableManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E929BAB2B45D3F3CF0BCC35C /* Pods-VegetableManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegetableManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-VegetableManagement/Pods-VegetableManagement.release.xcconfig"; sourceTree = "<group>"; };
@@ -268,6 +292,7 @@
 		185B1DE1206E11AA00816924 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				18D99F43207B4C1500DAFB5F /* Evaluation(我的评价) */,
 				18F7AA03207A0608009A4D4E /* FinishedOrder(已完成) */,
 				18F7A9FD2079FDDB009A4D4E /* Login(登录) */,
 				1832BF7E2073659600FC83B0 /* SelectAgent(配送区域设置) */,
@@ -378,6 +403,57 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		18D99F3C207B3D2800DAFB5F /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				18D99F3D207B3D2800DAFB5F /* VMFinishedTableViewCell.h */,
+				18D99F3E207B3D2800DAFB5F /* VMFinishedTableViewCell.m */,
+				18D99F3F207B3D2800DAFB5F /* VMFinishedTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		18D99F43207B4C1500DAFB5F /* Evaluation(我的评价) */ = {
+			isa = PBXGroup;
+			children = (
+				18D99F55207B4F1F00DAFB5F /* StarRateView */,
+				18D99F47207B4C6400DAFB5F /* Cell */,
+				18D99F48207B4C6400DAFB5F /* TableHeaderView */,
+				18D99F44207B4C4800DAFB5F /* VMEvaluationTableViewController.h */,
+				18D99F45207B4C4800DAFB5F /* VMEvaluationTableViewController.m */,
+			);
+			path = "Evaluation(我的评价)";
+			sourceTree = "<group>";
+		};
+		18D99F47207B4C6400DAFB5F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				18D99F4C207B4C9D00DAFB5F /* VMEvaluationTableViewCell.h */,
+				18D99F4D207B4C9D00DAFB5F /* VMEvaluationTableViewCell.m */,
+				18D99F4E207B4C9D00DAFB5F /* VMEvaluationTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		18D99F48207B4C6400DAFB5F /* TableHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				18D99F49207B4C8000DAFB5F /* VMEvaluationTableHeaderView.h */,
+				18D99F4A207B4C8000DAFB5F /* VMEvaluationTableHeaderView.m */,
+				18D99F53207B4CB500DAFB5F /* VMEvaluationTableHeaderView.xib */,
+			);
+			path = TableHeaderView;
+			sourceTree = "<group>";
+		};
+		18D99F55207B4F1F00DAFB5F /* StarRateView */ = {
+			isa = PBXGroup;
+			children = (
+				18D99F56207B4F1F00DAFB5F /* XHStarRateView.h */,
+				18D99F57207B4F1F00DAFB5F /* XHStarRateView.m */,
+			);
+			path = StarRateView;
+			sourceTree = "<group>";
+		};
 		18F7A9FD2079FDDB009A4D4E /* Login(登录) */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,12 +467,15 @@
 		18F7AA03207A0608009A4D4E /* FinishedOrder(已完成) */ = {
 			isa = PBXGroup;
 			children = (
+				18D99F3C207B3D2800DAFB5F /* cell */,
 				18F7AA04207A062F009A4D4E /* VMFinishedOrderViewController.h */,
 				18F7AA05207A062F009A4D4E /* VMFinishedOrderViewController.m */,
 				18F7AA06207A062F009A4D4E /* VMFinishedOrderViewController.xib */,
 				18F7AA09207A0DC2009A4D4E /* VMFinishedTableViewController.h */,
 				18F7AA0A207A0DC2009A4D4E /* VMFinishedTableViewController.m */,
-				18F7AA0B207A0DC2009A4D4E /* VMFinishedTableViewController.xib */,
+				18D99F35207B11E100DAFB5F /* VMFinishedTableHeadView.h */,
+				18D99F36207B11E100DAFB5F /* VMFinishedTableHeadView.m */,
+				18D99F3A207B120400DAFB5F /* VMFinishedTableHeadView.xib */,
 			);
 			path = "FinishedOrder(已完成)";
 			sourceTree = "<group>";
@@ -487,13 +566,16 @@
 				1832BF26207215FC00FC83B0 /* VMPersonalCenterTableViewCell.xib in Resources */,
 				1832BF7320734C9000FC83B0 /* VMMessageCenterTableViewCell.xib in Resources */,
 				1832BF89207367B700FC83B0 /* VMSelectAgentViewTableViewCell.xib in Resources */,
+				18D99F54207B4CB500DAFB5F /* VMEvaluationTableHeaderView.xib in Resources */,
 				1832BF2020720FFC00FC83B0 /* VMPersonalCenterViewController.xib in Resources */,
-				18F7AA0D207A0DC2009A4D4E /* VMFinishedTableViewController.xib in Resources */,
 				18F7AA08207A062F009A4D4E /* VMFinishedOrderViewController.xib in Resources */,
 				1832BF542072225400FC83B0 /* VMSetupViewController.xib in Resources */,
 				1832BF192071DE1B00FC83B0 /* VMWaitPickUpTableViewCell.xib in Resources */,
+				18D99F50207B4C9D00DAFB5F /* VMEvaluationTableViewCell.xib in Resources */,
 				185B1DDA206E096300816924 /* CustomerTabBarView.xib in Resources */,
+				18D99F41207B3D2800DAFB5F /* VMFinishedTableViewCell.xib in Resources */,
 				18CC221A206CBBED007E1274 /* Assets.xcassets in Resources */,
+				18D99F3B207B120400DAFB5F /* VMFinishedTableHeadView.xib in Resources */,
 				1832BF67207317F000FC83B0 /* VMHelpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,10 +675,12 @@
 				18CC2240206CD5E9007E1274 /* BaseViewController.m in Sources */,
 				185B1DE7206E11FC00816924 /* VMNewTaskViewController.m in Sources */,
 				185B1DDD206E0DA600816924 /* VMTabBarController.m in Sources */,
+				18D99F37207B11E100DAFB5F /* VMFinishedTableHeadView.m in Sources */,
 				1832BF25207215FC00FC83B0 /* VMPersonalCenterTableViewCell.m in Sources */,
 				1832BF88207367B700FC83B0 /* VMSelectAgentViewTableViewCell.m in Sources */,
 				18CC2212206CBBED007E1274 /* AppDelegate.m in Sources */,
 				185B1DE0206E0EAF00816924 /* VMCustomTabBar.m in Sources */,
+				18D99F58207B4F2000DAFB5F /* XHStarRateView.m in Sources */,
 				18F7AA012079FE52009A4D4E /* VMLoginViewController.m in Sources */,
 				1832BF7720735A2900FC83B0 /* VMMessageDetailViewController.m in Sources */,
 				1832BF1F20720FFC00FC83B0 /* VMPersonalCenterViewController.m in Sources */,
@@ -607,15 +691,19 @@
 				185B1DD6206E092700816924 /* CustomerTabBarView.m in Sources */,
 				1832BF182071DE1B00FC83B0 /* VMWaitPickUpTableViewCell.m in Sources */,
 				1832BF6020722D0000FC83B0 /* VMSetupTableViewCell.m in Sources */,
+				18D99F46207B4C4800DAFB5F /* VMEvaluationTableViewController.m in Sources */,
 				185B1DEA206E154200816924 /* VMNavigationController.m in Sources */,
 				18CC2242206CD5E9007E1274 /* CommonTools.m in Sources */,
 				1832BF66207317F000FC83B0 /* VMHelpViewController.m in Sources */,
 				1832BF8C2074AD3500FC83B0 /* VMTabBarView.m in Sources */,
+				18D99F4F207B4C9D00DAFB5F /* VMEvaluationTableViewCell.m in Sources */,
 				185B1DED206E15D000816924 /* VMWaitPickUpViewController.m in Sources */,
 				1832BF532072225400FC83B0 /* VMSetupViewController.m in Sources */,
 				1832BF6C20734C3500FC83B0 /* VMMessageCenterViewController.m in Sources */,
 				1832BF822073659600FC83B0 /* VMSelectAgentViewController.m in Sources */,
+				18D99F40207B3D2800DAFB5F /* VMFinishedTableViewCell.m in Sources */,
 				185B1DF8206E24CD00816924 /* VMNewTaskTableViewCell.m in Sources */,
+				18D99F4B207B4C8000DAFB5F /* VMEvaluationTableHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
