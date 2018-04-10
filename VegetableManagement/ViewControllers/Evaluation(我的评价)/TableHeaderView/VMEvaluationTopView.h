@@ -1,5 +1,5 @@
 //
-//  VMEvaluationTableHeaderView.h
+//  VMEvaluationTopView.h
 //  VegetableManagement
 //
 //  Created by Apple on 2018/4/9.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VMEvaluationTableHeaderView : UIView
+@interface VMEvaluationTopView : UIView
 
 @end

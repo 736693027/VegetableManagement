@@ -7,8 +7,9 @@
 //
 
 #import "VMEvaluationTableViewController.h"
-#import "VMEvaluationTableHeaderView.h"
+#import "VMEvaluationTopView.h"
 #import <Masonry/Masonry.h>
+#import "VMEvaluationTableViewCell.h"
 
 @interface VMEvaluationTableViewController ()
 
@@ -19,27 +20,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的评价";
-    VMEvaluationTableHeaderView *headView = [[[NSBundle mainBundle] loadNibNamed:@"VMEvaluationTableHeaderView" owner:self options:nil] lastObject];
-    [self.view addSubview:headView];
-    [headView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.offset(0);
-        make.height.offset(210);
+    self.navigationController.navigationBar.translucent = NO;
+    VMEvaluationTopView *headView = [[[NSBundle mainBundle] loadNibNamed:@"VMEvaluationTopView" owner:self options:nil] lastObject];
+    headView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 170);
+
+    [self.dataTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.top.offset(0);
     }];
+    [self tableRegisterNibName:@"VMEvaluationTableViewCell" cellReuseIdentifier:@"VMEvaluationTableViewCell" estimatedRowHeight:117];
+    self.dataTableView.tableHeaderView = headView;
+}
+
+#pragma mark tableview datasource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    VMEvaluationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMEvaluationTableViewCell"];
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

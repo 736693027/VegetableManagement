@@ -1,23 +1,23 @@
 //
-//  VMEvaluationTableHeaderView.m
+//  VMEvaluationTopView.m
 //  VegetableManagement
 //
 //  Created by Apple on 2018/4/9.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "VMEvaluationTableHeaderView.h"
+#import "VMEvaluationTopView.h"
 #import "XHStarRateView.h"
 #import <Masonry/Masonry.h>
 
-@interface VMEvaluationTableHeaderView()
+@interface VMEvaluationTopView()
 @property (weak, nonatomic) IBOutlet UIView *distributionView;
 @property (weak, nonatomic) IBOutlet UIView *serviceView;
 @property (weak, nonatomic) IBOutlet UIView *commodityView;
 
 @end
 
-@implementation VMEvaluationTableHeaderView
+@implementation VMEvaluationTopView
 
 - (void)awakeFromNib{
     [super awakeFromNib];
@@ -42,11 +42,5 @@
     [starRateView2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.left.offset(0);
     }];
-    
-    CALayer *lineLayer = [[CALayer alloc] init];
-    lineLayer.backgroundColor = [CommonTools changeColor:@"0xcccccc"].CGColor;
-    lineLayer.frame = CGRectMake(0, self.frame.size.height-0.5, SCREEN_WIDTH, 0.5);
-    [self.layer addSublayer:lineLayer];
-    
 }
 @end
