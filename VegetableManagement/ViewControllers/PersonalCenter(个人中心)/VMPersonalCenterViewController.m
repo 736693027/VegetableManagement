@@ -14,6 +14,7 @@
 #import "UIViewController+MMDrawerController.h"
 #import "VMFinishedOrderViewController.h"
 #import "VMEvaluationTableViewController.h"
+#import "VMOrderStatisticsViewController.h"
 
 @interface VMPersonalCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -97,7 +98,9 @@
                 //配送统计
             case 2:
             {
-                
+                VMOrderStatisticsViewController *orderStatisticsVC = [[VMOrderStatisticsViewController alloc] init];
+                orderStatisticsVC.hidesBottomBarWhenPushed = YES;
+                [arr[0] pushViewController:orderStatisticsVC animated:NO];
             }
                 break;
                 //我的评价
