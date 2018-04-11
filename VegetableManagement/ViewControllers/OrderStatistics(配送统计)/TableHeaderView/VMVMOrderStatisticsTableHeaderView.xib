@@ -111,11 +111,21 @@
                         <constraint firstAttribute="bottom" secondItem="Euh-Ol-8n4" secondAttribute="bottom" id="wcy-yK-cft"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLi-cd-vq6">
+                    <rect key="frame" x="0.0" y="69" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="ovR-cb-hH1"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="RIg-eb-pBI" firstAttribute="top" secondItem="caQ-iu-x9h" secondAttribute="top" constant="10" id="FTO-VS-alV"/>
                 <constraint firstAttribute="bottom" secondItem="RIg-eb-pBI" secondAttribute="bottom" constant="10" id="G2T-Ac-pfk"/>
+                <constraint firstItem="mfB-Zz-wwP" firstAttribute="bottom" secondItem="qLi-cd-vq6" secondAttribute="bottom" id="PsX-j5-1wN"/>
+                <constraint firstAttribute="trailing" secondItem="qLi-cd-vq6" secondAttribute="trailing" id="Vme-Zr-OtU"/>
+                <constraint firstItem="qLi-cd-vq6" firstAttribute="leading" secondItem="caQ-iu-x9h" secondAttribute="leading" id="auK-hK-NTN"/>
                 <constraint firstItem="RIg-eb-pBI" firstAttribute="trailing" secondItem="caQ-iu-x9h" secondAttribute="trailing" id="kRI-2X-ikl"/>
                 <constraint firstItem="RIg-eb-pBI" firstAttribute="leading" secondItem="caQ-iu-x9h" secondAttribute="leading" id="oT9-pj-X1b"/>
             </constraints>

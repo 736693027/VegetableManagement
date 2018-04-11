@@ -18,6 +18,13 @@
 
 @implementation VMVMOrderStatisticsTableHeaderView
 
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    self.searchBtn.layer.borderWidth = 0.5;
+    self.searchBtn.layer.borderColor = [CommonTools changeColor:@"0x999999"].CGColor;
+    self.searchBtn.layer.cornerRadius = 2.5;
+}
+
 - (IBAction)searchBtnClick:(UIButton *)sender {
     
 }
