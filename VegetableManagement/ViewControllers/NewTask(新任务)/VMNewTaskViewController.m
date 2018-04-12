@@ -10,6 +10,7 @@
 #import "VMTabBarController.h"
 #import "VMNewTaskTableViewCell.h"
 #import "UIViewController+MMDrawerController.h"
+#import "VMOrderDetailViewController.h"
 
 @interface VMNewTaskViewController ()
 
@@ -58,6 +59,11 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    VMOrderDetailViewController *orderDetailVC = [[VMOrderDetailViewController alloc] init];
+    orderDetailVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:orderDetailVC animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

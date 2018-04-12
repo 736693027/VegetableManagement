@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="P3e-3B-FmW" customClass="VMOrderDetailTableFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smb-8b-eEl">
+                    <rect key="frame" x="10" y="2.5" width="355" height="0.5"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="U8b-d3-XIr"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tk8-Zl-H2Q">
+                    <rect key="frame" x="10" y="15.5" width="172.5" height="45"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="7LK-se-UY0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="上报到店">
+                        <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUI-Yf-Yv0">
+                    <rect key="frame" x="192.5" y="16" width="172.5" height="45"/>
+                    <color key="backgroundColor" red="0.1450980392" green="0.79215686269999996" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="zY8-Ri-5M5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="我已取货">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MDd-yI-YnT" firstAttribute="bottom" secondItem="tk8-Zl-H2Q" secondAttribute="bottom" constant="12.5" id="Deo-s7-W6F"/>
+                <constraint firstItem="MDd-yI-YnT" firstAttribute="trailing" secondItem="aUI-Yf-Yv0" secondAttribute="trailing" constant="10" id="Due-3a-Q3g"/>
+                <constraint firstItem="aUI-Yf-Yv0" firstAttribute="leading" secondItem="tk8-Zl-H2Q" secondAttribute="trailing" constant="10" id="G50-Hu-QeV"/>
+                <constraint firstItem="aUI-Yf-Yv0" firstAttribute="width" secondItem="tk8-Zl-H2Q" secondAttribute="width" id="GiP-19-ifb"/>
+                <constraint firstItem="smb-8b-eEl" firstAttribute="leading" secondItem="P3e-3B-FmW" secondAttribute="leading" constant="10" id="LTg-o5-Zc1"/>
+                <constraint firstItem="aUI-Yf-Yv0" firstAttribute="top" secondItem="smb-8b-eEl" secondAttribute="bottom" constant="12.5" id="R6x-FF-urQ"/>
+                <constraint firstItem="smb-8b-eEl" firstAttribute="top" secondItem="MDd-yI-YnT" secondAttribute="top" constant="2.5" id="YJG-Fg-fZg"/>
+                <constraint firstItem="tk8-Zl-H2Q" firstAttribute="leading" secondItem="MDd-yI-YnT" secondAttribute="leading" constant="10" id="a2E-xz-JN4"/>
+                <constraint firstItem="MDd-yI-YnT" firstAttribute="bottom" secondItem="aUI-Yf-Yv0" secondAttribute="bottom" constant="12.5" id="mzu-MH-Zho"/>
+                <constraint firstItem="tk8-Zl-H2Q" firstAttribute="top" secondItem="smb-8b-eEl" secondAttribute="bottom" constant="12.5" id="vfQ-Md-Swg"/>
+                <constraint firstAttribute="trailing" secondItem="smb-8b-eEl" secondAttribute="trailing" constant="10" id="ypC-ZJ-QeU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="MDd-yI-YnT"/>
+            <connections>
+                <outlet property="reportBtn" destination="tk8-Zl-H2Q" id="U5p-YZ-mnK"/>
+                <outlet property="takeBtn" destination="aUI-Yf-Yv0" id="MHL-Y8-8dr"/>
+            </connections>
+            <point key="canvasLocation" x="243.5" y="-13.5"/>
+        </view>
+    </objects>
+</document>

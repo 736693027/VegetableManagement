@@ -9,6 +9,7 @@
 #import "VMSetupViewController.h"
 #import "VMSetupTableViewCell.h"
 #import "VMSelectAgentViewController.h"
+#import "VMUserLocationViewController.h"
 
 @interface VMSetupViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -69,7 +70,8 @@
     if(indexPath.section == 0){
         switch (indexPath.row) {
             case 0:{
-                    
+                VMUserLocationViewController *locationVC = [[VMUserLocationViewController alloc] init];
+                [self.navigationController pushViewController:locationVC animated:YES];
             }
                 break;
             case 1:{

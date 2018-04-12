@@ -68,6 +68,18 @@
 		18FDAFBF207DF472008AE54E /* VMOrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FDAFBD207DF472008AE54E /* VMOrderDetailViewController.xib */; };
 		18FDAFC3207DFF67008AE54E /* VMOrderDetailTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDAFC2207DFF67008AE54E /* VMOrderDetailTableHeaderView.m */; };
 		18FDAFC5207DFF76008AE54E /* VMOrderDetailTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FDAFC4207DFF76008AE54E /* VMOrderDetailTableHeaderView.xib */; };
+		18FDAFCA207EFCA4008AE54E /* VMOrderDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDAFC8207EFCA4008AE54E /* VMOrderDetailTableViewCell.m */; };
+		18FDAFCB207EFCA4008AE54E /* VMOrderDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FDAFC9207EFCA4008AE54E /* VMOrderDetailTableViewCell.xib */; };
+		18FDAFCF207F01FD008AE54E /* VMOrderTotalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDAFCD207F01FD008AE54E /* VMOrderTotalTableViewCell.m */; };
+		18FDAFD0207F01FD008AE54E /* VMOrderTotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FDAFCE207F01FD008AE54E /* VMOrderTotalTableViewCell.xib */; };
+		18FDAFD4207F0550008AE54E /* VMOrderTrackingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDAFD2207F0550008AE54E /* VMOrderTrackingTableViewCell.m */; };
+		18FDAFD5207F0550008AE54E /* VMOrderTrackingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FDAFD3207F0550008AE54E /* VMOrderTrackingTableViewCell.xib */; };
+		18FDAFD9207F0A13008AE54E /* VMSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDAFD8207F0A13008AE54E /* VMSectionHeaderView.m */; };
+		18FDAFDB207F0A1F008AE54E /* VMSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FDAFDA207F0A1F008AE54E /* VMSectionHeaderView.xib */; };
+		18FDAFDF207F2630008AE54E /* VMOrderDetailTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDAFDE207F2630008AE54E /* VMOrderDetailTableFooterView.m */; };
+		18FDAFE1207F270B008AE54E /* VMOrderDetailTableFooterViewDefault.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FDAFE0207F270B008AE54E /* VMOrderDetailTableFooterViewDefault.xib */; };
+		18FDAFE3207F2872008AE54E /* VMOrderDetailTableFooterViewOther.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FDAFE2207F2872008AE54E /* VMOrderDetailTableFooterViewOther.xib */; };
+		18FDAFE8207F3EE3008AE54E /* VMUserLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDAFE7207F3EE3008AE54E /* VMUserLocationViewController.m */; };
 		89F31D8AC665279E1A817B70 /* Pods_VegetableManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83F405C6F6A6BB5575622E0 /* Pods_VegetableManagement.framework */; };
 /* End PBXBuildFile section */
 
@@ -174,6 +186,25 @@
 		18FDAFC1207DFF67008AE54E /* VMOrderDetailTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMOrderDetailTableHeaderView.h; sourceTree = "<group>"; };
 		18FDAFC2207DFF67008AE54E /* VMOrderDetailTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMOrderDetailTableHeaderView.m; sourceTree = "<group>"; };
 		18FDAFC4207DFF76008AE54E /* VMOrderDetailTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMOrderDetailTableHeaderView.xib; sourceTree = "<group>"; };
+		18FDAFC7207EFCA4008AE54E /* VMOrderDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMOrderDetailTableViewCell.h; sourceTree = "<group>"; };
+		18FDAFC8207EFCA4008AE54E /* VMOrderDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMOrderDetailTableViewCell.m; sourceTree = "<group>"; };
+		18FDAFC9207EFCA4008AE54E /* VMOrderDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMOrderDetailTableViewCell.xib; sourceTree = "<group>"; };
+		18FDAFCC207F01FD008AE54E /* VMOrderTotalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMOrderTotalTableViewCell.h; sourceTree = "<group>"; };
+		18FDAFCD207F01FD008AE54E /* VMOrderTotalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMOrderTotalTableViewCell.m; sourceTree = "<group>"; };
+		18FDAFCE207F01FD008AE54E /* VMOrderTotalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMOrderTotalTableViewCell.xib; sourceTree = "<group>"; };
+		18FDAFD1207F0550008AE54E /* VMOrderTrackingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMOrderTrackingTableViewCell.h; sourceTree = "<group>"; };
+		18FDAFD2207F0550008AE54E /* VMOrderTrackingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMOrderTrackingTableViewCell.m; sourceTree = "<group>"; };
+		18FDAFD3207F0550008AE54E /* VMOrderTrackingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMOrderTrackingTableViewCell.xib; sourceTree = "<group>"; };
+		18FDAFD7207F0A13008AE54E /* VMSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMSectionHeaderView.h; sourceTree = "<group>"; };
+		18FDAFD8207F0A13008AE54E /* VMSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMSectionHeaderView.m; sourceTree = "<group>"; };
+		18FDAFDA207F0A1F008AE54E /* VMSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMSectionHeaderView.xib; sourceTree = "<group>"; };
+		18FDAFDD207F2630008AE54E /* VMOrderDetailTableFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMOrderDetailTableFooterView.h; sourceTree = "<group>"; };
+		18FDAFDE207F2630008AE54E /* VMOrderDetailTableFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMOrderDetailTableFooterView.m; sourceTree = "<group>"; };
+		18FDAFE0207F270B008AE54E /* VMOrderDetailTableFooterViewDefault.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMOrderDetailTableFooterViewDefault.xib; sourceTree = "<group>"; };
+		18FDAFE2207F2872008AE54E /* VMOrderDetailTableFooterViewOther.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMOrderDetailTableFooterViewOther.xib; sourceTree = "<group>"; };
+		18FDAFE4207F2C90008AE54E /* VMOrderDetailEnumFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMOrderDetailEnumFile.h; sourceTree = "<group>"; };
+		18FDAFE6207F3EE3008AE54E /* VMUserLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMUserLocationViewController.h; sourceTree = "<group>"; };
+		18FDAFE7207F3EE3008AE54E /* VMUserLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMUserLocationViewController.m; sourceTree = "<group>"; };
 		75D29ADE452037068377BC3C /* Pods-VegetableManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegetableManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VegetableManagement/Pods-VegetableManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		D83F405C6F6A6BB5575622E0 /* Pods_VegetableManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VegetableManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E929BAB2B45D3F3CF0BCC35C /* Pods-VegetableManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegetableManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-VegetableManagement/Pods-VegetableManagement.release.xcconfig"; sourceTree = "<group>"; };
@@ -315,6 +346,7 @@
 		185B1DE1206E11AA00816924 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				18FDAFE5207F3EC7008AE54E /* UserLocation(我的位置) */,
 				18FDAFB9207DE851008AE54E /* OrderDetail(订单详情) */,
 				18FDAFA6207CB917008AE54E /* OrderStatistics(配送统计) */,
 				18D99F43207B4C1500DAFB5F /* Evaluation(我的评价) */,
@@ -539,10 +571,14 @@
 		18FDAFB9207DE851008AE54E /* OrderDetail(订单详情) */ = {
 			isa = PBXGroup;
 			children = (
+				18FDAFDC207F24DB008AE54E /* TableFooterView */,
+				18FDAFD6207F0A01008AE54E /* SectionHeadView */,
+				18FDAFC6207EFC84008AE54E /* Cell */,
 				18FDAFC0207DFF52008AE54E /* TableHeaderView */,
 				18FDAFBB207DF472008AE54E /* VMOrderDetailViewController.h */,
 				18FDAFBC207DF472008AE54E /* VMOrderDetailViewController.m */,
 				18FDAFBD207DF472008AE54E /* VMOrderDetailViewController.xib */,
+				18FDAFE4207F2C90008AE54E /* VMOrderDetailEnumFile.h */,
 			);
 			name = "OrderDetail(订单详情)";
 			path = "VegetableManagement/ViewControllers/OrderDetail(订单详情)";
@@ -556,6 +592,52 @@
 				18FDAFC4207DFF76008AE54E /* VMOrderDetailTableHeaderView.xib */,
 			);
 			path = TableHeaderView;
+			sourceTree = "<group>";
+		};
+		18FDAFC6207EFC84008AE54E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				18FDAFC7207EFCA4008AE54E /* VMOrderDetailTableViewCell.h */,
+				18FDAFC8207EFCA4008AE54E /* VMOrderDetailTableViewCell.m */,
+				18FDAFC9207EFCA4008AE54E /* VMOrderDetailTableViewCell.xib */,
+				18FDAFCC207F01FD008AE54E /* VMOrderTotalTableViewCell.h */,
+				18FDAFCD207F01FD008AE54E /* VMOrderTotalTableViewCell.m */,
+				18FDAFCE207F01FD008AE54E /* VMOrderTotalTableViewCell.xib */,
+				18FDAFD1207F0550008AE54E /* VMOrderTrackingTableViewCell.h */,
+				18FDAFD2207F0550008AE54E /* VMOrderTrackingTableViewCell.m */,
+				18FDAFD3207F0550008AE54E /* VMOrderTrackingTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		18FDAFD6207F0A01008AE54E /* SectionHeadView */ = {
+			isa = PBXGroup;
+			children = (
+				18FDAFD7207F0A13008AE54E /* VMSectionHeaderView.h */,
+				18FDAFD8207F0A13008AE54E /* VMSectionHeaderView.m */,
+				18FDAFDA207F0A1F008AE54E /* VMSectionHeaderView.xib */,
+			);
+			path = SectionHeadView;
+			sourceTree = "<group>";
+		};
+		18FDAFDC207F24DB008AE54E /* TableFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				18FDAFDD207F2630008AE54E /* VMOrderDetailTableFooterView.h */,
+				18FDAFDE207F2630008AE54E /* VMOrderDetailTableFooterView.m */,
+				18FDAFE0207F270B008AE54E /* VMOrderDetailTableFooterViewDefault.xib */,
+				18FDAFE2207F2872008AE54E /* VMOrderDetailTableFooterViewOther.xib */,
+			);
+			path = TableFooterView;
+			sourceTree = "<group>";
+		};
+		18FDAFE5207F3EC7008AE54E /* UserLocation(我的位置) */ = {
+			isa = PBXGroup;
+			children = (
+				18FDAFE6207F3EE3008AE54E /* VMUserLocationViewController.h */,
+				18FDAFE7207F3EE3008AE54E /* VMUserLocationViewController.m */,
+			);
+			path = "UserLocation(我的位置)";
 			sourceTree = "<group>";
 		};
 		92EFF8B6C8CA4ED163A2FE10 /* Pods */ = {
@@ -641,6 +723,11 @@
 				18F7AA022079FE52009A4D4E /* VMLoginViewController.xib in Resources */,
 				1832BF5F20722D0000FC83B0 /* VMSetupTableViewCell.xib in Resources */,
 				185B1DF9206E24CD00816924 /* VMNewTaskTableViewCell.xib in Resources */,
+				18FDAFE3207F2872008AE54E /* VMOrderDetailTableFooterViewOther.xib in Resources */,
+				18FDAFD5207F0550008AE54E /* VMOrderTrackingTableViewCell.xib in Resources */,
+				18FDAFD0207F01FD008AE54E /* VMOrderTotalTableViewCell.xib in Resources */,
+				18FDAFE1207F270B008AE54E /* VMOrderDetailTableFooterViewDefault.xib in Resources */,
+				18FDAFDB207F0A1F008AE54E /* VMSectionHeaderView.xib in Resources */,
 				1832BF26207215FC00FC83B0 /* VMPersonalCenterTableViewCell.xib in Resources */,
 				1832BF7320734C9000FC83B0 /* VMMessageCenterTableViewCell.xib in Resources */,
 				1832BF89207367B700FC83B0 /* VMSelectAgentViewTableViewCell.xib in Resources */,
@@ -654,6 +741,7 @@
 				18FDAFC5207DFF76008AE54E /* VMOrderDetailTableHeaderView.xib in Resources */,
 				18FDAFB5207CBD16008AE54E /* VMVMOrderStatisticsTableViewCell.xib in Resources */,
 				185B1DDA206E096300816924 /* CustomerTabBarView.xib in Resources */,
+				18FDAFCB207EFCA4008AE54E /* VMOrderDetailTableViewCell.xib in Resources */,
 				18D99F41207B3D2800DAFB5F /* VMFinishedTableViewCell.xib in Resources */,
 				18CC221A206CBBED007E1274 /* Assets.xcassets in Resources */,
 				18FDAFAF207CBA27008AE54E /* VMVMOrderStatisticsTableHeaderView.xib in Resources */,
@@ -753,11 +841,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				185B1DF0206E15E600816924 /* VMDeliveryOrderViewController.m in Sources */,
+				18FDAFD9207F0A13008AE54E /* VMSectionHeaderView.m in Sources */,
 				18CC2220206CBBED007E1274 /* main.m in Sources */,
 				18CC2240206CD5E9007E1274 /* BaseViewController.m in Sources */,
 				185B1DE7206E11FC00816924 /* VMNewTaskViewController.m in Sources */,
 				185B1DDD206E0DA600816924 /* VMTabBarController.m in Sources */,
 				18D99F37207B11E100DAFB5F /* VMFinishedTableHeadView.m in Sources */,
+				18FDAFE8207F3EE3008AE54E /* VMUserLocationViewController.m in Sources */,
 				1832BF25207215FC00FC83B0 /* VMPersonalCenterTableViewCell.m in Sources */,
 				18FDAFA9207CB93A008AE54E /* VMOrderStatisticsViewController.m in Sources */,
 				1832BF88207367B700FC83B0 /* VMSelectAgentViewTableViewCell.m in Sources */,
@@ -772,7 +862,9 @@
 				185B1DF3206E161900816924 /* BaseTableViewController.m in Sources */,
 				18F7AA0C207A0DC2009A4D4E /* VMFinishedTableViewController.m in Sources */,
 				1832BF7220734C9000FC83B0 /* VMMessageCenterTableViewCell.m in Sources */,
+				18FDAFCA207EFCA4008AE54E /* VMOrderDetailTableViewCell.m in Sources */,
 				18FDAFB4207CBD16008AE54E /* VMVMOrderStatisticsTableViewCell.m in Sources */,
+				18FDAFCF207F01FD008AE54E /* VMOrderTotalTableViewCell.m in Sources */,
 				185B1DD6206E092700816924 /* CustomerTabBarView.m in Sources */,
 				1832BF182071DE1B00FC83B0 /* VMWaitPickUpTableViewCell.m in Sources */,
 				1832BF6020722D0000FC83B0 /* VMSetupTableViewCell.m in Sources */,
@@ -782,12 +874,14 @@
 				1832BF66207317F000FC83B0 /* VMHelpViewController.m in Sources */,
 				1832BF8C2074AD3500FC83B0 /* VMTabBarView.m in Sources */,
 				18D99F4F207B4C9D00DAFB5F /* VMEvaluationTableViewCell.m in Sources */,
+				18FDAFDF207F2630008AE54E /* VMOrderDetailTableFooterView.m in Sources */,
 				185B1DED206E15D000816924 /* VMWaitPickUpViewController.m in Sources */,
 				1832BF532072225400FC83B0 /* VMSetupViewController.m in Sources */,
 				18FDAFC3207DFF67008AE54E /* VMOrderDetailTableHeaderView.m in Sources */,
 				1832BF6C20734C3500FC83B0 /* VMMessageCenterViewController.m in Sources */,
 				1832BF822073659600FC83B0 /* VMSelectAgentViewController.m in Sources */,
 				18FDAFAD207CBA07008AE54E /* VMVMOrderStatisticsTableHeaderView.m in Sources */,
+				18FDAFD4207F0550008AE54E /* VMOrderTrackingTableViewCell.m in Sources */,
 				18D99F40207B3D2800DAFB5F /* VMFinishedTableViewCell.m in Sources */,
 				185B1DF8206E24CD00816924 /* VMNewTaskTableViewCell.m in Sources */,
 				18D99F4B207B4C8000DAFB5F /* VMEvaluationTopView.m in Sources */,

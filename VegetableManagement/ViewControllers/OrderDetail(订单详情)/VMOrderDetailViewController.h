@@ -7,7 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "VMOrderDetailEnumFile.h"
 
 @interface VMOrderDetailViewController : BaseViewController
+
+@property (nonatomic) VMOrderDetailTableFooterStyle footerStyle;
 
 @end
