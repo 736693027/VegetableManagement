@@ -7,6 +7,7 @@
 //
 
 #import "VMFinishedTableHeadView.h"
+#import "VMDatePicker.h"
 
 @interface VMFinishedTableHeadView()
 @property (weak, nonatomic) IBOutlet UIButton *searchBtn;
@@ -28,11 +29,25 @@
 }
 
 - (IBAction)startDateBtnClick:(UIButton *)sender {
-    
+    VMDatePicker *datePick = [VMDatePicker datePickerView];
+    @weakify(self);
+    datePick.dateSignal = [RACSubject subject];
+    [datePick.dateSignal subscribeNext:^(NSString *  _Nullable dateString) {
+        @strongify(self);
+        [self.startDateBtn setTitle:dateString forState:UIControlStateNormal];
+    }];
+    [datePick showPickerView];
 }
 
 - (IBAction)endDateBtnClick:(UIButton *)sender {
-    
+    VMDatePicker *datePick = [VMDatePicker datePickerView];
+    datePick.dateSignal = [RACSubject subject];
+    @weakify(self);
+    [datePick.dateSignal subscribeNext:^(NSString *  _Nullable dateString) {
+        @strongify(self);
+        [self.endDateBtn setTitle:dateString forState:UIControlStateNormal];
+    }];
+    [datePick showPickerView];
 }
 
 @end

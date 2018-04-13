@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="k06-Vf-zg7" customClass="VMDatePicker">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="CwO-YX-Av7">
+                    <rect key="frame" x="0.0" y="44" width="375" height="216"/>
+                    <date key="date" timeIntervalSinceReferenceDate="545283045.95941806">
+                        <!--2018-04-13 03:30:45 +0000-->
+                    </date>
+                </datePicker>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CnY-ey-H4h">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB0-RN-Ni6">
+                            <rect key="frame" x="15" y="7" width="31" height="30"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="1" green="0.18431372549019609" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="hiddenPickerView:" destination="k06-Vf-zg7" eventType="touchUpInside" id="7yO-mT-uck"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8a-Aa-dyN">
+                            <rect key="frame" x="329" y="7" width="31" height="30"/>
+                            <state key="normal" title="确定">
+                                <color key="titleColor" red="0.14509803921568626" green="0.792156862745098" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="confirmBtnClick:" destination="k06-Vf-zg7" eventType="touchUpInside" id="NdW-Es-fvC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="JB0-RN-Ni6" firstAttribute="leading" secondItem="CnY-ey-H4h" secondAttribute="leading" constant="15" id="JIr-Zx-2v6"/>
+                        <constraint firstAttribute="height" constant="44" id="c11-TV-9Y9"/>
+                        <constraint firstItem="b8a-Aa-dyN" firstAttribute="centerY" secondItem="CnY-ey-H4h" secondAttribute="centerY" id="eir-qj-OAJ"/>
+                        <constraint firstItem="JB0-RN-Ni6" firstAttribute="centerY" secondItem="CnY-ey-H4h" secondAttribute="centerY" id="ikO-sj-dM8"/>
+                        <constraint firstAttribute="trailing" secondItem="b8a-Aa-dyN" secondAttribute="trailing" constant="15" id="kYr-NP-KTT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="CwO-YX-Av7" firstAttribute="leading" secondItem="u79-Cm-v8G" secondAttribute="leading" id="8Ur-P0-Rod"/>
+                <constraint firstItem="u79-Cm-v8G" firstAttribute="trailing" secondItem="CwO-YX-Av7" secondAttribute="trailing" id="8cM-hj-8zY"/>
+                <constraint firstItem="CnY-ey-H4h" firstAttribute="trailing" secondItem="u79-Cm-v8G" secondAttribute="trailing" id="Fx1-jC-JRR"/>
+                <constraint firstItem="CwO-YX-Av7" firstAttribute="top" secondItem="CnY-ey-H4h" secondAttribute="bottom" id="Kd6-dJ-eTM"/>
+                <constraint firstItem="CwO-YX-Av7" firstAttribute="bottom" secondItem="u79-Cm-v8G" secondAttribute="bottom" id="YA9-C7-CDE"/>
+                <constraint firstItem="CnY-ey-H4h" firstAttribute="top" secondItem="u79-Cm-v8G" secondAttribute="top" id="q8C-WD-zfC"/>
+                <constraint firstItem="CnY-ey-H4h" firstAttribute="leading" secondItem="u79-Cm-v8G" secondAttribute="leading" id="zNL-a7-bw0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="u79-Cm-v8G"/>
+            <connections>
+                <outlet property="datePicker" destination="CwO-YX-Av7" id="3eF-Cd-2f7"/>
+            </connections>
+            <point key="canvasLocation" x="-20" y="-236"/>
+        </view>
+    </objects>
+</document>

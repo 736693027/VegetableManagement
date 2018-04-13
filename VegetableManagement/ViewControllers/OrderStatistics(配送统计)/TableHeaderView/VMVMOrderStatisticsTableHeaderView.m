@@ -7,12 +7,17 @@
 //
 
 #import "VMVMOrderStatisticsTableHeaderView.h"
+#import "VMDatePicker.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface VMVMOrderStatisticsTableHeaderView()
 
 @property (weak, nonatomic) IBOutlet UIButton *searchBtn;
 @property (weak, nonatomic) IBOutlet UIButton *startDateBtn;
 @property (weak, nonatomic) IBOutlet UIButton *endDateBtn;
+
+@property (copy ,nonatomic) NSString *startDate;
+@property (copy ,nonatomic) NSString *endDate;
 
 @end
 
@@ -30,11 +35,36 @@
 }
 
 - (IBAction)startDateBtnClick:(UIButton *)sender {
-    
+    VMDatePicker *datePick = [VMDatePicker datePickerView];
+    @weakify(self);
+    datePick.dateSignal = [RACSubject subject];
+    [datePick.dateSignal subscribeNext:^(NSString *  _Nullable dateString) {
+        @strongify(self);
+        if(self.endDate&&([CommonTools compareDate:dateString withOtherDate:self.endDate] == NSOrderedDescending)){
+                [SVProgressHUD showErrorWithStatus:@"开始日期需小于结束日期"];
+        }else{
+            self.startDate = dateString;
+            [self.startDateBtn setTitle:dateString forState:UIControlStateNormal];
+        }
+    }];
+    [datePick showPickerView];
 }
 
 - (IBAction)endDateBtnClick:(UIButton *)sender {
-    
+    VMDatePicker *datePick = [VMDatePicker datePickerView];
+    @weakify(self);
+    datePick.dateSignal = [RACSubject subject];
+    [datePick.dateSignal subscribeNext:^(NSString *  _Nullable dateString) {
+        @strongify(self);
+        if(self.startDate&&([CommonTools compareDate:self.startDate withOtherDate:dateString] == NSOrderedDescending)){
+                [SVProgressHUD showErrorWithStatus:@"结束日期需大于开始日期"];
+            
+        }else{
+            self.endDate = dateString;
+            [self.endDateBtn setTitle:dateString forState:UIControlStateNormal];
+        }
+    }];
+    [datePick showPickerView];
 }
 
 @end

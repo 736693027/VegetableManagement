@@ -48,16 +48,22 @@
                                 <constraint firstAttribute="bottom" secondItem="ZX5-hQ-1gE" secondAttribute="bottom" constant="12.5" id="zjw-Kn-6Lq"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siz-5y-NHI">
+                        <button opaque="NO" tag="500" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siz-5y-NHI">
                             <rect key="frame" x="328" y="174" width="42" height="42"/>
                             <state key="normal" image="map_ amplification"/>
+                            <connections>
+                                <action selector="mapButtonClick:" destination="hl0-P1-GbV" eventType="touchUpInside" id="9RJ-qG-wXH"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZv-vg-TBC">
+                        <button opaque="NO" tag="501" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZv-vg-TBC">
                             <rect key="frame" x="328" y="218" width="42" height="42"/>
                             <state key="normal" image="map_ narrow"/>
+                            <connections>
+                                <action selector="mapButtonClick:" destination="hl0-P1-GbV" eventType="touchUpInside" id="Do0-12-dZn"/>
+                            </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.33725490200000002" green="1" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="5zy-F2-Jir" firstAttribute="top" secondItem="Apv-9b-CWo" secondAttribute="top" id="BTD-Gx-DpT"/>
                         <constraint firstItem="FZv-vg-TBC" firstAttribute="top" secondItem="siz-5y-NHI" secondAttribute="bottom" constant="2" id="NmV-53-nwB"/>
@@ -303,7 +309,7 @@
             <connections>
                 <outlet property="headMapView" destination="Apv-9b-CWo" id="ryT-hK-m4h"/>
             </connections>
-            <point key="canvasLocation" x="31" y="-443"/>
+            <point key="canvasLocation" x="-91" y="-453"/>
         </view>
     </objects>
     <resources>

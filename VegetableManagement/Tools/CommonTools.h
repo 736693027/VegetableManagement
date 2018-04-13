@@ -28,14 +28,17 @@
  */
 
 + (UIImage*)createImageWithColor:(UIColor*) color;
+
 /*
  颜色数值转换:#ababab
  */
 +(UIColor *)changeColor:(NSString *)str;
+
 /*
  颜色数值转换:#ababab  透明度 alpha
  */
 +(UIColor *)changeColor:(NSString *)str alpha:(CGFloat )alpha;
+
 /**
  是否存在网络
  */
@@ -44,6 +47,7 @@
  获取当前屏幕显示的viewcontroller
  */
 + (UIViewController *)getCurrentVC;
+
 /**
  *  获取网络状态
  *
@@ -51,4 +55,13 @@
  */
 +(NSString *)getNetWorkStates;
 
+
+/**
+ 比对俩个日期
+
+ @param dateString 开始时间
+ @param otherDateString 结束时间
+ @return 对比结果
+ */
++ (NSComparisonResult)compareDate:(NSString *)dateString withOtherDate:(NSString *)otherDateString;
 @end

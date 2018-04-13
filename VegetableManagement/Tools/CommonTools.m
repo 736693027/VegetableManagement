@@ -261,4 +261,15 @@
     //根据状态选择
     return state;
 }
+
++ (NSComparisonResult)compareDate:(NSString *)dateString withOtherDate:(NSString *)otherDateString{
+    dateString = [dateString stringByReplacingOccurrencesOfString:@"." withString:@"-"];
+    otherDateString = [otherDateString stringByReplacingOccurrencesOfString:@"." withString:@"-"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+    [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+    NSDate *date = [dateFormatter dateFromString:dateString];
+    NSDate *otherDate = [dateFormatter dateFromString:otherDateString];
+    return [date compare:otherDate];
+}
 @end

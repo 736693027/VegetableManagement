@@ -80,6 +80,8 @@
 		18FDAFE1207F270B008AE54E /* VMOrderDetailTableFooterViewDefault.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FDAFE0207F270B008AE54E /* VMOrderDetailTableFooterViewDefault.xib */; };
 		18FDAFE3207F2872008AE54E /* VMOrderDetailTableFooterViewOther.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FDAFE2207F2872008AE54E /* VMOrderDetailTableFooterViewOther.xib */; };
 		18FDAFE8207F3EE3008AE54E /* VMUserLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDAFE7207F3EE3008AE54E /* VMUserLocationViewController.m */; };
+		18FDAFEC20805B59008AE54E /* VMDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDAFEB20805B59008AE54E /* VMDatePicker.m */; };
+		18FDAFF020805B7E008AE54E /* VMDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FDAFEF20805B7E008AE54E /* VMDatePicker.xib */; };
 		89F31D8AC665279E1A817B70 /* Pods_VegetableManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83F405C6F6A6BB5575622E0 /* Pods_VegetableManagement.framework */; };
 /* End PBXBuildFile section */
 
@@ -205,6 +207,9 @@
 		18FDAFE4207F2C90008AE54E /* VMOrderDetailEnumFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMOrderDetailEnumFile.h; sourceTree = "<group>"; };
 		18FDAFE6207F3EE3008AE54E /* VMUserLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMUserLocationViewController.h; sourceTree = "<group>"; };
 		18FDAFE7207F3EE3008AE54E /* VMUserLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMUserLocationViewController.m; sourceTree = "<group>"; };
+		18FDAFEA20805B59008AE54E /* VMDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMDatePicker.h; sourceTree = "<group>"; };
+		18FDAFEB20805B59008AE54E /* VMDatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMDatePicker.m; sourceTree = "<group>"; };
+		18FDAFEF20805B7E008AE54E /* VMDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMDatePicker.xib; sourceTree = "<group>"; };
 		75D29ADE452037068377BC3C /* Pods-VegetableManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegetableManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VegetableManagement/Pods-VegetableManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		D83F405C6F6A6BB5575622E0 /* Pods_VegetableManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VegetableManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E929BAB2B45D3F3CF0BCC35C /* Pods-VegetableManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegetableManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-VegetableManagement/Pods-VegetableManagement.release.xcconfig"; sourceTree = "<group>"; };
@@ -423,6 +428,7 @@
 		18CC220F206CBBED007E1274 /* VegetableManagement */ = {
 			isa = PBXGroup;
 			children = (
+				18FDAFE920805B48008AE54E /* DataPicker */,
 				185B1DE1206E11AA00816924 /* ViewControllers */,
 				185B1DD3206E090600816924 /* TabBarViewController */,
 				18CC2236206CD5E9007E1274 /* BaseViewController */,
@@ -640,6 +646,16 @@
 			path = "UserLocation(我的位置)";
 			sourceTree = "<group>";
 		};
+		18FDAFE920805B48008AE54E /* DataPicker */ = {
+			isa = PBXGroup;
+			children = (
+				18FDAFEA20805B59008AE54E /* VMDatePicker.h */,
+				18FDAFEB20805B59008AE54E /* VMDatePicker.m */,
+				18FDAFEF20805B7E008AE54E /* VMDatePicker.xib */,
+			);
+			path = DataPicker;
+			sourceTree = "<group>";
+		};
 		92EFF8B6C8CA4ED163A2FE10 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,6 +759,7 @@
 				185B1DDA206E096300816924 /* CustomerTabBarView.xib in Resources */,
 				18FDAFCB207EFCA4008AE54E /* VMOrderDetailTableViewCell.xib in Resources */,
 				18D99F41207B3D2800DAFB5F /* VMFinishedTableViewCell.xib in Resources */,
+				18FDAFF020805B7E008AE54E /* VMDatePicker.xib in Resources */,
 				18CC221A206CBBED007E1274 /* Assets.xcassets in Resources */,
 				18FDAFAF207CBA27008AE54E /* VMVMOrderStatisticsTableHeaderView.xib in Resources */,
 				18D99F3B207B120400DAFB5F /* VMFinishedTableHeadView.xib in Resources */,
@@ -842,6 +859,7 @@
 			files = (
 				185B1DF0206E15E600816924 /* VMDeliveryOrderViewController.m in Sources */,
 				18FDAFD9207F0A13008AE54E /* VMSectionHeaderView.m in Sources */,
+				18FDAFEC20805B59008AE54E /* VMDatePicker.m in Sources */,
 				18CC2220206CBBED007E1274 /* main.m in Sources */,
 				18CC2240206CD5E9007E1274 /* BaseViewController.m in Sources */,
 				185B1DE7206E11FC00816924 /* VMNewTaskViewController.m in Sources */,
