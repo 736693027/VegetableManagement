@@ -48,13 +48,25 @@
                                 <constraint firstAttribute="bottom" secondItem="ZX5-hQ-1gE" secondAttribute="bottom" constant="12.5" id="zjw-Kn-6Lq"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siz-5y-NHI">
+                            <rect key="frame" x="328" y="174" width="42" height="42"/>
+                            <state key="normal" image="map_ amplification"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZv-vg-TBC">
+                            <rect key="frame" x="328" y="218" width="42" height="42"/>
+                            <state key="normal" image="map_ narrow"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.33725490200000002" green="1" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="5zy-F2-Jir" firstAttribute="top" secondItem="Apv-9b-CWo" secondAttribute="top" id="BTD-Gx-DpT"/>
+                        <constraint firstItem="FZv-vg-TBC" firstAttribute="top" secondItem="siz-5y-NHI" secondAttribute="bottom" constant="2" id="NmV-53-nwB"/>
                         <constraint firstItem="5zy-F2-Jir" firstAttribute="leading" secondItem="Apv-9b-CWo" secondAttribute="leading" id="Zd0-sM-pxP"/>
+                        <constraint firstAttribute="trailing" secondItem="siz-5y-NHI" secondAttribute="trailing" constant="5" id="dKr-yE-nRr"/>
                         <constraint firstAttribute="height" constant="265" id="iKR-VG-Mh6"/>
                         <constraint firstAttribute="trailing" secondItem="5zy-F2-Jir" secondAttribute="trailing" id="qIr-ng-m23"/>
+                        <constraint firstAttribute="bottom" secondItem="FZv-vg-TBC" secondAttribute="bottom" constant="5" id="tkl-fY-KzK"/>
+                        <constraint firstAttribute="trailing" secondItem="FZv-vg-TBC" secondAttribute="trailing" constant="5" id="yaZ-PL-hF4"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvS-Vc-8ho">
@@ -298,5 +310,7 @@
         <image name="icon_caibangDelivery" width="42" height="12"/>
         <image name="icon_cellphone" width="15" height="17"/>
         <image name="icon_mapNav" width="22" height="22"/>
+        <image name="map_ amplification" width="42" height="42"/>
+        <image name="map_ narrow" width="42" height="42"/>
     </resources>
 </document>
