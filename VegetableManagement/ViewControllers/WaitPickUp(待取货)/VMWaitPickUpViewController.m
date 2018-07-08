@@ -9,6 +9,7 @@
 #import "VMWaitPickUpViewController.h"
 #import "VMWaitPickUpTableViewCell.h"
 #import "UIViewController+MMDrawerController.h"
+#import "VMGetWaitPickUpListAPI.h"
 
 @interface VMWaitPickUpViewController ()
 
@@ -44,6 +45,16 @@
     return cell;
 }
 
+- (void)requestData{
+    VMGetWaitPickUpListAPI *getListAPI = [[VMGetWaitPickUpListAPI alloc] init];
+    [getListAPI startRequestWithArraySuccess:^(NSArray *responseArray) {
+        
+    } failModel:^(VMResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"待取货列表获取失败"];
+    }];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

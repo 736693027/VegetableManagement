@@ -15,4 +15,6 @@
 - (void)navLeftButtonClicked:(UIButton *)sender;
 
 - (void)navRightButtonClicked:(UIButton *)sender;
+
+- (void)requestData;//请求数据
 @end

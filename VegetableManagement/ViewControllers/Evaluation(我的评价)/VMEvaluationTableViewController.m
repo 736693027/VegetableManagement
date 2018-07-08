@@ -10,6 +10,7 @@
 #import "VMEvaluationTopView.h"
 #import <Masonry/Masonry.h>
 #import "VMEvaluationTableViewCell.h"
+#import "VMGetEvaluationListAPI.h"
 
 @interface VMEvaluationTableViewController ()
 
@@ -39,6 +40,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VMEvaluationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMEvaluationTableViewCell"];
     return cell;
+}
+- (void)requestData{
+    [SVProgressHUD show];
+    VMGetEvaluationListAPI *getListData = [[VMGetEvaluationListAPI alloc] init];
+    [getListData startRequestWithArraySuccess:^(NSArray *responseArray) {
+        
+    } failModel:^(VMResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"获取失败"];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

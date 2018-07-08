@@ -10,6 +10,8 @@
 #import "VMFinishedTableViewCell.h"
 #import "VMFinishedTableHeadView.h"
 #import <Masonry/Masonry.h>
+#import "VMGetFinishedOrderListAPI.h"
+#import "VMGetFinishedOrderCancleListAPI.h"
 
 @interface VMFinishedTableViewController ()
 
@@ -51,6 +53,27 @@
     return cell;
 }
 
+- (void)requestData{
+    if(self.listType == VMFinishedTableViewTypeFinished){
+        VMGetFinishedOrderListAPI *getFinishedListAPI = [[VMGetFinishedOrderListAPI alloc] init];
+        [getFinishedListAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+            
+        } failModel:^(VMResponseModel *errorModel) {
+            [SVProgressHUD showErrorWithStatus:errorModel.message];
+        } fail:^(YTKBaseRequest *request) {
+            [SVProgressHUD showErrorWithStatus:@"列表数据获取失败"];
+        }];
+    }else{
+        VMGetFinishedOrderCancleListAPI *getCancleListAPI = [[VMGetFinishedOrderCancleListAPI alloc] init];
+        [getCancleListAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+            
+        } failModel:^(VMResponseModel *errorModel) {
+            [SVProgressHUD showErrorWithStatus:errorModel.message];
+        } fail:^(YTKBaseRequest *request) {
+            [SVProgressHUD showErrorWithStatus:@"列表数据获取失败"];
+        }];
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

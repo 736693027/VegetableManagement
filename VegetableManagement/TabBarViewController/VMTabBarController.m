@@ -13,6 +13,7 @@
 #import "VMWaitPickUpViewController.h"
 #import "VMDeliveryOrderViewController.h"
 #import "VMNavigationController.h"
+#import "VMGetTablCountAPI.h"
 
 @interface VMTabBarController ()<CustomerTabBarViewDelegate>{
     VMCustomTabBar *tabBar;
@@ -25,11 +26,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     tabBar = [[VMCustomTabBar alloc] init];
     tabBar.tabBarView.viewDelegate = self;
     [self setValue:tabBar forKey:@"tabBar"];
     
     [self addAllChildViewController];
+    
+    VMGetTablCountAPI *getTabCount = [[VMGetTablCountAPI alloc] init];
+    [getTabCount startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        
+    } failModel:^(VMResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"标签总数获取失败"];
+    }];
 }
 
 - (void)addAllChildViewController{

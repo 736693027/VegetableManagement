@@ -9,6 +9,7 @@
 #import "VMDeliveryOrderViewController.h"
 #import "VMWaitPickUpTableViewCell.h"
 #import "UIViewController+MMDrawerController.h"
+#import "VMDeliveryOrderGetListAPI.h"
 
 @interface VMDeliveryOrderViewController ()
 
@@ -43,6 +44,18 @@
     [cell.operatingBtn setBackgroundImage:[UIImage imageNamed:@"icon_deliverdBtn"] forState:UIControlStateNormal];
     return cell;
 }
+
+- (void)requestData{
+    VMDeliveryOrderGetListAPI *getListAPI = [[VMDeliveryOrderGetListAPI alloc] init];
+    [getListAPI startRequestWithArraySuccess:^(NSArray *responseArray) {
+        
+    } failModel:^(VMResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"待取货列表获取失败"];
+    }];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

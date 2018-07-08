@@ -9,6 +9,7 @@
 #import "VMMessageCenterViewController.h"
 #import "VMMessageCenterTableViewCell.h"
 #import "VMMessageDetailViewController.h"
+#import "VMGetMessageCenterListAPI.h"
 
 @interface VMMessageCenterViewController ()
 
@@ -35,6 +36,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     VMMessageDetailViewController *detailVC = [[VMMessageDetailViewController alloc] init];
     [self.navigationController pushViewController:detailVC animated:YES];
+}
+- (void)requestData{
+    [SVProgressHUD show];
+    VMGetMessageCenterListAPI *getListData = [[VMGetMessageCenterListAPI alloc] init];
+    [getListData startRequestWithArraySuccess:^(NSArray *responseArray) {
+        
+    } failModel:^(VMResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"获取失败"];
+    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

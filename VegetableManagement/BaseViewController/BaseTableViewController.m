@@ -7,7 +7,6 @@
 //
 
 #import "BaseTableViewController.h"
-#import "MJRefresh.h"
 
 @interface BaseTableViewController ()
 
@@ -40,6 +39,7 @@
     [self.view addSubview:self.dataTableView];
     _dataTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(tableHeadViewRefreshAction)];
     _dataTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(tableFootViewRefreshAction)];
+    [_dataTableView.mj_header beginRefreshing];
 }
 
 - (void)tableRegisterNibName:(NSString *)nibName cellReuseIdentifier:(NSString *)cellReuseIdentifier estimatedRowHeight:(CGFloat)height{
@@ -49,10 +49,15 @@
 }
 
 - (void)tableHeadViewRefreshAction{
-};
+    [self.dataArray removeAllObjects];
+    self.pageNumber = 1;
+    [self requestData];
+}
 
 - (void)tableFootViewRefreshAction{
-};
+    self.pageNumber ++ ;
+    [self requestData];
+}
 
 - (void)setIsClickEmptyImageLoading:(BOOL)isClickEmptyImageLoading
 {

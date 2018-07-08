@@ -8,6 +8,7 @@
 
 #import "VMFinishedOrderViewController.h"
 #import "VMFinishedTableViewController.h"
+#import "VMGetFinishedOrderTabCountAPi.h"
 
 @interface VMFinishedOrderViewController ()<UIScrollViewDelegate>{
     NSInteger currentIndex;
@@ -26,9 +27,18 @@
     for(NSInteger i=0;i<2;i++){
         VMFinishedTableViewController *finishedTable = [[VMFinishedTableViewController alloc] init];
         finishedTable.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, _mainScrollview.frame.size.height);
+        finishedTable.listType = (i+1);
         [self addChildViewController:finishedTable];
         [_mainScrollview addSubview:finishedTable.view];
     }
+    VMGetFinishedOrderTabCountAPi *getTapCountAPI = [[VMGetFinishedOrderTabCountAPi alloc] init];
+    [getTapCountAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        
+    } failModel:^(VMResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"标签总数获取失败"];
+    }];
 }
 - (IBAction)buttonClick:(UIButton *)sender {
     NSInteger index = sender.tag - 100;

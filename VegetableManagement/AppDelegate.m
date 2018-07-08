@@ -42,8 +42,6 @@
     //5、设置左右两边抽屉显示的多少
     self.drawerController.maximumLeftDrawerWidth = 300.0;
     [self.drawerController setShowsShadow:NO];
-    
-    VMLoginViewController *loginVC = [[VMLoginViewController alloc] init];
 
     self.window.rootViewController = self.drawerController;
     [self.window makeKeyAndVisible];

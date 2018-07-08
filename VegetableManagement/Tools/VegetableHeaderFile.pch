@@ -16,5 +16,10 @@
 #define TabBarHeight 68
 
 #import "CommonTools.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+#import <YYModel/YYModel.h>
+
+#define BASEURL @"https://www.baidu.com"
+#define OBJC(v) (([v isEqual:[NSNull null]] | [v isEqual:@"(null)"] | [v isEqual:@"<null>"] | v== nil) ? @"" : v)
 
 #endif /* VegetableHeaderFile_pch */

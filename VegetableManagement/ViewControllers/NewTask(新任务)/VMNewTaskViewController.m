@@ -11,6 +11,7 @@
 #import "VMNewTaskTableViewCell.h"
 #import "UIViewController+MMDrawerController.h"
 #import "VMOrderDetailViewController.h"
+#import "VMNewTaskListAPI.h"
 
 @interface VMNewTaskViewController ()
 
@@ -43,7 +44,6 @@
     NSString *cellClassName = NSStringFromClass([VMNewTaskTableViewCell class]);
     [self tableRegisterNibName:cellClassName cellReuseIdentifier:cellClassName estimatedRowHeight:266];
 }
-
 #pragma mark nav leftBarBtn click
 - (void)navLeftButtonClicked:(UIButton *)sender {
     //这里的话是通过遍历循环拿到之前在AppDelegate中声明的那个MMDrawerController属性，然后判断是否为打开状态，如果是就关闭，否就是打开(初略解释，里面还有一些条件)
@@ -63,6 +63,23 @@
     VMOrderDetailViewController *orderDetailVC = [[VMOrderDetailViewController alloc] init];
     orderDetailVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:orderDetailVC animated:YES];
+}
+
+- (void)requestData{
+    [SVProgressHUD show];
+    if([self.dataTableView.mj_header isRefreshing]){
+        [self.dataTableView.mj_header endRefreshing];
+    }else{
+        [self.dataTableView.mj_footer endRefreshing];
+    }
+    VMNewTaskListAPI *taskListAPI = [[VMNewTaskListAPI alloc] init];
+    [taskListAPI startRequestWithArraySuccess:^(NSArray *responseArray) {
+        [SVProgressHUD dismiss];
+    } failModel:^(VMResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+         [SVProgressHUD showErrorWithStatus:@"列表数据获取失败"];
+    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

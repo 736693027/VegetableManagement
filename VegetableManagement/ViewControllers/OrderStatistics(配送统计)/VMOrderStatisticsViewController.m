@@ -10,6 +10,7 @@
 #import "VMVMOrderStatisticsTableHeaderView.h"
 #import "VMVMOrderStatisticsTableViewCell.h"
 #import <Masonry/Masonry.h>
+#import "VMGetOrderStatisticsListAPI.h"
 
 @interface VMOrderStatisticsViewController ()
 
@@ -40,6 +41,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VMVMOrderStatisticsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMVMOrderStatisticsTableViewCell"];
     return cell;
+}
+- (void)requestData{
+    VMGetOrderStatisticsListAPI *orderStatisticsList = [[VMGetOrderStatisticsListAPI alloc] init];
+    [orderStatisticsList startRequestWithArraySuccess:^(NSArray *responseArray) {
+        
+    } failModel:^(VMResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"获取失败"];
+    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

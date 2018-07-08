@@ -9,6 +9,7 @@
 #import "VMEvaluationTopView.h"
 #import "XHStarRateView.h"
 #import <Masonry/Masonry.h>
+#import "VMGetEvaluationInfoAPI.h"
 
 @interface VMEvaluationTopView()
 @property (weak, nonatomic) IBOutlet UIView *distributionView;
@@ -41,6 +42,15 @@
     [self.commodityView addSubview:starRateView2];
     [starRateView2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.left.offset(0);
+    }];
+    
+    VMGetEvaluationInfoAPI *getEvaluationAPI = [[VMGetEvaluationInfoAPI alloc] init];
+    [getEvaluationAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        
+    } failModel:^(VMResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"评价信息获取失败"];
     }];
 }
 @end
