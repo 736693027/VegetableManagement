@@ -75,7 +75,7 @@
     if([titleString containsString:@"("]){
         NSRange range = [titleString rangeOfString:@"("];
         NSRange lastRangr = [titleString rangeOfString:@")"];
-        bridgeString = [titleString substringWithRange:NSMakeRange(range.location, lastRangr.location-range.location)];
+        bridgeString = [titleString substringWithRange:NSMakeRange(range.location, lastRangr.location-range.location+1)];
     }
     NSMutableAttributedString *attributedString;
     if(!isSelect){

@@ -15,11 +15,19 @@
 #define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
 #define TabBarHeight 68
 
+/************************通用文件*********************************/
 #import "CommonTools.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <YYModel/YYModel.h>
 
-#define BASEURL @"https://www.baidu.com"
+/************************接口定义*********************************/
+#define BASEURL @"http://139.224.221.134:8081"
+
+
+/************************辅助宏定义*********************************/
 #define OBJC(v) (([v isEqual:[NSNull null]] | [v isEqual:@"(null)"] | [v isEqual:@"<null>"] | v== nil) ? @"" : v)
+
+/************************消息通知定义*********************************/
+#define VMLogoutNotification @"VMLogoutNotification" //退出登录
 
 #endif /* VegetableHeaderFile_pch */

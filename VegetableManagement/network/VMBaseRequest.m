@@ -62,9 +62,9 @@
             
             if (responseModel.result.integerValue == RESPONSE_CODE_SUCCESS){//请求成功
                 
-                if ([responseModel.jsonString isKindOfClass:[NSString class]]) {
+                if ([responseModel.result isKindOfClass:[NSString class]]) {
                     
-                    NSData *jsonData = [(NSString *)responseModel.jsonString dataUsingEncoding : NSUTF8StringEncoding];
+                    NSData *jsonData = [(NSString *)responseModel.result dataUsingEncoding : NSUTF8StringEncoding];
                     
                     id dicOrArray = jsonData?[NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:NULL]:nil;
                     

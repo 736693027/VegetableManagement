@@ -12,9 +12,9 @@
 
 - (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic {
     
-    id data = dic[@"data"];
+    id data = dic[@"result"];
     if (data) {
-        self.jsonString =  [data yy_modelToJSONString];
+        self.result =  [data yy_modelToJSONString];
     }
     
     return YES;

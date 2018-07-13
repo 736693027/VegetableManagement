@@ -11,7 +11,6 @@
 #import "VMTabBarController.h"
 #import <MMDrawerController/MMDrawerController.h>
 #import "VMPersonalCenterViewController.h"
-#import "VMLoginViewController.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
 
 @interface AppDelegate ()

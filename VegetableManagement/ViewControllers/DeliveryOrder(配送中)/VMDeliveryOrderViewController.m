@@ -50,7 +50,7 @@
     [getListAPI startRequestWithArraySuccess:^(NSArray *responseArray) {
         
     } failModel:^(VMResponseModel *errorModel) {
-        [SVProgressHUD showErrorWithStatus:errorModel.message];
+        [SVProgressHUD showErrorWithStatus:errorModel.msg];
     } fail:^(YTKBaseRequest *request) {
         [SVProgressHUD showErrorWithStatus:@"待取货列表获取失败"];
     }];

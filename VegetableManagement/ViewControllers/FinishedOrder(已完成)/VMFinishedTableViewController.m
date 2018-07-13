@@ -59,7 +59,7 @@
         [getFinishedListAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
             
         } failModel:^(VMResponseModel *errorModel) {
-            [SVProgressHUD showErrorWithStatus:errorModel.message];
+            [SVProgressHUD showErrorWithStatus:errorModel.msg];
         } fail:^(YTKBaseRequest *request) {
             [SVProgressHUD showErrorWithStatus:@"列表数据获取失败"];
         }];
@@ -68,7 +68,7 @@
         [getCancleListAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
             
         } failModel:^(VMResponseModel *errorModel) {
-            [SVProgressHUD showErrorWithStatus:errorModel.message];
+            [SVProgressHUD showErrorWithStatus:errorModel.msg];
         } fail:^(YTKBaseRequest *request) {
             [SVProgressHUD showErrorWithStatus:@"列表数据获取失败"];
         }];

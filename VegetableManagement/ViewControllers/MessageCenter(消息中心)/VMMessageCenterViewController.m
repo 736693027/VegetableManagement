@@ -38,12 +38,12 @@
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 - (void)requestData{
-    [SVProgressHUD show];
+    [SVProgressHUD showWithStatus:@"加载中..."];
     VMGetMessageCenterListAPI *getListData = [[VMGetMessageCenterListAPI alloc] init];
     [getListData startRequestWithArraySuccess:^(NSArray *responseArray) {
         
     } failModel:^(VMResponseModel *errorModel) {
-        [SVProgressHUD showErrorWithStatus:errorModel.message];
+        [SVProgressHUD showErrorWithStatus:errorModel.msg];
     } fail:^(YTKBaseRequest *request) {
         [SVProgressHUD showErrorWithStatus:@"获取失败"];
     }];

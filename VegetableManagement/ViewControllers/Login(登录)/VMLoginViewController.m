@@ -8,6 +8,9 @@
 
 #import "VMLoginViewController.h"
 #import "VMLoginRequestAPI.h"
+#import "VMRegisterViewController.h"
+#import "VMForgetViewController.h"
+#import "VMLoginUserInfoModel.h"
 
 @interface VMLoginViewController ()
 
@@ -25,15 +28,34 @@
 }
 - (IBAction)loginButtonClick:(UIButton *)sender {
     if(self.passwordTextField.text.length>0&&self.phoneNumberTextField.text.length>0){
+        [SVProgressHUD showWithStatus:@"加载中..."];
         VMLoginRequestAPI *loginAPI = [[VMLoginRequestAPI alloc] initWithUsername:self.phoneNumberTextField.text password:self.passwordTextField.text];
         [loginAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
-            
+            [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+            VMLoginUserInfoModel *loginModel = [VMLoginUserInfoModel loginUsrInfoModel];
+            VMLoginUserInfoModel *tmpLoginModel = [VMLoginUserInfoModel yy_modelWithJSON:responseDic];
+            loginModel = [tmpLoginModel copy];
+            [self dismissViewControllerAnimated:YES completion:nil];
         } failModel:^(VMResponseModel *errorModel) {
-            
+            [SVProgressHUD showErrorWithStatus:errorModel.msg];
         } fail:^(YTKBaseRequest *request) {
             
         }];
+    }else if (self.passwordTextField.text.length>0){
+        [SVProgressHUD showErrorWithStatus:@"请输入密码"];
+    }else if (self.phoneNumberTextField.text.length>0){
+        [SVProgressHUD showErrorWithStatus:@"请输入手机号"];
     }
+}
+- (IBAction)registerButtonClick:(id)sender {
+    VMRegisterViewController *registVC = [[VMRegisterViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:registVC];
+    [self presentViewController:nav animated:YES completion:nil];
+}
+- (IBAction)forgetButtonClick:(id)sender {
+    VMForgetViewController *forgerVC = [[VMForgetViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:forgerVC];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

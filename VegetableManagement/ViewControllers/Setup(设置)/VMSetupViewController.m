@@ -10,6 +10,7 @@
 #import "VMSetupTableViewCell.h"
 #import "VMSelectAgentViewController.h"
 #import "VMUserLocationViewController.h"
+#import "VMLoginUserInfoModel.h"
 
 @interface VMSetupViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -87,7 +88,10 @@
                 break;
         }
     }else{
-        
+        VMLoginUserInfoModel *loginUserModel = [VMLoginUserInfoModel loginUsrInfoModel];
+        [loginUserModel clear];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        [[NSNotificationCenter defaultCenter] postNotificationName:VMLogoutNotification object:nil];
     }
 }
 - (void)didReceiveMemoryWarning {

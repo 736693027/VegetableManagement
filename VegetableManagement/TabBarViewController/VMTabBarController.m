@@ -14,6 +14,9 @@
 #import "VMDeliveryOrderViewController.h"
 #import "VMNavigationController.h"
 #import "VMGetTablCountAPI.h"
+#import "VMLoginUserInfoModel.h"
+#import "VMLoginViewController.h"
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface VMTabBarController ()<CustomerTabBarViewDelegate>{
     VMCustomTabBar *tabBar;
@@ -23,10 +26,26 @@
 
 @implementation VMTabBarController
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+//    VMLoginUserInfoModel *loginUserInfo = [VMLoginUserInfoModel loginUsrInfoModel];
+//    if(!loginUserInfo.lgoinUserId){
+//        [self jumpToLoginViewController];
+//    }
+}
+- (void)jumpToLoginViewController{
+    VMLoginViewController *loginVC = [[VMLoginViewController alloc] init];
+    [self presentViewController:loginVC animated:YES completion:nil];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    @weakify(self);
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:VMLogoutNotification object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+        @strongify(self);
+        [self jumpToLoginViewController];
+    }];
     tabBar = [[VMCustomTabBar alloc] init];
     tabBar.tabBarView.viewDelegate = self;
     [self setValue:tabBar forKey:@"tabBar"];
@@ -35,9 +54,15 @@
     
     VMGetTablCountAPI *getTabCount = [[VMGetTablCountAPI alloc] init];
     [getTabCount startRequestWithDicSuccess:^(NSDictionary *responseDic) {
-        
+        NSNumber *newTaskNumber = [responseDic objectForKey:@"newTask"];
+        NSNumber *pickupNumber = [responseDic objectForKey:@"pickup"];
+        NSNumber *distributionNumber = [responseDic objectForKey:@"distribution"];
+        @strongify(self)
+        [self setTabBarItemBridge:newTaskNumber.integerValue withIndex:0];
+        [self setTabBarItemBridge:pickupNumber.integerValue withIndex:1];
+        [self setTabBarItemBridge:distributionNumber.integerValue withIndex:2];
     } failModel:^(VMResponseModel *errorModel) {
-        [SVProgressHUD showErrorWithStatus:errorModel.message];
+        [SVProgressHUD showErrorWithStatus:errorModel.msg];
     } fail:^(YTKBaseRequest *request) {
         [SVProgressHUD showErrorWithStatus:@"标签总数获取失败"];
     }];

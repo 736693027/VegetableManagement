@@ -35,12 +35,12 @@
     self.dataTableView.rowHeight = UITableViewAutomaticDimension;
     self.dataTableView.estimatedRowHeight = 51;
     [self.dataTableView registerNib:[UINib nibWithNibName:@"VMPersonalCenterTableViewCell" bundle:nil] forCellReuseIdentifier:@"VMPersonalCenterTableViewCell"];
-    [SVProgressHUD show];
+    [SVProgressHUD showWithStatus:@"加载中..."];
     VMGetPersonalInfoAPI *getPersonInfoAPI = [[VMGetPersonalInfoAPI alloc] init];
     [getPersonInfoAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
         [SVProgressHUD dismiss];
     } failModel:^(VMResponseModel *errorModel) {
-        [SVProgressHUD showErrorWithStatus:errorModel.message];
+        [SVProgressHUD showErrorWithStatus:errorModel.msg];
     } fail:^(YTKBaseRequest *request) {
         [SVProgressHUD showErrorWithStatus:@"用户信息获取失败"];
     }];

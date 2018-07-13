@@ -35,7 +35,7 @@
     [getTapCountAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
         
     } failModel:^(VMResponseModel *errorModel) {
-        [SVProgressHUD showErrorWithStatus:errorModel.message];
+        [SVProgressHUD showErrorWithStatus:errorModel.msg];
     } fail:^(YTKBaseRequest *request) {
         [SVProgressHUD showErrorWithStatus:@"标签总数获取失败"];
     }];

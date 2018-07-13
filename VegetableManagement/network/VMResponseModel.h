@@ -17,11 +17,11 @@ typedef enum : NSUInteger {
 @interface VMResponseModel : NSObject
 
 /** 返回码 0:成功、1:session失效 */
-@property (nonatomic, copy) NSString * result;
+@property (nonatomic, copy) NSString * code;
 /** 信息描述 */
-@property (nonatomic, copy) NSString * message;
+@property (nonatomic, copy) NSString * msg;
 /** json对象 */
-@property (nonatomic, copy) NSString *jsonString;
+@property (nonatomic, copy) NSString *result;
 
 
 @end

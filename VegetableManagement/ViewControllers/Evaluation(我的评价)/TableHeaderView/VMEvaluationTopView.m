@@ -48,7 +48,7 @@
     [getEvaluationAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
         
     } failModel:^(VMResponseModel *errorModel) {
-        [SVProgressHUD showErrorWithStatus:errorModel.message];
+        [SVProgressHUD showErrorWithStatus:errorModel.msg];
     } fail:^(YTKBaseRequest *request) {
         [SVProgressHUD showErrorWithStatus:@"评价信息获取失败"];
     }];

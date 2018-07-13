@@ -47,7 +47,7 @@
     [orderStatisticsList startRequestWithArraySuccess:^(NSArray *responseArray) {
         
     } failModel:^(VMResponseModel *errorModel) {
-        [SVProgressHUD showErrorWithStatus:errorModel.message];
+        [SVProgressHUD showErrorWithStatus:errorModel.msg];
     } fail:^(YTKBaseRequest *request) {
         [SVProgressHUD showErrorWithStatus:@"获取失败"];
     }];

@@ -12,6 +12,7 @@
 #import "UIViewController+MMDrawerController.h"
 #import "VMOrderDetailViewController.h"
 #import "VMNewTaskListAPI.h"
+#import "VMNewTaskItemModel.h"
 
 @interface VMNewTaskViewController ()
 
@@ -34,10 +35,6 @@
     //导航左侧按钮设置
     [navLeftBtn setImage:[UIImage imageNamed:@"icon_toUserPhoto"] forState:UIControlStateNormal];
     
-    //tabBar按钮bridge设置
-    VMTabBarController *tabBarVC = (VMTabBarController *)self.tabBarController;
-    [tabBarVC setTabBarItemBridge:2 withIndex:0];
-    
     self.dataTableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-TabBarHeight);
     self.dataTableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     self.dataTableView.separatorColor = [CommonTools changeColor:@"0xcccccc"];
@@ -52,7 +49,7 @@
 
 #pragma mark tableView datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VMNewTaskTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMNewTaskTableViewCell"];
@@ -66,17 +63,25 @@
 }
 
 - (void)requestData{
-    [SVProgressHUD show];
+    [SVProgressHUD showWithStatus:@"加载中..."];
     if([self.dataTableView.mj_header isRefreshing]){
         [self.dataTableView.mj_header endRefreshing];
     }else{
         [self.dataTableView.mj_footer endRefreshing];
     }
-    VMNewTaskListAPI *taskListAPI = [[VMNewTaskListAPI alloc] init];
-    [taskListAPI startRequestWithArraySuccess:^(NSArray *responseArray) {
+    VMNewTaskListAPI *taskListAPI = [[VMNewTaskListAPI alloc] initWithPage:self.pageNumber row:10];
+    [taskListAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
         [SVProgressHUD dismiss];
+        if(self.pageNumber == 1){
+            [self.dataArray removeAllObjects];
+        }
+        NSArray *itemArrays = [responseDic objectForKey:@"list"];
+        if(itemArrays.count>0){
+            self.dataArray addObjectsFromArray:[NSArray yy_modelArrayWithClass:[VMNewTaskItemModel class] json:itemArrays];
+            [self.dataTableView reloadData];
+        }
     } failModel:^(VMResponseModel *errorModel) {
-        [SVProgressHUD showErrorWithStatus:errorModel.message];
+        [SVProgressHUD showErrorWithStatus:errorModel.msg];
     } fail:^(YTKBaseRequest *request) {
          [SVProgressHUD showErrorWithStatus:@"列表数据获取失败"];
     }];
