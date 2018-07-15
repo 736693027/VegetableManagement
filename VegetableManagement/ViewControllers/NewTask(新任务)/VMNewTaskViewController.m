@@ -77,7 +77,7 @@
         }
         NSArray *itemArrays = [responseDic objectForKey:@"list"];
         if(itemArrays.count>0){
-            self.dataArray addObjectsFromArray:[NSArray yy_modelArrayWithClass:[VMNewTaskItemModel class] json:itemArrays];
+            [self.dataArray addObjectsFromArray:[NSArray yy_modelArrayWithClass:[VMNewTaskItemModel class] json:itemArrays]];
             [self.dataTableView reloadData];
         }
     } failModel:^(VMResponseModel *errorModel) {

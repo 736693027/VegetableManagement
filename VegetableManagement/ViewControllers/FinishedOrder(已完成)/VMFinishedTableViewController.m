@@ -54,6 +54,12 @@
 }
 
 - (void)requestData{
+    [SVProgressHUD showWithStatus:@"加载中..."];
+    if([self.dataTableView.mj_header isRefreshing]){
+        [self.dataTableView.mj_header endRefreshing];
+    }else{
+        [self.dataTableView.mj_footer endRefreshing];
+    }
     if(self.listType == VMFinishedTableViewTypeFinished){
         VMGetFinishedOrderListAPI *getFinishedListAPI = [[VMGetFinishedOrderListAPI alloc] init];
         [getFinishedListAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VMMessageCenterModel;
 
 @interface VMMessageCenterTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) VMMessageCenterModel *itemModel;
 @end

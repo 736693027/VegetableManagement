@@ -9,6 +9,7 @@
 #import "VMVMOrderStatisticsTableHeaderView.h"
 #import "VMDatePicker.h"
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface VMVMOrderStatisticsTableHeaderView()
 
@@ -31,7 +32,16 @@
 }
 
 - (IBAction)searchBtnClick:(UIButton *)sender {
-    
+    if(self.resltSubject&&self.startDate.length>0&&self.endDate.length>0){
+        NSDictionary *result = @{@"startTime":self.startDate,
+                                 @"endTime":self.endDate
+                                 };
+        [self.resltSubject sendNext:result];
+    }else if (self.startDate.length == 0){
+        [SVProgressHUD showWithStatus:@"请选择起始时间"];
+    }else if (self.endDate.length == 0){
+        [SVProgressHUD showWithStatus:@"请选择截止时间"];
+    }
 }
 
 - (IBAction)startDateBtnClick:(UIButton *)sender {

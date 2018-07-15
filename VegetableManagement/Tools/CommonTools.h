@@ -64,4 +64,7 @@
  @return 对比结果
  */
 + (NSComparisonResult)compareDate:(NSString *)dateString withOtherDate:(NSString *)otherDateString;
+
+//秒转换日期
++ (NSString *)returnDateFromSecond:(NSString *)num;
 @end

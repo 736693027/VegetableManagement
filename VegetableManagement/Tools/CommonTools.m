@@ -272,4 +272,18 @@
     NSDate *otherDate = [dateFormatter dateFromString:otherDateString];
     return [date compare:otherDate];
 }
+
++ (NSString *)returnDateFromSecond:(NSString *)num{
+    
+    int x = [[num substringToIndex:10] intValue];
+    
+    NSDate *date1 = [NSDate dateWithTimeIntervalSince1970:x];
+    
+    NSDateFormatter *dateformatter=[[NSDateFormatter alloc]init];
+    
+    [dateformatter setDateFormat:@"yyyy-MM-dd hh:mm"];
+    
+    return [dateformatter stringFromDate:date1];
+    
+}
 @end

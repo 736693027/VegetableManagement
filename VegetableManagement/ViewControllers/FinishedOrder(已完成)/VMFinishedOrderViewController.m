@@ -14,6 +14,8 @@
     NSInteger currentIndex;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *mainScrollview;
+@property (weak, nonatomic) IBOutlet UIButton *finishedButton;
+@property (weak, nonatomic) IBOutlet UIButton *cancleButton;
 
 @property (weak, nonatomic) IBOutlet UIView *indicatorView;
 @end
@@ -33,7 +35,12 @@
     }
     VMGetFinishedOrderTabCountAPi *getTapCountAPI = [[VMGetFinishedOrderTabCountAPi alloc] init];
     [getTapCountAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
-        
+        NSNumber *finishNumber = [responseDic objectForKey:@"finished"];
+        NSNumber *cancleNumber = [responseDic objectForKey:@"canceled"];
+        NSString *finishedString = [NSString stringWithFormat:@"已完成(%ld)",finishNumber.integerValue];
+        NSString *cancleString = [NSString stringWithFormat:@"已取消(%ld)",cancleNumber.integerValue];
+        [self.finishedButton setTitle:finishedString forState:UIControlStateNormal];
+        [self.cancleButton setTitle:cancleString forState:UIControlStateNormal];
     } failModel:^(VMResponseModel *errorModel) {
         [SVProgressHUD showErrorWithStatus:errorModel.msg];
     } fail:^(YTKBaseRequest *request) {

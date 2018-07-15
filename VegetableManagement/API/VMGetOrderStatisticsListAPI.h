@@ -10,4 +10,9 @@
 
 @interface VMGetOrderStatisticsListAPI : VMBaseRequest
 
+/**
+ @param startTime 起始时间
+ @param endTime 结束时间
+ */
+- (instancetype)initWithStartTime:(NSString *)startTime endTime:(NSString *)endTime;
 @end

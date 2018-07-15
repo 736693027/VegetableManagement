@@ -10,6 +10,7 @@
 #import "VMMessageCenterTableViewCell.h"
 #import "VMMessageDetailViewController.h"
 #import "VMGetMessageCenterListAPI.h"
+#import "VMMessageCenterModel.h"
 
 @interface VMMessageCenterViewController ()
 
@@ -27,10 +28,12 @@
 
 #pragma mark tableview datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 102;
+    return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VMMessageCenterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([VMMessageCenterTableViewCell class])];
+    VMMessageCenterModel *model = [self.dataArray objectAtIndex:indexPath.row];
+    cell.itemModel = model;
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -39,9 +42,22 @@
 }
 - (void)requestData{
     [SVProgressHUD showWithStatus:@"加载中..."];
-    VMGetMessageCenterListAPI *getListData = [[VMGetMessageCenterListAPI alloc] init];
-    [getListData startRequestWithArraySuccess:^(NSArray *responseArray) {
-        
+    if([self.dataTableView.mj_header isRefreshing]){
+        [self.dataTableView.mj_header endRefreshing];
+    }else{
+        [self.dataTableView.mj_footer endRefreshing];
+    }
+    VMGetMessageCenterListAPI *getListData = [[VMGetMessageCenterListAPI alloc] initWithPage:self.pageNumber row:10];
+    [getListData startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        [SVProgressHUD dismiss];
+        if(self.pageNumber == 1){
+            [self.dataArray removeAllObjects];
+        }
+        NSArray *itemArrays = [responseDic objectForKey:@"list"];
+        if(itemArrays.count>0){
+            [self.dataArray addObjectsFromArray:[NSArray yy_modelArrayWithClass:[VMMessageCenterModel class] json:itemArrays]];
+            [self.dataTableView reloadData];
+        }
     } failModel:^(VMResponseModel *errorModel) {
         [SVProgressHUD showErrorWithStatus:errorModel.msg];
     } fail:^(YTKBaseRequest *request) {

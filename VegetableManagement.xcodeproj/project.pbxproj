@@ -77,6 +77,8 @@
 		18EBAA0820F1EF7D00A6A6B0 /* VMGetFinishedOrderListAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EBAA0720F1EF7D00A6A6B0 /* VMGetFinishedOrderListAPI.m */; };
 		18EBAA0B20F1F0AC00A6A6B0 /* VMGetFinishedOrderCancleListAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EBAA0A20F1F0AC00A6A6B0 /* VMGetFinishedOrderCancleListAPI.m */; };
 		18EE075720F88D5500D2CC80 /* VMNewTaskItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE075620F88D5500D2CC80 /* VMNewTaskItemModel.m */; };
+		18EE075B20FB179400D2CC80 /* VMMessageCenterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE075A20FB179400D2CC80 /* VMMessageCenterModel.m */; };
+		18EE075F20FB1E4000D2CC80 /* VMOrderStatisticsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE075E20FB1E4000D2CC80 /* VMOrderStatisticsModel.m */; };
 		18F7AA012079FE52009A4D4E /* VMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F7A9FF2079FE52009A4D4E /* VMLoginViewController.m */; };
 		18F7AA022079FE52009A4D4E /* VMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F7AA002079FE52009A4D4E /* VMLoginViewController.xib */; };
 		18F7AA07207A062F009A4D4E /* VMFinishedOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F7AA05207A062F009A4D4E /* VMFinishedOrderViewController.m */; };
@@ -233,6 +235,10 @@
 		18EBAA0A20F1F0AC00A6A6B0 /* VMGetFinishedOrderCancleListAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMGetFinishedOrderCancleListAPI.m; sourceTree = "<group>"; };
 		18EE075520F88D5500D2CC80 /* VMNewTaskItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMNewTaskItemModel.h; sourceTree = "<group>"; };
 		18EE075620F88D5500D2CC80 /* VMNewTaskItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMNewTaskItemModel.m; sourceTree = "<group>"; };
+		18EE075920FB179400D2CC80 /* VMMessageCenterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMMessageCenterModel.h; sourceTree = "<group>"; };
+		18EE075A20FB179400D2CC80 /* VMMessageCenterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMessageCenterModel.m; sourceTree = "<group>"; };
+		18EE075D20FB1E4000D2CC80 /* VMOrderStatisticsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMOrderStatisticsModel.h; sourceTree = "<group>"; };
+		18EE075E20FB1E4000D2CC80 /* VMOrderStatisticsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMOrderStatisticsModel.m; sourceTree = "<group>"; };
 		18F7A9FE2079FE52009A4D4E /* VMLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMLoginViewController.h; sourceTree = "<group>"; };
 		18F7A9FF2079FE52009A4D4E /* VMLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMLoginViewController.m; sourceTree = "<group>"; };
 		18F7AA002079FE52009A4D4E /* VMLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMLoginViewController.xib; sourceTree = "<group>"; };
@@ -359,6 +365,7 @@
 		1832BF6820734C2100FC83B0 /* MessageCenter(消息中心) */ = {
 			isa = PBXGroup;
 			children = (
+				18EE075820FB178000D2CC80 /* Model */,
 				1832BF6E20734C7800FC83B0 /* Cell */,
 				1832BF6920734C3500FC83B0 /* VMMessageCenterViewController.h */,
 				1832BF6A20734C3500FC83B0 /* VMMessageCenterViewController.m */,
@@ -644,6 +651,24 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		18EE075820FB178000D2CC80 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18EE075920FB179400D2CC80 /* VMMessageCenterModel.h */,
+				18EE075A20FB179400D2CC80 /* VMMessageCenterModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18EE075C20FB1E2C00D2CC80 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				18EE075D20FB1E4000D2CC80 /* VMOrderStatisticsModel.h */,
+				18EE075E20FB1E4000D2CC80 /* VMOrderStatisticsModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		18F7A9FD2079FDDB009A4D4E /* Login(登录) */ = {
 			isa = PBXGroup;
 			children = (
@@ -681,6 +706,7 @@
 		18FDAFA6207CB917008AE54E /* OrderStatistics(配送统计) */ = {
 			isa = PBXGroup;
 			children = (
+				18EE075C20FB1E2C00D2CC80 /* model */,
 				18FDAFB0207CBCFD008AE54E /* Cell */,
 				18FDAFAA207CB9DA008AE54E /* TableHeaderView */,
 				18FDAFA7207CB93A008AE54E /* VMOrderStatisticsViewController.h */,
@@ -1008,7 +1034,9 @@
 				18EBA9F320F1E1DA00A6A6B0 /* VMGetPersonalInfoAPI.m in Sources */,
 				18FDAFE8207F3EE3008AE54E /* VMUserLocationViewController.m in Sources */,
 				1832BF25207215FC00FC83B0 /* VMPersonalCenterTableViewCell.m in Sources */,
+				18EE075F20FB1E4000D2CC80 /* VMOrderStatisticsModel.m in Sources */,
 				18FDAFA9207CB93A008AE54E /* VMOrderStatisticsViewController.m in Sources */,
+				18EE075B20FB179400D2CC80 /* VMMessageCenterModel.m in Sources */,
 				1832BF88207367B700FC83B0 /* VMSelectAgentViewTableViewCell.m in Sources */,
 				18CC2212206CBBED007E1274 /* AppDelegate.m in Sources */,
 				18EBA9E720F1C76300A6A6B0 /* VMLoginUserInfoModel.m in Sources */,

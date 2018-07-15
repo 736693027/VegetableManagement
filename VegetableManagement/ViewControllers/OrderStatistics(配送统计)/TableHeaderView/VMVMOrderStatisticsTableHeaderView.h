@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class RACSubject;
 
 @interface VMVMOrderStatisticsTableHeaderView : UIView
+
+@property (strong, nonatomic) RACSubject *resltSubject;
 
 @end

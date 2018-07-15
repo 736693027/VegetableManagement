@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VMOrderStatisticsModel;
 
 @interface VMVMOrderStatisticsTableViewCell : UITableViewCell
 
+- (void)setItemModel:(VMOrderStatisticsModel *)itemModel index:(NSInteger)index isSearchResult:(BOOL)state;
 @end
