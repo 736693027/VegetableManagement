@@ -7,7 +7,10 @@
 //
 
 #import "BaseViewController.h"
+@class VMMessageCenterModel;
 
 @interface VMMessageDetailViewController : BaseViewController
+
+@property (nonatomic, strong) VMMessageCenterModel *itemModel;
 
 @end

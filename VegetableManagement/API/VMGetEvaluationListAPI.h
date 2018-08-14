@@ -10,4 +10,6 @@
 
 @interface VMGetEvaluationListAPI : VMBaseRequest
 
+- (instancetype)initWithPage:(NSInteger)page row:(NSInteger)row;
+
 @end

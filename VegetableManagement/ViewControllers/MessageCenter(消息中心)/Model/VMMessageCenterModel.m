@@ -14,13 +14,7 @@
     return @{@"itemId" : @"id"};
     
 }
-- (NSString *)dateTime{
-    _dateTime = @"";
-    if(self.createdAt){
-        _dateTime = [CommonTools returnDateFromSecond:self.createdAt];
-    }
-    return _dateTime;
-}
+
 - (NSString *)imageUrl{
     _imageUrl = @"";
     if(self.thumb){

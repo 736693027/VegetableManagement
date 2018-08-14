@@ -107,6 +107,7 @@
 		18FDAFE8207F3EE3008AE54E /* VMUserLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDAFE7207F3EE3008AE54E /* VMUserLocationViewController.m */; };
 		18FDAFEC20805B59008AE54E /* VMDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDAFEB20805B59008AE54E /* VMDatePicker.m */; };
 		18FDAFF020805B7E008AE54E /* VMDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FDAFEF20805B7E008AE54E /* VMDatePicker.xib */; };
+		38D5D12C212313530060E95E /* VMEvaluationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D5D12B212313530060E95E /* VMEvaluationModel.m */; };
 		89F31D8AC665279E1A817B70 /* Pods_VegetableManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83F405C6F6A6BB5575622E0 /* Pods_VegetableManagement.framework */; };
 /* End PBXBuildFile section */
 
@@ -283,6 +284,8 @@
 		18FDAFEA20805B59008AE54E /* VMDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMDatePicker.h; sourceTree = "<group>"; };
 		18FDAFEB20805B59008AE54E /* VMDatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMDatePicker.m; sourceTree = "<group>"; };
 		18FDAFEF20805B7E008AE54E /* VMDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMDatePicker.xib; sourceTree = "<group>"; };
+		38D5D12A212313530060E95E /* VMEvaluationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMEvaluationModel.h; sourceTree = "<group>"; };
+		38D5D12B212313530060E95E /* VMEvaluationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMEvaluationModel.m; sourceTree = "<group>"; };
 		75D29ADE452037068377BC3C /* Pods-VegetableManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegetableManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VegetableManagement/Pods-VegetableManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		D83F405C6F6A6BB5575622E0 /* Pods_VegetableManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VegetableManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E929BAB2B45D3F3CF0BCC35C /* Pods-VegetableManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegetableManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-VegetableManagement/Pods-VegetableManagement.release.xcconfig"; sourceTree = "<group>"; };
@@ -556,6 +559,7 @@
 		18D99F43207B4C1500DAFB5F /* Evaluation(我的评价) */ = {
 			isa = PBXGroup;
 			children = (
+				38D5D129212313400060E95E /* Model */,
 				18D99F55207B4F1F00DAFB5F /* StarRateView */,
 				18D99F47207B4C6400DAFB5F /* Cell */,
 				18D99F48207B4C6400DAFB5F /* TableHeaderView */,
@@ -817,6 +821,15 @@
 			path = DataPicker;
 			sourceTree = "<group>";
 		};
+		38D5D129212313400060E95E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38D5D12A212313530060E95E /* VMEvaluationModel.h */,
+				38D5D12B212313530060E95E /* VMEvaluationModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		92EFF8B6C8CA4ED163A2FE10 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1052,6 +1065,7 @@
 				18EBA9ED20F1CA6300A6A6B0 /* VMGetEvaluationListAPI.m in Sources */,
 				1832BF1F20720FFC00FC83B0 /* VMPersonalCenterViewController.m in Sources */,
 				180A84A220F4814B0001C1B4 /* VMRegisterViewController.m in Sources */,
+				38D5D12C212313530060E95E /* VMEvaluationModel.m in Sources */,
 				18EBA9F020F1E16500A6A6B0 /* VMGetMessageCenterListAPI.m in Sources */,
 				18F7AA07207A062F009A4D4E /* VMFinishedOrderViewController.m in Sources */,
 				185B1DF3206E161900816924 /* BaseTableViewController.m in Sources */,

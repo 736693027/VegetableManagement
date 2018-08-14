@@ -72,11 +72,13 @@
     }
     VMGetOrderStatisticsListAPI *orderStatisticsList = [[VMGetOrderStatisticsListAPI alloc] initWithStartTime:self.startTime endTime:self.endTime];
     [orderStatisticsList startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        [SVProgressHUD dismiss];
         [self.dataArray removeAllObjects];
         VMOrderStatisticsModel *model = [VMOrderStatisticsModel yy_modelWithJSON:responseDic];
         if(model){
             [self.dataArray addObject:model];
         }
+        [self.dataTableView reloadData];
     } failModel:^(VMResponseModel *errorModel) {
         [SVProgressHUD showErrorWithStatus:errorModel.msg];
     } fail:^(YTKBaseRequest *request) {
