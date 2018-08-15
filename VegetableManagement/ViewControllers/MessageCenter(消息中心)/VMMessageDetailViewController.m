@@ -7,8 +7,12 @@
 //
 
 #import "VMMessageDetailViewController.h"
+#import "VMMessageCenterModel.h"
 
 @interface VMMessageDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
 @end
 
@@ -17,21 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"消息中心";
+    self.titleLabel.text = self.itemModel.title;
+    self.dateTimeLabel.text = self.itemModel.createTime;
+    self.contentLabel.text = self.itemModel.content;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

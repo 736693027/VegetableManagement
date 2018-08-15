@@ -51,11 +51,13 @@
 - (void)tableHeadViewRefreshAction{
     [self.dataArray removeAllObjects];
     self.pageNumber = 1;
+    [self.dataTableView.mj_header endRefreshing];
     [self requestData];
 }
 
 - (void)tableFootViewRefreshAction{
     self.pageNumber ++ ;
+    [self.dataTableView.mj_footer endRefreshing];
     [self requestData];
 }
 

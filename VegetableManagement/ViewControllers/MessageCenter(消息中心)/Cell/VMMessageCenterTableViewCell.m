@@ -34,6 +34,6 @@
     _itemModel = itemModel;
     self.titlLabel.text = itemModel.title;
     self.contentLabel.text = itemModel.content;
-    self.dateTimeLabel.text = itemModel.dateTime;
+    self.dateTimeLabel.text = itemModel.createTime;
 }
 @end

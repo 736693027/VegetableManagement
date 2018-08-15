@@ -16,7 +16,9 @@
 @property (nonatomic, copy)NSString *sort;
 @property (nonatomic, copy)NSString *content;
 @property (nonatomic, copy)NSString *createdAt;
-@property (nonatomic, copy)NSString *dateTime;
+@property (nonatomic, copy)NSString *updatedAt;
+@property (nonatomic, copy)NSString *createTime;
+@property (nonatomic, copy)NSString *updateTime;
 @property (nonatomic, copy)NSString *imageUrl;
 
 @end

@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface VMEvaluationTopView : UIView
+@property (weak, nonatomic) IBOutlet UILabel *totalGradeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distributionSpeedGradeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *serviceAttrGradeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *goodsCompleteGradeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalEvaluateLabel;
 
 @end
