@@ -27,6 +27,10 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>需要您的地理位置信息</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

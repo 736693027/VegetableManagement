@@ -102,7 +102,7 @@
                         <action selector="loginButtonClick:" destination="-1" eventType="touchUpInside" id="vxg-si-Od3"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DId-X9-ddF">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DId-X9-ddF">
                     <rect key="frame" x="27.5" y="384" width="30" height="29"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="注册">
@@ -142,7 +142,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="f69-DT-jxZ" secondAttribute="trailing" constant="27.5" id="zKN-Rz-e4l"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-341" y="4"/>
+            <point key="canvasLocation" x="-35" y="53"/>
         </view>
     </objects>
     <resources>

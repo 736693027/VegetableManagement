@@ -60,7 +60,7 @@
             
             VMResponseModel * responseModel = [VMResponseModel yy_modelWithJSON:request.responseString];
             
-            if (responseModel.result.integerValue == RESPONSE_CODE_SUCCESS){//请求成功
+            if (responseModel.code.integerValue == RESPONSE_CODE_SUCCESS){//请求成功
                 
                 if ([responseModel.result isKindOfClass:[NSString class]]) {
                     
@@ -83,12 +83,6 @@
                     successBlock(nil);
                 }
                 
-            }else if(responseModel.result.integerValue == RESPONSE_CODE_SESSIONINVALID){//session失效
-                
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    //登录失效
-                });
-                
             }else{//业务错误
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -106,7 +100,7 @@
         [weakSelf clearBlock];
         
     } failure:^(YTKBaseRequest *request) {
-        _failBlock(request);
+        weakSelf.failBlock(request);
         [weakSelf clearBlock];
     }];
 

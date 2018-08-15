@@ -7,18 +7,32 @@
 //
 
 #import "VMNewTaskTableViewCell.h"
+#import "VMNewTaskItemModel.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+
+@interface VMNewTaskTableViewCell()<AMapSearchDelegate>
+
+@property (strong, nonatomic) AMapSearchAPI *search;
+@end
 
 @implementation VMNewTaskTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
-//    self.pickupInformationBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
-//    self.pickupInformationBtn.layer.borderWidth = 1;
-//    self.pickupInformationBtn.layer.cornerRadius = 2;
-//    self.deliveryInformationBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
-//    self.deliveryInformationBtn.layer.borderWidth = 1;
-//    self.deliveryInformationBtn.layer.cornerRadius = 2;
+    self.search = [[AMapSearchAPI alloc] init];
+    self.search.delegate = self;
+}
+
+- (void)setItemModel:(VMNewTaskItemModel *)itemModel{
+    _itemModel = itemModel;
+    self.dateTimeLabel.text = itemModel.lastEndTime;
+    self.priceLabel.text = [NSString stringWithFormat:@"¥%@",itemModel.estimatedAmount];
+    self.pickupPlaceLabel.text = itemModel.storeName;
+    self.pickupAddressLabel.text = itemModel.storeOther;
+    self.deliveryAddressLabel.text = itemModel.userOther;
+    self.pickupDistanceLabel.text = [itemModel getStoreDistance];
+    self.deliveryDistanceLabel.text = [itemModel getDestinationDistance];
 }
 
 - (IBAction)creatNewOrderBtnClick:(UIButton *)sender {

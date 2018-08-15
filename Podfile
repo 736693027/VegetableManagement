@@ -14,11 +14,10 @@ pod 'IQKeyboardManager', '~> 5.0.7'
 pod 'DZNEmptyDataSet', '~> 1.8.1'
 pod 'Realm', '~> 3.1.0'
 pod 'ReactiveObjC', '~> 3.1.0'
+pod 'MMDrawerController', '~> 0.6.0'
 
 pod 'AMap3DMap'
 pod 'AMapLocation'
 pod 'AMapNavi'
-
-pod 'MMDrawerController', '~> 0.6.0'
-
+pod 'AMapSearch'
 end

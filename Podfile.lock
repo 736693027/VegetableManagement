@@ -22,13 +22,15 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - AMap3DMap (6.1.0):
+  - AMap3DMap (6.3.1):
+    - AMapFoundation (~> 1.5)
+  - AMapFoundation (1.5.3)
+  - AMapLocation (2.6.1):
     - AMapFoundation (~> 1.4)
-  - AMapFoundation (1.4.3)
-  - AMapLocation (2.6.0):
-    - AMapFoundation (~> 1.4)
-  - AMapNavi (6.0.0):
-    - AMap3DMap (>= 6.0.0)
+  - AMapNavi (6.2.0):
+    - AMap3DMap (~> 6.2)
+    - AMapFoundation (~> 1.5)
+  - AMapSearch (6.1.1):
     - AMapFoundation (~> 1.4)
   - DZNEmptyDataSet (1.8.1)
   - IQKeyboardManager (5.0.8)
@@ -63,6 +65,7 @@ DEPENDENCIES:
   - AMap3DMap
   - AMapLocation
   - AMapNavi
+  - AMapSearch
   - DZNEmptyDataSet (~> 1.8.1)
   - IQKeyboardManager (~> 5.0.7)
   - Masonry (~> 0.6.3)
@@ -76,13 +79,14 @@ DEPENDENCIES:
   - YYModel (~> 0.9.5)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFDownloadRequestOperation
     - AFNetworking
     - AMap3DMap
     - AMapFoundation
     - AMapLocation
     - AMapNavi
+    - AMapSearch
     - DZNEmptyDataSet
     - IQKeyboardManager
     - Masonry
@@ -98,10 +102,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFDownloadRequestOperation: 748a1643423e1ddb23f2178f778087d4f0ae8ac7
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
-  AMap3DMap: 2cf8028884fc66c7e051f5e8818808949eff290d
-  AMapFoundation: 973682cfe60b92efd73a8ef8f1144fa0fa8e1296
-  AMapLocation: 55116a2c8956eab7550cbb56e989aa5cdcc424e3
-  AMapNavi: 4d75c4ff83abd50959530e95c6da439e5b9fc06a
+  AMap3DMap: 7e1b2f2a1628a584f085d7f158d7c9835837e8c2
+  AMapFoundation: 58f883c80754c659cf626deb3150936bfe8f1772
+  AMapLocation: cf024b53dc03663efb4ea4bcce27d4cce58bb97a
+  AMapNavi: bb43c7ac8f85197c562e89b39af22e7c85182d95
+  AMapSearch: 3dcbf85c403a2a0fe0eda5318caabc272b31f5e1
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   IQKeyboardManager: 266cb7b1d11f94a3e71229d77f960f9a1b538e5b
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
@@ -114,6 +119,6 @@ SPEC CHECKSUMS:
   YTKNetwork: 28ef7a3c119f61e737a76abbe74ff2fe1afec913
   YYModel: 33a27f41a995f4c36ff8178421bac9f221a9c7ea
 
-PODFILE CHECKSUM: d1a2f8f898e0b78de2cc5eecab5aaa4347d12ded
+PODFILE CHECKSUM: 7d1325db8c4713aea3b4ea797805166bb8aac8ff
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

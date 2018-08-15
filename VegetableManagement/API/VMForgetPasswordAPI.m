@@ -1,24 +1,21 @@
 //
-//  VMRegisterAPI.m
+//  VMForgetPasswordAPI.m
 //  VegetableManagement
 //
-//  Created by Apple on 2018/7/10.
+//  Created by Apple on 2018/8/14.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "VMRegisterAPI.h"
+#import "VMForgetPasswordAPI.h"
 
-@implementation VMRegisterAPI{
+@implementation VMForgetPasswordAPI{
     NSString *_phoneNumber;
-    NSString *_verificationCode;
     NSString *_password;
 }
-
-- (instancetype)initWithPhoneNumber:(NSString *)phoneNumber verificationCode:(NSString *)verificationCode password:(NSString *)password{
+- (instancetype)initWithPhoneNumber:(NSString *)phoneNumber password:(NSString *)password{
     self = [super init];
     if(self){
         _phoneNumber = phoneNumber;
-        _verificationCode = verificationCode;
         _password = password;
     }
     return self;
@@ -31,8 +28,9 @@
 }
 - (id)requestArgument {
     return @{
-             @"username":OBJC(_password),
-             @"password" : OBJC(_phoneNumber)
+             @"oncepwd":OBJC(_password),
+             @"phone" : OBJC(_phoneNumber),
+             @"twicepwd":OBJC(_phoneNumber)
              };
 }
 @end
