@@ -9,5 +9,9 @@
 #import "VMBaseRequest.h"
 
 @interface VMGetFinishedOrderListAPI : VMBaseRequest
-
+/**
+ @param page 页码 ，从1开始
+ @param row 每页显示数
+ */
+- (instancetype)initWithPage:(NSInteger)page row:(NSInteger)row;
 @end

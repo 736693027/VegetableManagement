@@ -53,6 +53,8 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VMNewTaskTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMNewTaskTableViewCell"];
+    VMNewTaskItemModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+    cell.itemModel = itemModel;
     return cell;
 }
 

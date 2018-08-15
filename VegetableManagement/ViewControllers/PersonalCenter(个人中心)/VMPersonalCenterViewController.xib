@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VMPersonalCenterViewController">
             <connections>
                 <outlet property="dataTableView" destination="QAo-YL-pll" id="4jJ-63-Pcs"/>
+                <outlet property="orderCountLabel" destination="Byl-zO-deO" id="EzO-TD-qPq"/>
+                <outlet property="totalAmountLabel" destination="FDe-eZ-SN4" id="pxR-6a-6mo"/>
+                <outlet property="userHeadImageView" destination="c85-XR-zLY" id="Y25-qe-l2k"/>
+                <outlet property="userNameLabel" destination="fX4-09-xrK" id="MwT-b6-Ipn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="workStateSwitch" destination="WD5-kC-Ujz" id="uVp-FU-e25"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -48,7 +53,7 @@
                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WD5-kC-Ujz">
+                <switch opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WD5-kC-Ujz">
                     <rect key="frame" x="311" y="134.5" width="51" height="31"/>
                 </switch>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QAo-YL-pll">
@@ -147,7 +152,7 @@
                 <constraint firstItem="2xi-30-pM4" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="u9z-3K-Wqe"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="461" y="-122"/>
+            <point key="canvasLocation" x="-403" y="-31"/>
         </view>
     </objects>
     <resources>

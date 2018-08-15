@@ -16,10 +16,17 @@
 #import "VMEvaluationTableViewController.h"
 #import "VMOrderStatisticsViewController.h"
 #import "VMGetPersonalInfoAPI.h"
+#import "VMLoginUserInfoModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface VMPersonalCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *workStateSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *orderCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalAmountLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *userHeadImageView;
 
 @property (strong, nonatomic) NSArray *titleArray;
 @property (strong, nonatomic) NSArray *cellIconImageArray;
@@ -36,13 +43,29 @@
     self.dataTableView.estimatedRowHeight = 51;
     [self.dataTableView registerNib:[UINib nibWithNibName:@"VMPersonalCenterTableViewCell" bundle:nil] forCellReuseIdentifier:@"VMPersonalCenterTableViewCell"];
     [SVProgressHUD showWithStatus:@"加载中..."];
-    VMGetPersonalInfoAPI *getPersonInfoAPI = [[VMGetPersonalInfoAPI alloc] init];
-    [getPersonInfoAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
-        [SVProgressHUD dismiss];
+    VMGetPersonalInfoAPI *getPersonInfoRequest = [[VMGetPersonalInfoAPI alloc] init];
+    [getPersonInfoRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+        VMLoginUserInfoModel *loginModel = [VMLoginUserInfoModel loginUsrInfoModel];
+        VMLoginUserInfoModel *tmpLoginModel = [VMLoginUserInfoModel yy_modelWithJSON:responseDic];
+        loginModel = [tmpLoginModel copy];
+        
+        if(loginModel.startState.integerValue == 1){
+            self.workStateSwitch.on = YES;
+        }else{
+            self.workStateSwitch.on = NO;
+        }
+        self.userNameLabel.text = loginModel.username;
+        NSString *headImageUrl = [NSString stringWithFormat:@"%@%@",BASEURL,loginModel.avatar];
+        [self.userHeadImageView sd_setImageWithURL:[NSURL URLWithString:headImageUrl] placeholderImage:[UIImage imageNamed:@"user_photo"]];
+        NSInteger totalAmount = loginModel.commission.integerValue*loginModel.orderAmount.integerValue;
+        self.totalAmountLabel.text = [NSString stringWithFormat:@"今日佣金 %ld",totalAmount];
+        self.orderCountLabel.text = [NSString stringWithFormat:@"累计单量 %@",loginModel.orderAmount];
+        
     } failModel:^(VMResponseModel *errorModel) {
         [SVProgressHUD showErrorWithStatus:errorModel.msg];
     } fail:^(YTKBaseRequest *request) {
-        [SVProgressHUD showErrorWithStatus:@"用户信息获取失败"];
+        
     }];
 }
 

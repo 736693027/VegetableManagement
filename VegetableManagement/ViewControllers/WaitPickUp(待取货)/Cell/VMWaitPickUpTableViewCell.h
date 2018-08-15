@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VMNewTaskItemModel;
 
 @interface VMWaitPickUpTableViewCell : UITableViewCell
 
@@ -36,5 +37,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *toUseBtn;
 //订单操作按钮
 @property (weak, nonatomic) IBOutlet UIButton *operatingBtn;
+
+@property (strong, nonatomic) VMNewTaskItemModel *itemModel;
 
 @end

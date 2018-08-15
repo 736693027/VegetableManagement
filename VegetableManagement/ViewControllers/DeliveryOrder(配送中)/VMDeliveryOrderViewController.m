@@ -10,6 +10,7 @@
 #import "VMWaitPickUpTableViewCell.h"
 #import "UIViewController+MMDrawerController.h"
 #import "VMDeliveryOrderGetListAPI.h"
+#import "VMNewTaskItemModel.h"
 
 @interface VMDeliveryOrderViewController ()
 
@@ -46,9 +47,23 @@
 }
 
 - (void)requestData{
-    VMDeliveryOrderGetListAPI *getListAPI = [[VMDeliveryOrderGetListAPI alloc] init];
-    [getListAPI startRequestWithArraySuccess:^(NSArray *responseArray) {
-        
+    [SVProgressHUD showWithStatus:@"加载中..."];
+    if([self.dataTableView.mj_header isRefreshing]){
+        [self.dataTableView.mj_header endRefreshing];
+    }else{
+        [self.dataTableView.mj_footer endRefreshing];
+    }
+    VMDeliveryOrderGetListAPI *getListAPI = [[VMDeliveryOrderGetListAPI alloc] initWithPage:self.pageNumber row:10];
+    [getListAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        [SVProgressHUD dismiss];
+        if(self.pageNumber == 1){
+            [self.dataArray removeAllObjects];
+        }
+        NSArray *itemArrays = [responseDic objectForKey:@"list"];
+        if(itemArrays.count>0){
+            [self.dataArray addObjectsFromArray:[NSArray yy_modelArrayWithClass:[VMNewTaskItemModel class] json:itemArrays]];
+            [self.dataTableView reloadData];
+        }
     } failModel:^(VMResponseModel *errorModel) {
         [SVProgressHUD showErrorWithStatus:errorModel.msg];
     } fail:^(YTKBaseRequest *request) {

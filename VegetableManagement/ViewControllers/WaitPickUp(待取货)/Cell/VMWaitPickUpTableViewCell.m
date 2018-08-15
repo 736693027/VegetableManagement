@@ -7,6 +7,7 @@
 //
 
 #import "VMWaitPickUpTableViewCell.h"
+#import "VMNewTaskItemModel.h"
 
 @implementation VMWaitPickUpTableViewCell
 
@@ -23,6 +24,17 @@
     self.toBusinessBtn.layer.borderWidth = 0.5;
     self.toUseBtn.layer.borderColor = [CommonTools changeColor:@"0x999999"].CGColor;
     self.toUseBtn.layer.borderWidth = 0.5;
+}
+
+- (void)setItemModel:(VMNewTaskItemModel *)itemModel{
+    _itemModel = itemModel;
+    self.dateTimeLabel.text = itemModel.lastEndTime;
+    self.priceLabel.text = [NSString stringWithFormat:@"¥%@",itemModel.estimatedAmount];
+    self.pickupPlaceLabel.text = itemModel.storeName;
+    self.pickupAddressLabel.text = itemModel.storeOther;
+    self.deliveryAddressLabel.text = itemModel.userOther;
+    self.pickupDistanceLabel.text = [itemModel getStoreDistance];
+    self.deliveryDistanceLabel.text = [itemModel getDestinationDistance];
 }
 
 - (IBAction)cellBtnClick:(UIButton *)sender {

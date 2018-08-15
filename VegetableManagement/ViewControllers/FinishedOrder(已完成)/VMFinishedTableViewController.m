@@ -12,6 +12,7 @@
 #import <Masonry/Masonry.h>
 #import "VMGetFinishedOrderListAPI.h"
 #import "VMGetFinishedOrderCancleListAPI.h"
+#import "VMNewTaskItemModel.h"
 
 @interface VMFinishedTableViewController ()
 
@@ -46,10 +47,12 @@
 
 #pragma mark tableView datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VMFinishedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMFinishedTableViewCell"];
+    VMNewTaskItemModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+    cell.itemModel = itemModel;
     return cell;
 }
 
@@ -61,18 +64,34 @@
         [self.dataTableView.mj_footer endRefreshing];
     }
     if(self.listType == VMFinishedTableViewTypeFinished){
-        VMGetFinishedOrderListAPI *getFinishedListAPI = [[VMGetFinishedOrderListAPI alloc] init];
+        VMGetFinishedOrderListAPI *getFinishedListAPI = [[VMGetFinishedOrderListAPI alloc] initWithPage:self.pageNumber row:10];
         [getFinishedListAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
-            
+            [SVProgressHUD dismiss];
+            if(self.pageNumber == 1){
+                [self.dataArray removeAllObjects];
+            }
+            NSArray *itemArrays = [responseDic objectForKey:@"list"];
+            if(itemArrays.count>0){
+                [self.dataArray addObjectsFromArray:[NSArray yy_modelArrayWithClass:[VMNewTaskItemModel class] json:itemArrays]];
+                [self.dataTableView reloadData];
+            }
         } failModel:^(VMResponseModel *errorModel) {
             [SVProgressHUD showErrorWithStatus:errorModel.msg];
         } fail:^(YTKBaseRequest *request) {
             [SVProgressHUD showErrorWithStatus:@"列表数据获取失败"];
         }];
     }else{
-        VMGetFinishedOrderCancleListAPI *getCancleListAPI = [[VMGetFinishedOrderCancleListAPI alloc] init];
+        VMGetFinishedOrderCancleListAPI *getCancleListAPI = [[VMGetFinishedOrderCancleListAPI alloc] initWithPage:self.pageNumber row:10];
         [getCancleListAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
-            
+            [SVProgressHUD dismiss];
+            if(self.pageNumber == 1){
+                [self.dataArray removeAllObjects];
+            }
+            NSArray *itemArrays = [responseDic objectForKey:@"list"];
+            if(itemArrays.count>0){
+                [self.dataArray addObjectsFromArray:[NSArray yy_modelArrayWithClass:[VMNewTaskItemModel class] json:itemArrays]];
+                [self.dataTableView reloadData];
+            }
         } failModel:^(VMResponseModel *errorModel) {
             [SVProgressHUD showErrorWithStatus:errorModel.msg];
         } fail:^(YTKBaseRequest *request) {

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VMNewTaskItemModel;
 
 @interface VMFinishedTableViewCell : UITableViewCell
 
@@ -29,5 +30,7 @@
 //送货的地址
 @property (weak, nonatomic) IBOutlet UILabel *deliveryAddressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *iconLabel;
+
+@property (strong, nonatomic) VMNewTaskItemModel *itemModel;
 
 @end

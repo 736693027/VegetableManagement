@@ -7,6 +7,7 @@
 //
 
 #import "VMFinishedTableViewCell.h"
+#import "VMNewTaskItemModel.h"
 
 @implementation VMFinishedTableViewCell
 
@@ -21,6 +22,16 @@
 //    self.deliveryInformationBtn.layer.cornerRadius = 2;
 }
 
+- (void)setItemModel:(VMNewTaskItemModel *)itemModel {
+    _itemModel = itemModel;
+    self.dateTimeLabel.text = itemModel.lastEndTime;
+    self.priceLabel.text = [NSString stringWithFormat:@"¥%@",itemModel.estimatedAmount];
+    self.pickupPlaceLabel.text = itemModel.storeName;
+    self.pickupAddressLabel.text = itemModel.storeOther;
+    self.deliveryAddressLabel.text = itemModel.userOther;
+    self.pickupDistanceLabel.text = [itemModel getStoreDistance];
+    self.deliveryDistanceLabel.text = [itemModel getDestinationDistance];
+}
 - (IBAction)creatNewOrderBtnClick:(UIButton *)sender {
     
 }
