@@ -9,7 +9,6 @@
 #import "VMVMOrderStatisticsTableHeaderView.h"
 #import "VMDatePicker.h"
 #import <SVProgressHUD/SVProgressHUD.h>
-#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface VMVMOrderStatisticsTableHeaderView()
 
@@ -38,9 +37,9 @@
                                  };
         [self.resltSubject sendNext:result];
     }else if (self.startDate.length == 0){
-        [SVProgressHUD showWithStatus:@"请选择起始时间"];
+        [SVProgressHUD showErrorWithStatus:@"请选择起始时间"];
     }else if (self.endDate.length == 0){
-        [SVProgressHUD showWithStatus:@"请选择截止时间"];
+        [SVProgressHUD showErrorWithStatus:@"请选择截止时间"];
     }
 }
 

@@ -8,7 +8,6 @@
 
 #import "VMGetUserLocation.h"
 #import <AMapLocationKit/AMapLocationKit.h>
-#import <ReactiveObjc/ReactiveObjC.h>
 
 @interface VMGetUserLocation()<AMapLocationManagerDelegate>
 

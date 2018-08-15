@@ -8,7 +8,6 @@
 
 #import "VMNewTaskItemModel.h"
 #import "VMSearchLocationTools.h"
-#import <ReactiveObjc/ReactiveObjC.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 #import "VMGetLocationDistanceTools.h"
  

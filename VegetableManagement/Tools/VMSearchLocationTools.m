@@ -9,7 +9,6 @@
 #import "VMSearchLocationTools.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
-#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface VMSearchLocationTools()<AMapSearchDelegate>
 

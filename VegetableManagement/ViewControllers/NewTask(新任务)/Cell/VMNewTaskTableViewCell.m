@@ -10,6 +10,7 @@
 #import "VMNewTaskItemModel.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
+#import "VMAcceptOrdersAPI.h"
 
 @interface VMNewTaskTableViewCell()<AMapSearchDelegate>
 
@@ -34,9 +35,21 @@
     self.pickupDistanceLabel.text = [itemModel getStoreDistance];
     self.deliveryDistanceLabel.text = [itemModel getDestinationDistance];
 }
-
 - (IBAction)creatNewOrderBtnClick:(UIButton *)sender {
-    
+    [SVProgressHUD show];
+    VMAcceptOrdersAPI *acceptOrderRequest = [[VMAcceptOrdersAPI alloc] initWithOrderId:self.itemModel.orderId];
+    @weakify(self)
+    [acceptOrderRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        @strongify(self)
+        [SVProgressHUD showInfoWithStatus:@"抢单成功"];
+        if(self.acceptOrderSubject){
+            [self.acceptOrderSubject sendNext:@1];
+        }
+    } failModel:^(VMResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.msg];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"抢单失败"];
+    }];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

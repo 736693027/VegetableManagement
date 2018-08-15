@@ -22,6 +22,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"重置密码";
 }
 - (IBAction)submitButtonClick:(id)sender {
     if(self.phoneNumberTextField.text.length == 0){
@@ -39,12 +40,12 @@
     }
     VMForgetPasswordAPI *forgetPasswordAPI = [[VMForgetPasswordAPI alloc] initWithPhoneNumber:self.phoneNumberTextField.text password:self.passwordTextField.text];
     [forgetPasswordAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
-        [SVProgressHUD showWithStatus:@"修改成功，请重新登录"];
+        [SVProgressHUD showInfoWithStatus:@"修改成功，请重新登录"];
         [self dismissViewControllerAnimated:YES completion:nil];
     } failModel:^(VMResponseModel *errorModel) {
-        [SVProgressHUD showWithStatus:@"修改失败"];
+        [SVProgressHUD showErrorWithStatus:errorModel.msg];
     } fail:^(YTKBaseRequest *request) {
-        [SVProgressHUD showWithStatus:@"修改失败"];
+        [SVProgressHUD showErrorWithStatus:@"修改失败"];
     }];
 }
 

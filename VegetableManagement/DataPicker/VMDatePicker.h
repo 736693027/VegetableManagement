@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface VMDatePicker : UIView
 

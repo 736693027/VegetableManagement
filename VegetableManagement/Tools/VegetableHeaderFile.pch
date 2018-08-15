@@ -19,6 +19,7 @@
 #import "CommonTools.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <YYModel/YYModel.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 /************************接口定义*********************************/
 #define BASEURL @"http://139.224.221.134:8081"

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class VMNewTaskItemModel;
+@class VMNewTaskItemModel,RACSubject;
 
 @interface VMNewTaskTableViewCell : UITableViewCell
 
@@ -33,5 +33,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *iconLabel;
 
 @property (strong, nonatomic) VMNewTaskItemModel *itemModel;
+
+@property (strong, nonatomic) RACSubject *acceptOrderSubject;
 
 @end

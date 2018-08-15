@@ -7,7 +7,6 @@
 //
 
 #import "VMRegisterViewController.h"
-#import <ReactiveObjC/ReactiveObjC.h>
 #import "VMGetVerificationCodeRequest.h"
 #import "VMRegisterAPI.h"
 

@@ -13,7 +13,6 @@
 #import "VMOrderTrackingTableViewCell.h"
 #import "VMSectionHeaderView.h"
 #import "VMOrderDetailTableFooterView.h"
-#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface VMOrderDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;

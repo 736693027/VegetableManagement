@@ -49,6 +49,7 @@
 		1875573A2122C7DE00D3ABD2 /* VMSearchLocationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 187557392122C7DE00D3ABD2 /* VMSearchLocationTools.m */; };
 		187557402122D4D100D3ABD2 /* VMGetUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1875573F2122D4D100D3ABD2 /* VMGetUserLocation.m */; };
 		187557432122DD5C00D3ABD2 /* VMGetLocationDistanceTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 187557422122DD5C00D3ABD2 /* VMGetLocationDistanceTools.m */; };
+		187557462123F64400D3ABD2 /* VMAcceptOrdersAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 187557452123F64400D3ABD2 /* VMAcceptOrdersAPI.m */; };
 		18CC2212206CBBED007E1274 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CC2211206CBBED007E1274 /* AppDelegate.m */; };
 		18CC221A206CBBED007E1274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CC2219206CBBED007E1274 /* Assets.xcassets */; };
 		18CC2220206CBBED007E1274 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CC221F206CBBED007E1274 /* main.m */; };
@@ -188,6 +189,8 @@
 		1875573F2122D4D100D3ABD2 /* VMGetUserLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMGetUserLocation.m; sourceTree = "<group>"; };
 		187557412122DD5C00D3ABD2 /* VMGetLocationDistanceTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMGetLocationDistanceTools.h; sourceTree = "<group>"; };
 		187557422122DD5C00D3ABD2 /* VMGetLocationDistanceTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMGetLocationDistanceTools.m; sourceTree = "<group>"; };
+		187557442123F64400D3ABD2 /* VMAcceptOrdersAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMAcceptOrdersAPI.h; sourceTree = "<group>"; };
+		187557452123F64400D3ABD2 /* VMAcceptOrdersAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMAcceptOrdersAPI.m; sourceTree = "<group>"; };
 		18CC220D206CBBED007E1274 /* VegetableManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VegetableManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CC2210206CBBED007E1274 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18CC2211206CBBED007E1274 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -667,6 +670,8 @@
 				187557332122ABC800D3ABD2 /* VMGetVerificationCodeRequest.m */,
 				187557352122AEA700D3ABD2 /* VMForgetPasswordAPI.h */,
 				187557362122AEA700D3ABD2 /* VMForgetPasswordAPI.m */,
+				187557442123F64400D3ABD2 /* VMAcceptOrdersAPI.h */,
+				187557452123F64400D3ABD2 /* VMAcceptOrdersAPI.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1065,6 +1070,7 @@
 			files = (
 				185B1DF0206E15E600816924 /* VMDeliveryOrderViewController.m in Sources */,
 				18EBA9DD20F1B6D500A6A6B0 /* VMBaseRequest.m in Sources */,
+				187557462123F64400D3ABD2 /* VMAcceptOrdersAPI.m in Sources */,
 				18FDAFD9207F0A13008AE54E /* VMSectionHeaderView.m in Sources */,
 				18FDAFEC20805B59008AE54E /* VMDatePicker.m in Sources */,
 				18CC2220206CBBED007E1274 /* main.m in Sources */,

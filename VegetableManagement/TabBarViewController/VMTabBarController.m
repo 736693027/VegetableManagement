@@ -16,7 +16,6 @@
 #import "VMGetTablCountAPI.h"
 #import "VMLoginUserInfoModel.h"
 #import "VMLoginViewController.h"
-#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface VMTabBarController ()<CustomerTabBarViewDelegate>{
     VMCustomTabBar *tabBar;

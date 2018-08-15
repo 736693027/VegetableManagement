@@ -11,7 +11,6 @@
 #import "VMVMOrderStatisticsTableViewCell.h"
 #import <Masonry/Masonry.h>
 #import "VMGetOrderStatisticsListAPI.h"
-#import <ReactiveObjC/ReactiveObjC.h>
 #import "VMOrderStatisticsModel.h"
 
 @interface VMOrderStatisticsViewController ()

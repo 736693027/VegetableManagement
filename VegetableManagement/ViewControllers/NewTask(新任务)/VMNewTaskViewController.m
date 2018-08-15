@@ -55,6 +55,12 @@
     VMNewTaskTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMNewTaskTableViewCell"];
     VMNewTaskItemModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
     cell.itemModel = itemModel;
+    cell.acceptOrderSubject = [RACSubject subject];
+    @weakify(self)
+    [cell.acceptOrderSubject subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        [self.dataTableView.mj_header beginRefreshing];
+    }];
     return cell;
 }
 
