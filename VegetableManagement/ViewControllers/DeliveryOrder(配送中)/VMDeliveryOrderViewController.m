@@ -11,6 +11,7 @@
 #import "UIViewController+MMDrawerController.h"
 #import "VMDeliveryOrderGetListAPI.h"
 #import "VMNewTaskItemModel.h"
+#import "VMOrderDetailViewController.h"
 
 @interface VMDeliveryOrderViewController ()
 
@@ -45,7 +46,11 @@
     [cell.operatingBtn setBackgroundImage:[UIImage imageNamed:@"icon_deliverdBtn"] forState:UIControlStateNormal];
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    VMOrderDetailViewController *orderDetailVC = [[VMOrderDetailViewController alloc] init];
+    orderDetailVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:orderDetailVC animated:YES];
+}
 - (void)requestData{
     [SVProgressHUD showWithStatus:@"加载中..."];
     if([self.dataTableView.mj_header isRefreshing]){

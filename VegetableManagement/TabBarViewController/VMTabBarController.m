@@ -30,7 +30,7 @@
     
     VMLoginUserInfoModel *loginUserInfo = [VMLoginUserInfoModel loginUsrInfoModel];
     if(!loginUserInfo.lgoinUserId){
-        [self jumpToLoginViewController];
+//        [self jumpToLoginViewController];
     }
 }
 - (void)jumpToLoginViewController{

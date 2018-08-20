@@ -27,6 +27,8 @@
 
 }
 - (IBAction)loginButtonClick:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+
     if(self.passwordTextField.text.length>0&&self.phoneNumberTextField.text.length>0){
         [SVProgressHUD showWithStatus:@"加载中..."];
         VMLoginRequestAPI *loginAPI = [[VMLoginRequestAPI alloc] initWithUsername:self.phoneNumberTextField.text password:self.passwordTextField.text];

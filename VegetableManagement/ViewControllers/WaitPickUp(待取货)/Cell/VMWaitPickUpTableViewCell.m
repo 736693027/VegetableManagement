@@ -36,8 +36,25 @@
     self.pickupDistanceLabel.text = [itemModel getStoreDistance];
     self.deliveryDistanceLabel.text = [itemModel getDestinationDistance];
 }
+//打电话给商家
+- (IBAction)callToStoreBtnClick:(UIButton *)sender {
+    
+    NSString *telString = [NSString stringWithFormat:@"tel:%@",self.itemModel.storePhone];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:telString] options:@{} completionHandler:^(BOOL success) {
+        
+    }];
+}
+//打电话给用户
+- (IBAction)callToUserBtnClick:(UIButton *)sender {
+    
+    NSString *telString = [NSString stringWithFormat:@"tel:%@",self.itemModel.userPhone];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:telString] options:@{} completionHandler:^(BOOL success) {
+        
+    }];
+}
 
-- (IBAction)cellBtnClick:(UIButton *)sender {
+//已取货
+- (IBAction)takeGoodsBtnClick:(UIButton *)sender {
     
     
 }

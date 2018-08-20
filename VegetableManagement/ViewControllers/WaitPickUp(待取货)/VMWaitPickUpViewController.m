@@ -11,6 +11,7 @@
 #import "UIViewController+MMDrawerController.h"
 #import "VMGetWaitPickUpListAPI.h"
 #import "VMNewTaskItemModel.h"
+#import "VMOrderDetailViewController.h"
 
 @interface VMWaitPickUpViewController ()
 
@@ -39,15 +40,19 @@
 
 #pragma mark tableView datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataArray.count;
+    return 10;//return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VMWaitPickUpTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMWaitPickUpTableViewCell"];
-    VMNewTaskItemModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
-    cell.itemModel = itemModel;
+//    VMNewTaskItemModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+//    cell.itemModel = itemModel;
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    VMOrderDetailViewController *orderDetailVC = [[VMOrderDetailViewController alloc] init];
+    orderDetailVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:orderDetailVC animated:YES];
+}
 - (void)requestData{
     [SVProgressHUD showWithStatus:@"加载中..."];
     if([self.dataTableView.mj_header isRefreshing]){

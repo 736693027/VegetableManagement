@@ -16,8 +16,9 @@ pod 'Realm', '~> 3.1.0'
 pod 'ReactiveObjC', '~> 3.1.0'
 pod 'MMDrawerController', '~> 0.6.0'
 
-pod 'AMap3DMap'
-pod 'AMapLocation'
-pod 'AMapNavi'
-pod 'AMapSearch'
+pod 'AMap3DMap' , '~> 6.3.1'
+pod 'AMapLocation', '~> 2.6.1'
+pod 'AMapNavi', '~> 6.2.0'
+pod 'AMapSearch', '~> 6.1.1'
+
 end

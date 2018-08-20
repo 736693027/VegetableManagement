@@ -49,12 +49,12 @@
 
 #pragma mark tableView datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataArray.count;
+    return 10;//return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VMNewTaskTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMNewTaskTableViewCell"];
-    VMNewTaskItemModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
-    cell.itemModel = itemModel;
+//    VMNewTaskItemModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+//    cell.itemModel = itemModel;
     cell.acceptOrderSubject = [RACSubject subject];
     @weakify(self)
     [cell.acceptOrderSubject subscribeNext:^(id  _Nullable x) {

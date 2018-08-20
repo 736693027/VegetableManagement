@@ -57,7 +57,11 @@
     }else{
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    cell.detailLabel.text = (indexPath.section==0&&indexPath.row==1)?@"v2.2":@"";
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    // app版本
+    NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    
+    cell.detailLabel.text = (indexPath.section==0&&indexPath.row==1)?[NSString stringWithFormat:@"v%@",app_Version]:@"";
     [cell.iconImageView setImage:[UIImage imageNamed:tmpImageArray[indexPath.row]]];
     return cell;
 }

@@ -62,10 +62,10 @@ PODS:
   - YYModel (0.9.12)
 
 DEPENDENCIES:
-  - AMap3DMap
-  - AMapLocation
-  - AMapNavi
-  - AMapSearch
+  - AMap3DMap (~> 6.3.1)
+  - AMapLocation (~> 2.6.1)
+  - AMapNavi (~> 6.2.0)
+  - AMapSearch (~> 6.1.1)
   - DZNEmptyDataSet (~> 1.8.1)
   - IQKeyboardManager (~> 5.0.7)
   - Masonry (~> 0.6.3)
@@ -79,7 +79,7 @@ DEPENDENCIES:
   - YYModel (~> 0.9.5)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFDownloadRequestOperation
     - AFNetworking
     - AMap3DMap
@@ -119,6 +119,6 @@ SPEC CHECKSUMS:
   YTKNetwork: 28ef7a3c119f61e737a76abbe74ff2fe1afec913
   YYModel: 33a27f41a995f4c36ff8178421bac9f221a9c7ea
 
-PODFILE CHECKSUM: 7d1325db8c4713aea3b4ea797805166bb8aac8ff
+PODFILE CHECKSUM: dc0c5d244bef3edade7054af41bafeeb6f12699a
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0
