@@ -18,6 +18,7 @@
 #import "VMGetPersonalInfoAPI.h"
 #import "VMLoginUserInfoModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "VMNavigationController.h"
 
 @interface VMPersonalCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -70,13 +71,12 @@
 }
 
 - (IBAction)noticeBtnClick:(UIButton *)sender {
-    
     //拿到我们的LitterLCenterViewController，让它去push
-    UITabBarController* nav = (UITabBarController*)self.mm_drawerController.centerViewController;
-    NSArray *arr = nav.viewControllers;
+    UITabBarController* tabBarViewController = (UITabBarController*)self.mm_drawerController.centerViewController;
+    VMNavigationController *currentNav = tabBarViewController.selectedViewController;
     VMMessageCenterViewController *messagerCenterVC = [[VMMessageCenterViewController alloc] init];
     messagerCenterVC.hidesBottomBarWhenPushed = YES;
-    [arr[0] pushViewController:messagerCenterVC animated:NO];
+    [currentNav pushViewController:messagerCenterVC animated:NO];
     //当我们push成功之后，关闭我们的抽屉
     [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
         //设置打开抽屉模式为MMOpenDrawerGestureModeNone，也就是没有任何效果。
@@ -86,11 +86,9 @@
 
 - (IBAction)helpBtnClick:(UIButton *)sender {
     VMHelpViewController *helpVC = [[VMHelpViewController alloc] init];
-    helpVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:helpVC animated:YES];
-    UITabBarController *tabBarController = (UITabBarController *)self.mm_drawerController.centerViewController;
-    NSArray *arr = tabBarController.viewControllers;
-    [arr[0] pushViewController:helpVC animated:YES];
+    UITabBarController* tabBarViewController = (UITabBarController*)self.mm_drawerController.centerViewController;
+    VMNavigationController *currentNav = tabBarViewController.selectedViewController;
+    [currentNav pushViewController:helpVC animated:YES];
     [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
         [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
     }];
@@ -111,8 +109,8 @@
 #pragma mark tableview delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //拿到我们的LitterLCenterViewController，让它去push
-    UITabBarController* nav = (UITabBarController*)self.mm_drawerController.centerViewController;
-    NSArray *arr = nav.viewControllers;
+    UITabBarController* tabBarViewController = (UITabBarController*)self.mm_drawerController.centerViewController;
+    VMNavigationController *currentNav = tabBarViewController.selectedViewController;
         switch (indexPath.row) {
                 //待完成
             case 0:
@@ -125,7 +123,7 @@
             {
                 VMFinishedOrderViewController *finishedVC = [[VMFinishedOrderViewController alloc] init];
                 finishedVC.hidesBottomBarWhenPushed = YES;
-                [arr[0] pushViewController:finishedVC animated:NO];
+                [currentNav pushViewController:finishedVC animated:YES];
             }
                 break;
                 //配送统计
@@ -133,7 +131,7 @@
             {
                 VMOrderStatisticsViewController *orderStatisticsVC = [[VMOrderStatisticsViewController alloc] init];
                 orderStatisticsVC.hidesBottomBarWhenPushed = YES;
-                [arr[0] pushViewController:orderStatisticsVC animated:NO];
+                [currentNav pushViewController:orderStatisticsVC animated:YES];
             }
                 break;
                 //我的评价
@@ -141,7 +139,7 @@
             {
                 VMEvaluationTableViewController *evaluationVC = [[VMEvaluationTableViewController alloc] init];
                 evaluationVC.hidesBottomBarWhenPushed = YES;
-                [arr[0] pushViewController:evaluationVC animated:NO];
+                [currentNav pushViewController:evaluationVC animated:YES];
             }
                 break;
                 //设置
@@ -150,7 +148,7 @@
                 
                 VMSetupViewController *setupVC = [[VMSetupViewController alloc] init];
                 setupVC.hidesBottomBarWhenPushed = YES;
-                [arr[0] pushViewController:setupVC animated:NO];
+                [currentNav pushViewController:setupVC animated:YES];
                 
             }
                 break;

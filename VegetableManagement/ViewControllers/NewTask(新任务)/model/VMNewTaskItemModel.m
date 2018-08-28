@@ -33,6 +33,30 @@
     return self.destinationDistance;
 }
 
+- (NSString *)destinationDistance{
+    if(_destinationDistance){
+        return _destinationDistance;
+    }
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        VMSearchLocationTools *showLocationTools = [VMSearchLocationTools showLocationTools];
+        showLocationTools.address = self.userOther;
+        showLocationTools.resultSubject = [RACSubject subject];
+        @weakify(self)
+        [showLocationTools.resultSubject subscribeNext:^(NSDictionary * _Nullable x) {
+            @strongify(self);
+            AMapGeoPoint *geoPoint = [x objectForKey:self.userOther];
+            VMGetLocationDistanceTools *locationDistanceTools = [VMGetLocationDistanceTools showDistanceTools];
+            [locationDistanceTools setLatitudde:geoPoint.latitude longitude:geoPoint.longitude];
+            locationDistanceTools.resultSubject = [RACSubject subject];
+            [locationDistanceTools.resultSubject subscribeNext:^(NSNumber * _Nullable distance) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    _destinationDistance = [NSString stringWithFormat:@"%.2fKM",distance.floatValue];
+                });
+            }];
+        }];
+    });
+    return nil;
+}
 - (NSString *)getStoreDistance {
     if(self.storeDistance == nil){
         VMSearchLocationTools *showLocationTools = [VMSearchLocationTools showLocationTools];

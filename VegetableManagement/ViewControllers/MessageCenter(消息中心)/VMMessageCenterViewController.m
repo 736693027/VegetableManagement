@@ -38,6 +38,8 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     VMMessageDetailViewController *detailVC = [[VMMessageDetailViewController alloc] init];
+    VMMessageCenterModel *model = [self.dataArray objectAtIndex:indexPath.row];
+    detailVC.itemModel = model;
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 - (void)requestData{

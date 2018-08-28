@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface VMNavigationController : UINavigationController
+//获取侧滑返回手势
+- (UIScreenEdgePanGestureRecognizer *)screenEdgePanGestureRecognizer;
 
 @end

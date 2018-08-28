@@ -49,7 +49,6 @@
 }
 
 - (void)tableHeadViewRefreshAction{
-    [self.dataArray removeAllObjects];
     self.pageNumber = 1;
     [self.dataTableView.mj_header endRefreshing];
     [self requestData];

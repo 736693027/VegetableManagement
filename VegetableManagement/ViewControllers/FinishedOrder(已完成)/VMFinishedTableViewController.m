@@ -47,12 +47,12 @@
 
 #pragma mark tableView datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;//return self.dataArray.count;
+    return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VMFinishedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMFinishedTableViewCell"];
-//    VMNewTaskItemModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
-//    cell.itemModel = itemModel;
+    VMNewTaskItemModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+    cell.itemModel = itemModel;
     return cell;
 }
 

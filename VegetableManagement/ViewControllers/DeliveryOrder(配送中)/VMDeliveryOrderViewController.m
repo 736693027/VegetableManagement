@@ -39,11 +39,13 @@
 
 #pragma mark tableView datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VMWaitPickUpTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMWaitPickUpTableViewCell"];
     [cell.operatingBtn setBackgroundImage:[UIImage imageNamed:@"icon_deliverdBtn"] forState:UIControlStateNormal];
+    VMNewTaskItemModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+    cell.itemModel = itemModel;
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -8,6 +8,9 @@
 
 #import "VMWaitPickUpTableViewCell.h"
 #import "VMNewTaskItemModel.h"
+#import "VMSearchLocationTools.h"
+#import "VMGetLocationDistanceTools.h"
+#import <AMapSearchKit/AMapSearchKit.h>
 
 @implementation VMWaitPickUpTableViewCell
 
@@ -33,8 +36,37 @@
     self.pickupPlaceLabel.text = itemModel.storeName;
     self.pickupAddressLabel.text = itemModel.storeOther;
     self.deliveryAddressLabel.text = itemModel.userOther;
-    self.pickupDistanceLabel.text = [itemModel getStoreDistance];
-    self.deliveryDistanceLabel.text = [itemModel getDestinationDistance];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        VMSearchLocationTools *showLocationTools = [VMSearchLocationTools showLocationTools];
+        showLocationTools.address = itemModel.userOther;
+        showLocationTools.resultSubject = [RACSubject subject];
+        @weakify(self)
+        [showLocationTools.resultSubject subscribeNext:^(NSDictionary * _Nullable x) {
+            @strongify(self);
+            AMapGeoPoint *geoPoint = [x objectForKey:itemModel.userOther];
+            VMGetLocationDistanceTools *locationDistanceTools = [VMGetLocationDistanceTools showDistanceTools];
+            [locationDistanceTools setLatitudde:geoPoint.latitude longitude:geoPoint.longitude];
+            locationDistanceTools.resultSubject = [RACSubject subject];
+            [locationDistanceTools.resultSubject subscribeNext:^(NSNumber * _Nullable distance) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.deliveryDistanceLabel.text = [NSString stringWithFormat:@"%.2fKM",distance.floatValue];
+                });
+            }];
+        }];
+        VMSearchLocationTools *showLocationTools1 = [VMSearchLocationTools showLocationTools];
+        showLocationTools1.address = itemModel.storeOther;
+        showLocationTools1.resultSubject = [RACSubject subject];
+        [showLocationTools1.resultSubject subscribeNext:^(NSDictionary * _Nullable x) {
+            @strongify(self);
+            AMapGeoPoint *geoPoint = [x objectForKey:itemModel.storeOther];
+            VMGetLocationDistanceTools *locationDistanceTools = [VMGetLocationDistanceTools showDistanceTools];
+            [locationDistanceTools setLatitudde:geoPoint.latitude longitude:geoPoint.longitude];
+            locationDistanceTools.resultSubject = [RACSubject subject];
+            [locationDistanceTools.resultSubject subscribeNext:^(NSNumber * _Nullable distance) {
+                self.pickupDistanceLabel.text = [NSString stringWithFormat:@"%.2fKM",distance.floatValue];
+            }];
+        }];
+    });
 }
 //打电话给商家
 - (IBAction)callToStoreBtnClick:(UIButton *)sender {

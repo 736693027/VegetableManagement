@@ -24,7 +24,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [AMapServices sharedServices].apiKey = @"5ea6578dc48af6300e792a00cc287a01";
+    [AMapServices sharedServices].apiKey = @"5a61f236ae9aaeb74e4eff4faac33060";
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -36,8 +36,8 @@
     self.drawerController = [[MMDrawerController alloc]initWithCenterViewController:tabBarVC leftDrawerViewController:personCenter rightDrawerViewController:nil];
     
     //4、设置打开/关闭抽屉的手势
-    self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
-    self.drawerController.closeDrawerGestureModeMask =MMCloseDrawerGestureModeAll;
+    self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeNone;
+    self.drawerController.closeDrawerGestureModeMask =MMCloseDrawerGestureModeNone;
     //5、设置左右两边抽屉显示的多少
     self.drawerController.maximumLeftDrawerWidth = 300.0;
     [self.drawerController setShowsShadow:NO];
