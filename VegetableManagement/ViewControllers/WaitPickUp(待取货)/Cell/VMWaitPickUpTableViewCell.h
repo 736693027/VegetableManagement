@@ -31,9 +31,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *deliveryAddressLabel;
 //显示'菜帮配送'
 @property (weak, nonatomic) IBOutlet UILabel *iconLabel;
-//电话商家
+//商家电话
 @property (weak, nonatomic) IBOutlet UIButton *toBusinessBtn;
-//电话用户
+//用户电话
 @property (weak, nonatomic) IBOutlet UIButton *toUseBtn;
 //订单操作按钮
 @property (weak, nonatomic) IBOutlet UIButton *operatingBtn;

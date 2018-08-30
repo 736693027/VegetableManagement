@@ -7,6 +7,7 @@
 //
 
 #import "VMHelpViewController.h"
+#import "VMNavigationController.h"
 
 @interface VMHelpViewController ()<UIScrollViewDelegate>{
     NSInteger currentIndex;
@@ -32,6 +33,12 @@
             view.backgroundColor = [UIColor yellowColor];
         }
         [_mainScrollview addSubview:view];
+    }
+    //禁止侧滑手势和UIScrollView同时滑动
+    VMNavigationController *navContrl = (VMNavigationController *)self.navigationController;
+    if([navContrl screenEdgePanGestureRecognizer]){
+        //指定滑动手势在侧滑返回手势失效后响应
+        [self.mainScrollview.panGestureRecognizer requireGestureRecognizerToFail:[navContrl screenEdgePanGestureRecognizer]];
     }
 }
 

@@ -36,8 +36,8 @@
     self.drawerController = [[MMDrawerController alloc]initWithCenterViewController:tabBarVC leftDrawerViewController:personCenter rightDrawerViewController:nil];
     
     //4、设置打开/关闭抽屉的手势
-    self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeNone;
-    self.drawerController.closeDrawerGestureModeMask =MMCloseDrawerGestureModeNone;
+    self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+    self.drawerController.closeDrawerGestureModeMask =MMCloseDrawerGestureModeAll;
     //5、设置左右两边抽屉显示的多少
     self.drawerController.maximumLeftDrawerWidth = 300.0;
     [self.drawerController setShowsShadow:NO];
