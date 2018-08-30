@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -114,7 +113,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvB-iR-SRH">
-                        <rect key="frame" x="255" y="50" width="50" height="20"/>
+                        <rect key="frame" x="257.5" y="50" width="50" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="RF4-Y0-lTv"/>
                             <constraint firstAttribute="width" constant="50" id="qgz-mD-LMB"/>
@@ -183,6 +182,7 @@
                     <constraint firstItem="B8m-1V-Ilu" firstAttribute="centerY" secondItem="LdN-Gn-Mb9" secondAttribute="centerY" id="2id-qf-r6C"/>
                     <constraint firstItem="3Za-hx-ds4" firstAttribute="leading" secondItem="non-1d-NW4" secondAttribute="trailing" constant="10" id="4jm-RD-9em"/>
                     <constraint firstItem="hBC-b9-snf" firstAttribute="leading" secondItem="K4G-Fj-Gbx" secondAttribute="leading" id="6zn-uK-kr5"/>
+                    <constraint firstAttribute="trailing" secondItem="fvB-iR-SRH" secondAttribute="trailing" constant="12.5" id="7Fh-xT-enZ"/>
                     <constraint firstItem="9TE-yQ-UeO" firstAttribute="centerY" secondItem="3kV-Vv-qbo" secondAttribute="centerY" id="9Ak-tf-V13"/>
                     <constraint firstItem="T0t-KE-tVV" firstAttribute="height" secondItem="3kV-Vv-qbo" secondAttribute="height" id="Bxl-RK-UQ9"/>
                     <constraint firstAttribute="trailing" secondItem="K4G-Fj-Gbx" secondAttribute="trailing" constant="12.5" id="Dfx-Zy-CeE"/>
@@ -196,7 +196,6 @@
                     <constraint firstItem="9TE-yQ-UeO" firstAttribute="leading" secondItem="3kV-Vv-qbo" secondAttribute="trailing" constant="12.5" id="Nps-3f-3uR"/>
                     <constraint firstItem="fkc-f5-JEC" firstAttribute="centerX" secondItem="non-1d-NW4" secondAttribute="centerX" id="Odt-0T-iYT"/>
                     <constraint firstItem="tpJ-Z2-IF9" firstAttribute="leading" secondItem="LdN-Gn-Mb9" secondAttribute="trailing" constant="5" id="OlA-q9-YNu"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="fvB-iR-SRH" secondAttribute="trailing" constant="-1" id="UCv-PZ-cto"/>
                     <constraint firstAttribute="trailing" secondItem="7Tl-e3-qZT" secondAttribute="trailing" constant="12.5" id="XNa-nT-WOg"/>
                     <constraint firstItem="non-1d-NW4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12.5" id="Y0m-GX-por"/>
                     <constraint firstItem="non-1d-NW4" firstAttribute="top" secondItem="hxn-Xp-gIW" secondAttribute="bottom" constant="17.5" id="bZR-om-t2L"/>

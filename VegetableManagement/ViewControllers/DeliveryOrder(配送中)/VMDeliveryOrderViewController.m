@@ -43,9 +43,17 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VMWaitPickUpTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMWaitPickUpTableViewCell"];
-    [cell.operatingBtn setBackgroundImage:[UIImage imageNamed:@"icon_deliverdBtn"] forState:UIControlStateNormal];
+    [cell.operatingBtn setTitle:@"我已送达" forState:UIControlStateNormal];
     VMNewTaskItemModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+    cell.cellType = VWaitPickUpTableViewCellAlreadyDelivery;
     cell.itemModel = itemModel;
+    cell.pickupOrderSubject = [RACSubject subject];
+    @weakify(self)
+    [cell.pickupOrderSubject subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        [self.dataTableView.mj_header beginRefreshing];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kUploadTabBarItemValueNotification object:nil];
+    }];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

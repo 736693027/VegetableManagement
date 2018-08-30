@@ -16,6 +16,9 @@
 		180A84A720F48B720001C1B4 /* VMForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180A84A520F48B720001C1B4 /* VMForgetViewController.m */; };
 		180A84A820F48B720001C1B4 /* VMForgetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180A84A620F48B720001C1B4 /* VMForgetViewController.xib */; };
 		180A84AB20F493FF0001C1B4 /* VMRegisterAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 180A84AA20F493FF0001C1B4 /* VMRegisterAPI.m */; };
+		181CE10D21379A6000310A75 /* VMAlreadyPickupGoodsAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CE10C21379A6000310A75 /* VMAlreadyPickupGoodsAPI.m */; };
+		181CE11021379AAC00310A75 /* VMCompleteDeliveryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CE10F21379AAC00310A75 /* VMCompleteDeliveryAPI.m */; };
+		181CE11321379B3700310A75 /* VMCancleOrderAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CE11221379B3700310A75 /* VMCancleOrderAPI.m */; };
 		1832BF182071DE1B00FC83B0 /* VMWaitPickUpTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF152071DE1A00FC83B0 /* VMWaitPickUpTableViewCell.m */; };
 		1832BF192071DE1B00FC83B0 /* VMWaitPickUpTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832BF172071DE1A00FC83B0 /* VMWaitPickUpTableViewCell.xib */; };
 		1832BF1F20720FFC00FC83B0 /* VMPersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF1D20720FFC00FC83B0 /* VMPersonalCenterViewController.m */; };
@@ -132,6 +135,12 @@
 		180A84A620F48B720001C1B4 /* VMForgetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMForgetViewController.xib; sourceTree = "<group>"; };
 		180A84A920F493FF0001C1B4 /* VMRegisterAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMRegisterAPI.h; sourceTree = "<group>"; };
 		180A84AA20F493FF0001C1B4 /* VMRegisterAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMRegisterAPI.m; sourceTree = "<group>"; };
+		181CE10B21379A6000310A75 /* VMAlreadyPickupGoodsAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMAlreadyPickupGoodsAPI.h; sourceTree = "<group>"; };
+		181CE10C21379A6000310A75 /* VMAlreadyPickupGoodsAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMAlreadyPickupGoodsAPI.m; sourceTree = "<group>"; };
+		181CE10E21379AAC00310A75 /* VMCompleteDeliveryAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMCompleteDeliveryAPI.h; sourceTree = "<group>"; };
+		181CE10F21379AAC00310A75 /* VMCompleteDeliveryAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMCompleteDeliveryAPI.m; sourceTree = "<group>"; };
+		181CE11121379B3700310A75 /* VMCancleOrderAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMCancleOrderAPI.h; sourceTree = "<group>"; };
+		181CE11221379B3700310A75 /* VMCancleOrderAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMCancleOrderAPI.m; sourceTree = "<group>"; };
 		1832BF152071DE1A00FC83B0 /* VMWaitPickUpTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMWaitPickUpTableViewCell.m; sourceTree = "<group>"; };
 		1832BF162071DE1A00FC83B0 /* VMWaitPickUpTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMWaitPickUpTableViewCell.h; sourceTree = "<group>"; };
 		1832BF172071DE1A00FC83B0 /* VMWaitPickUpTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMWaitPickUpTableViewCell.xib; sourceTree = "<group>"; };
@@ -672,6 +681,12 @@
 				187557362122AEA700D3ABD2 /* VMForgetPasswordAPI.m */,
 				187557442123F64400D3ABD2 /* VMAcceptOrdersAPI.h */,
 				187557452123F64400D3ABD2 /* VMAcceptOrdersAPI.m */,
+				181CE10B21379A6000310A75 /* VMAlreadyPickupGoodsAPI.h */,
+				181CE10C21379A6000310A75 /* VMAlreadyPickupGoodsAPI.m */,
+				181CE10E21379AAC00310A75 /* VMCompleteDeliveryAPI.h */,
+				181CE10F21379AAC00310A75 /* VMCompleteDeliveryAPI.m */,
+				181CE11121379B3700310A75 /* VMCancleOrderAPI.h */,
+				181CE11221379B3700310A75 /* VMCancleOrderAPI.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1083,6 +1098,7 @@
 				18D99F37207B11E100DAFB5F /* VMFinishedTableHeadView.m in Sources */,
 				18EBA9F320F1E1DA00A6A6B0 /* VMGetPersonalInfoAPI.m in Sources */,
 				18FDAFE8207F3EE3008AE54E /* VMUserLocationViewController.m in Sources */,
+				181CE11021379AAC00310A75 /* VMCompleteDeliveryAPI.m in Sources */,
 				1832BF25207215FC00FC83B0 /* VMPersonalCenterTableViewCell.m in Sources */,
 				18EE075F20FB1E4000D2CC80 /* VMOrderStatisticsModel.m in Sources */,
 				18FDAFA9207CB93A008AE54E /* VMOrderStatisticsViewController.m in Sources */,
@@ -1094,6 +1110,7 @@
 				18035E9A208445E200181ABE /* VMSetupTableViewCell.m in Sources */,
 				18D99F58207B4F2000DAFB5F /* XHStarRateView.m in Sources */,
 				18EBA9FF20F1E8B000A6A6B0 /* VMGetWaitPickUpListAPI.m in Sources */,
+				181CE11321379B3700310A75 /* VMCancleOrderAPI.m in Sources */,
 				18F7AA012079FE52009A4D4E /* VMLoginViewController.m in Sources */,
 				18EBA9E020F1B7D400A6A6B0 /* VMBaseModel.m in Sources */,
 				18FDAFBE207DF472008AE54E /* VMOrderDetailViewController.m in Sources */,
@@ -1121,6 +1138,7 @@
 				187557342122ABC800D3ABD2 /* VMGetVerificationCodeRequest.m in Sources */,
 				18035E98208445E200181ABE /* VMSetupViewController.m in Sources */,
 				18EBA9DC20F1B6D500A6A6B0 /* VMResponseModel.m in Sources */,
+				181CE10D21379A6000310A75 /* VMAlreadyPickupGoodsAPI.m in Sources */,
 				18D99F46207B4C4800DAFB5F /* VMEvaluationTableViewController.m in Sources */,
 				185B1DEA206E154200816924 /* VMNavigationController.m in Sources */,
 				18CC2242206CD5E9007E1274 /* CommonTools.m in Sources */,

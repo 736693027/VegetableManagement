@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-@class VMNewTaskItemModel;
+@class VMNewTaskItemModel,RACSubject;
+
+typedef NS_ENUM(NSInteger ,VWaitPickUpTableViewCellType) {
+    VWaitPickUpTableViewCellPickup = 1, //我已取货
+    VWaitPickUpTableViewCellAlreadyDelivery, //我已送达
+};
 
 @interface VMWaitPickUpTableViewCell : UITableViewCell
 
@@ -39,5 +44,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *operatingBtn;
 
 @property (strong, nonatomic) VMNewTaskItemModel *itemModel;
+
+@property (strong, nonatomic) RACSubject *pickupOrderSubject;
+
+@property (assign, nonatomic) VWaitPickUpTableViewCellType cellType;
 
 @end

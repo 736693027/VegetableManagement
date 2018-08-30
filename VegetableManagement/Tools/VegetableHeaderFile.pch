@@ -30,5 +30,6 @@
 
 /************************消息通知定义*********************************/
 #define VMLogoutNotification @"VMLogoutNotification" //退出登录
+#define kUploadTabBarItemValueNotification @"UploadTabBarItemValueNotification" //更新tabBar的标签数
 
 #endif /* VegetableHeaderFile_pch */

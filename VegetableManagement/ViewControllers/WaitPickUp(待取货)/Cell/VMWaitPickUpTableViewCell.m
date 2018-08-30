@@ -11,6 +11,9 @@
 #import "VMSearchLocationTools.h"
 #import "VMGetLocationDistanceTools.h"
 #import <AMapSearchKit/AMapSearchKit.h>
+#import "VMAlreadyPickupGoodsAPI.h"
+#import <ReactiveObjC/ReactiveObjC.h>
+#import "VMCompleteDeliveryAPI.h"
 
 @implementation VMWaitPickUpTableViewCell
 
@@ -87,8 +90,36 @@
 
 //已取货
 - (IBAction)takeGoodsBtnClick:(UIButton *)sender {
-    
-    
+    [SVProgressHUD show];
+    if(self.cellType == VWaitPickUpTableViewCellPickup){
+        VMAlreadyPickupGoodsAPI *acceptOrderRequest = [[VMAlreadyPickupGoodsAPI alloc] initWithOrderId:self.itemModel.orderId];
+        @weakify(self)
+        [acceptOrderRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+            @strongify(self)
+            [SVProgressHUD showInfoWithStatus:@"取货成功"];
+            if(self.pickupOrderSubject){
+                [self.pickupOrderSubject sendNext:@1];
+            }
+        } failModel:^(VMResponseModel *errorModel) {
+            [SVProgressHUD showErrorWithStatus:errorModel.msg];
+        } fail:^(YTKBaseRequest *request) {
+            [SVProgressHUD showErrorWithStatus:@"取货失败"];
+        }];
+    }else{
+        VMCompleteDeliveryAPI *acceptOrderRequest = [[VMCompleteDeliveryAPI alloc] initWithOrderId:self.itemModel.orderId];
+        @weakify(self)
+        [acceptOrderRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+            @strongify(self)
+            [SVProgressHUD showInfoWithStatus:@"成功送达"];
+            if(self.pickupOrderSubject){
+                [self.pickupOrderSubject sendNext:@1];
+            }
+        } failModel:^(VMResponseModel *errorModel) {
+            [SVProgressHUD showErrorWithStatus:errorModel.msg];
+        } fail:^(YTKBaseRequest *request) {
+            [SVProgressHUD showErrorWithStatus:@"送达失败"];
+        }];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

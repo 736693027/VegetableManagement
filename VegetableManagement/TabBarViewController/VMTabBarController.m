@@ -50,7 +50,17 @@
     [self setValue:tabBar forKey:@"tabBar"];
     
     [self addAllChildViewController];
+
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kUploadTabBarItemValueNotification object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+        @strongify(self)
+        [self requestData];
+    }];
     
+    [self requestData];
+    
+}
+- (void)requestData {
+    @weakify(self);
     VMGetTablCountAPI *getTabCount = [[VMGetTablCountAPI alloc] init];
     [getTabCount startRequestWithDicSuccess:^(NSDictionary *responseDic) {
         NSNumber *newTaskNumber = [responseDic objectForKey:@"newTask"];

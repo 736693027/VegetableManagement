@@ -46,6 +46,14 @@
     VMWaitPickUpTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMWaitPickUpTableViewCell"];
     VMNewTaskItemModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
     cell.itemModel = itemModel;
+    cell.cellType = VWaitPickUpTableViewCellPickup;
+    cell.pickupOrderSubject = [RACSubject subject];
+    @weakify(self)
+    [cell.pickupOrderSubject subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        [self.dataTableView.mj_header beginRefreshing];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kUploadTabBarItemValueNotification object:nil];
+    }];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

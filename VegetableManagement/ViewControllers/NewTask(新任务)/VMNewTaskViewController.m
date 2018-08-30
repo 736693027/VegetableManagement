@@ -60,6 +60,7 @@
     [cell.acceptOrderSubject subscribeNext:^(id  _Nullable x) {
         @strongify(self)
         [self.dataTableView.mj_header beginRefreshing];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kUploadTabBarItemValueNotification object:nil];
     }];
     return cell;
 }
