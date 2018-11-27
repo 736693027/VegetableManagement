@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0DCC89DC8D50B6276F6AB744867D958D"
+               BlueprintIdentifier = "BB9FE4DD30E091541BB758CE35C73213"
                BlueprintName = "AFDownloadRequestOperation"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "AFDownloadRequestOperation.framework">
