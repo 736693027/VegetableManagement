@@ -79,7 +79,7 @@ DEPENDENCIES:
   - YYModel (~> 0.9.5)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFDownloadRequestOperation
     - AFNetworking
     - AMap3DMap
@@ -121,4 +121,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: dc0c5d244bef3edade7054af41bafeeb6f12699a
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

@@ -927,7 +927,7 @@
 				TargetAttributes = {
 					18CC220C206CBBED007E1274 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1282,15 +1282,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 8M4UTM4W65;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H3VBM36K4M;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VegetableManagement/Tools/VegetableHeaderFile.pch";
 				INFOPLIST_FILE = VegetableManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qianshou.QSMerchantManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lubaocar.LBAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9b738bbd-04e3-4a30-a52d-bb1e2b56d791";
-				PROVISIONING_PROFILE_SPECIFIER = QSMerchantManager_dev_file;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1301,16 +1301,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 8M4UTM4W65;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H3VBM36K4M;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VegetableManagement/Tools/VegetableHeaderFile.pch";
 				INFOPLIST_FILE = VegetableManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qianshou.QSMerchantManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lubaocar.LBAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7ced6562-64f0-4a46-be9f-92330aeadd85";
-				PROVISIONING_PROFILE_SPECIFIER = QSMerchantManager_dis_file;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
