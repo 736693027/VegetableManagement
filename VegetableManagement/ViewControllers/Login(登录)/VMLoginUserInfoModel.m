@@ -11,9 +11,9 @@
 
 @implementation VMLoginUserInfoModel
 
-+ (NSDictionary *)modelCustomPropertyMapper {
-    return @{@"lgoinUserId" : @"id"};
-}
+//+ (NSDictionary *)modelCustomPropertyMapper {
+//    return @{@"lgoinUserId" : @"id"};
+//}
 
 + (instancetype)loginUsrInfoModel{
     static dispatch_once_t onceToken;
@@ -36,27 +36,38 @@
 - (id)copyWithZone:(NSZone *)zone{
     VMLoginUserInfoModel *newModel = [VMLoginUserInfoModel loginUsrInfoModel];
     if(newModel){
-        newModel.lgoinUserId = [self.lgoinUserId copyWithZone:zone];
-        newModel.phone = [self.phone copyWithZone:zone];
-        newModel.username = [self.username copyWithZone:zone];
-        newModel.password = [self.password copyWithZone:zone];
-        newModel.name = [self.name copyWithZone:zone];
-        newModel.idCard = [self.idCard copyWithZone:zone];
-        newModel.avatar = [self.avatar copyWithZone:zone];
-        newModel.billingAccount = [self.billingAccount copyWithZone:zone];
-        newModel.commission = [self.commission copyWithZone:zone];
-        newModel.orderAmount = [self.orderAmount copyWithZone:zone];
-        newModel.province = [self.province copyWithZone:zone];
-        newModel.city = [self.city copyWithZone:zone];
-        newModel.township = [self.township copyWithZone:zone];
-        newModel.other = [self.other copyWithZone:zone];
-        newModel.lat = [self.lat copyWithZone:zone];
-        newModel.lng = [self.lng copyWithZone:zone];
-        newModel.status = [self.status copyWithZone:zone];
-        newModel.createdAt = [self.createdAt copyWithZone:zone];
-        newModel.updatedAt = [self.updatedAt copyWithZone:zone];
-        newModel.startState = [self.startState copyWithZone:zone];
+        newModel.address = [self.address copyWithZone:zone];
+        newModel.announcement = [self.announcement copyWithZone:zone];
+        newModel.introduction = [self.introduction copyWithZone:zone];
+        newModel.isAutomaticOrder = [self.isAutomaticOrder copyWithZone:zone];
+        newModel.sessionKey = [self.sessionKey copyWithZone:zone];
+        newModel.shopID = [self.shopID copyWithZone:zone];
+        newModel.tel = [self.tel copyWithZone:zone];
+        newModel.type = [self.type copyWithZone:zone];
     }
     return newModel;
+}
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+    if(self = [super init]){
+        self.address = [aDecoder decodeObjectForKey:@"address"];
+        self.announcement = [aDecoder decodeObjectForKey:@"announcement"];
+        self.introduction = [aDecoder decodeObjectForKey:@"introduction"];
+        self.isAutomaticOrder = [aDecoder decodeObjectForKey:@"isAutomaticOrder"];
+        self.sessionKey = [aDecoder decodeObjectForKey:@"sessionKey"];
+        self.shopID = [aDecoder decodeObjectForKey:@"shopID"];
+        self.tel = [aDecoder decodeObjectForKey:@"tel"];
+        self.type = [aDecoder decodeObjectForKey:@"type"];
+    }
+    return self;
+}
+- (void)encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeObject:_address forKey:@"address"];
+    [aCoder encodeObject:_announcement forKey:@"announcement"];
+    [aCoder encodeObject:_introduction forKey:@"introduction"];
+    [aCoder encodeObject:_isAutomaticOrder forKey:@"isAutomaticOrder"];
+    [aCoder encodeObject:_sessionKey forKey:@"sessionKey"];
+    [aCoder encodeObject:_shopID forKey:@"shopID"];
+    [aCoder encodeObject:_tel forKey:@"tel"];
+    [aCoder encodeObject:_type forKey:@"type"];
 }
 @end

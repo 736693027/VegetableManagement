@@ -37,9 +37,15 @@
             VMLoginUserInfoModel *loginModel = [VMLoginUserInfoModel loginUsrInfoModel];
             VMLoginUserInfoModel *tmpLoginModel = [VMLoginUserInfoModel yy_modelWithJSON:responseDic];
             loginModel = [tmpLoginModel copy];
+            NSString *homePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0];
+            NSString *loginPath = [homePath stringByAppendingPathComponent:@"login.data"];
+            BOOL result = [NSKeyedArchiver archiveRootObject:loginModel toFile:loginPath];
+            if(!result){
+                NSLog(@"------归档失败——---————-");
+            }
             [self dismissViewControllerAnimated:YES completion:nil];
-        } failModel:^(VMResponseModel *errorModel) {
-            [SVProgressHUD showErrorWithStatus:errorModel.msg];
+        } failModel:^(LBResponseModel *errorModel) {
+            [SVProgressHUD showErrorWithStatus:errorModel.message];
         } fail:^(YTKBaseRequest *request) {
             
         }];
@@ -50,9 +56,9 @@
     }
 }
 - (IBAction)registerButtonClick:(id)sender {
-    VMRegisterViewController *registVC = [[VMRegisterViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:registVC];
-    [self presentViewController:nav animated:YES completion:nil];
+//    VMRegisterViewController *registVC = [[VMRegisterViewController alloc] init];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:registVC];
+//    [self presentViewController:nav animated:YES completion:nil];
 }
 - (IBAction)forgetButtonClick:(id)sender {
     VMForgetViewController *forgerVC = [[VMForgetViewController alloc] init];

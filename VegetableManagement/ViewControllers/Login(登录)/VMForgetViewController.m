@@ -42,8 +42,8 @@
     [forgetPasswordAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
         [SVProgressHUD showInfoWithStatus:@"修改成功，请重新登录"];
         [self dismissViewControllerAnimated:YES completion:nil];
-    } failModel:^(VMResponseModel *errorModel) {
-        [SVProgressHUD showErrorWithStatus:errorModel.msg];
+    } failModel:^(LBResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
     } fail:^(YTKBaseRequest *request) {
         [SVProgressHUD showErrorWithStatus:@"修改失败"];
     }];
