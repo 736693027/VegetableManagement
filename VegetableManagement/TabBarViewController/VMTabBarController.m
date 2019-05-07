@@ -28,10 +28,10 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    VMLoginUserInfoModel *loginUserInfo = [VMLoginUserInfoModel loginUsrInfoModel];
-    if(!loginUserInfo.lgoinUserId){
-        [self jumpToLoginViewController];
-    }
+//    VMLoginUserInfoModel *loginUserInfo = [VMLoginUserInfoModel loginUsrInfoModel];
+//    if(!loginUserInfo.lgoinUserId){
+//        [self jumpToLoginViewController];
+//    }
 }
 - (void)jumpToLoginViewController{
     VMLoginViewController *loginVC = [[VMLoginViewController alloc] init];

@@ -1287,10 +1287,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VegetableManagement/Tools/VegetableHeaderFile.pch";
 				INFOPLIST_FILE = VegetableManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qianshou.managementvegetable;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianshou.QSMerchantManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9b738bbd-04e3-4a30-a52d-bb1e2b56d791";
-				PROVISIONING_PROFILE_SPECIFIER = managementvegetable_dev_file;
+				PROVISIONING_PROFILE_SPECIFIER = QSMerchantManager_dev_file;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1307,10 +1307,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VegetableManagement/Tools/VegetableHeaderFile.pch";
 				INFOPLIST_FILE = VegetableManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qianshou.managementvegetable;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianshou.QSMerchantManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7ced6562-64f0-4a46-be9f-92330aeadd85";
-				PROVISIONING_PROFILE_SPECIFIER = managementvegetable_dis_file;
+				PROVISIONING_PROFILE_SPECIFIER = QSMerchantManager_dis_file;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
