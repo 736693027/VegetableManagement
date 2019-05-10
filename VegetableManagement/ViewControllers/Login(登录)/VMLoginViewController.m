@@ -44,8 +44,8 @@
                 NSLog(@"------归档失败——---————-");
             }
             [self dismissViewControllerAnimated:YES completion:nil];
-        } failModel:^(LBResponseModel *errorModel) {
-            [SVProgressHUD showErrorWithStatus:errorModel.message];
+        } failModel:^(VMResponseModel *errorModel) {
+            [SVProgressHUD showErrorWithStatus:errorModel.msg];
         } fail:^(YTKBaseRequest *request) {
             
         }];

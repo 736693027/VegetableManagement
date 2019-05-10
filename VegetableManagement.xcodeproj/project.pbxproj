@@ -36,6 +36,7 @@
 		1832BF88207367B700FC83B0 /* VMSelectAgentViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF86207367B700FC83B0 /* VMSelectAgentViewTableViewCell.m */; };
 		1832BF89207367B700FC83B0 /* VMSelectAgentViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832BF87207367B700FC83B0 /* VMSelectAgentViewTableViewCell.xib */; };
 		1832BF8C2074AD3500FC83B0 /* VMTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832BF8B2074AD3500FC83B0 /* VMTabBarView.m */; };
+		1853A36B2285121800BA8F72 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1853A36A2285121800BA8F72 /* libstdc++.6.0.9.tbd */; };
 		185B1DD6206E092700816924 /* CustomerTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B1DD5206E092700816924 /* CustomerTabBarView.m */; };
 		185B1DDA206E096300816924 /* CustomerTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185B1DD9206E096300816924 /* CustomerTabBarView.xib */; };
 		185B1DDD206E0DA600816924 /* VMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B1DDC206E0DA600816924 /* VMTabBarController.m */; };
@@ -168,6 +169,7 @@
 		1832BF87207367B700FC83B0 /* VMSelectAgentViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VMSelectAgentViewTableViewCell.xib; sourceTree = "<group>"; };
 		1832BF8A2074AD3500FC83B0 /* VMTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMTabBarView.h; sourceTree = "<group>"; };
 		1832BF8B2074AD3500FC83B0 /* VMTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMTabBarView.m; sourceTree = "<group>"; };
+		1853A36A2285121800BA8F72 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		185B1DD4206E092700816924 /* CustomerTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomerTabBarView.h; sourceTree = "<group>"; };
 		185B1DD5206E092700816924 /* CustomerTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomerTabBarView.m; sourceTree = "<group>"; };
 		185B1DD9206E096300816924 /* CustomerTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerTabBarView.xib; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1853A36B2285121800BA8F72 /* libstdc++.6.0.9.tbd in Frameworks */,
 				89F31D8AC665279E1A817B70 /* Pods_VegetableManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -887,6 +890,7 @@
 		A4D4BD2F8C765B39FBEE5755 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1853A36A2285121800BA8F72 /* libstdc++.6.0.9.tbd */,
 				D83F405C6F6A6BB5575622E0 /* Pods_VegetableManagement.framework */,
 			);
 			name = Frameworks;

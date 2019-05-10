@@ -36,38 +36,44 @@
 - (id)copyWithZone:(NSZone *)zone{
     VMLoginUserInfoModel *newModel = [VMLoginUserInfoModel loginUsrInfoModel];
     if(newModel){
-        newModel.address = [self.address copyWithZone:zone];
-        newModel.announcement = [self.announcement copyWithZone:zone];
-        newModel.introduction = [self.introduction copyWithZone:zone];
-        newModel.isAutomaticOrder = [self.isAutomaticOrder copyWithZone:zone];
-        newModel.sessionKey = [self.sessionKey copyWithZone:zone];
-        newModel.shopID = [self.shopID copyWithZone:zone];
-        newModel.tel = [self.tel copyWithZone:zone];
-        newModel.type = [self.type copyWithZone:zone];
+        unsigned int count = 0;
+        Ivar *ivars = class_copyIvarList([VMLoginUserInfoModel class], &count);
+        for(int i=0;i<count;i++){
+            Ivar ivar = ivars[i];
+            const char *name = ivar_getName(ivar);
+            NSString *key = [NSString stringWithUTF8String:name];
+            id value = [[self valueForKey:key] copyWithZone:zone];
+            [newModel setValue:value forKey:key];
+        }
+        free(ivars);
     }
     return newModel;
 }
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     if(self = [super init]){
-        self.address = [aDecoder decodeObjectForKey:@"address"];
-        self.announcement = [aDecoder decodeObjectForKey:@"announcement"];
-        self.introduction = [aDecoder decodeObjectForKey:@"introduction"];
-        self.isAutomaticOrder = [aDecoder decodeObjectForKey:@"isAutomaticOrder"];
-        self.sessionKey = [aDecoder decodeObjectForKey:@"sessionKey"];
-        self.shopID = [aDecoder decodeObjectForKey:@"shopID"];
-        self.tel = [aDecoder decodeObjectForKey:@"tel"];
-        self.type = [aDecoder decodeObjectForKey:@"type"];
+        unsigned int count = 0;
+        Ivar *ivars = class_copyIvarList([VMLoginUserInfoModel class], &count);
+        for(int i=0;i<count;i++){
+            Ivar ivar = ivars[i];
+            const char *name = ivar_getName(ivar);
+            NSString *key = [NSString stringWithUTF8String:name];
+            id value = [self valueForKey:key];
+            [aDecoder setValue:value forKey:key];
+        }
+        free(ivars);
     }
     return self;
 }
 - (void)encodeWithCoder:(NSCoder *)aCoder{
-    [aCoder encodeObject:_address forKey:@"address"];
-    [aCoder encodeObject:_announcement forKey:@"announcement"];
-    [aCoder encodeObject:_introduction forKey:@"introduction"];
-    [aCoder encodeObject:_isAutomaticOrder forKey:@"isAutomaticOrder"];
-    [aCoder encodeObject:_sessionKey forKey:@"sessionKey"];
-    [aCoder encodeObject:_shopID forKey:@"shopID"];
-    [aCoder encodeObject:_tel forKey:@"tel"];
-    [aCoder encodeObject:_type forKey:@"type"];
+    unsigned int count = 0;
+    Ivar *ivars = class_copyIvarList([VMLoginUserInfoModel class], &count);
+    for(int i=0;i<count;i++){
+        Ivar ivar = ivars[i];
+        const char *name = ivar_getName(ivar);
+        NSString *key = [NSString stringWithUTF8String:name];
+        id value = [self valueForKey:key];
+        [aCoder encodeObject:value forKey:key];
+    }
+    free(ivars);
 }
 @end
