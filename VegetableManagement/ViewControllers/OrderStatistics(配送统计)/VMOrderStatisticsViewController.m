@@ -51,7 +51,7 @@
 #pragma mark tableview datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if(self.isSearchState){
-        return 1;
+        return self.dataArray.count==0?0:1;;
     }else{
         return self.dataArray.count==0?0:3;
     }
