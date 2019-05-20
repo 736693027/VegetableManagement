@@ -22,7 +22,7 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 
 /************************接口定义*********************************/
-#define BASEURL @"http://139.224.221.134:8081"
+#define BASEURL @"https://h5.qsvc.caibangps.com"
 
 
 /************************辅助宏定义*********************************/
